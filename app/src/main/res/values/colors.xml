@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="home">#03A9F4</color>
+    <color name="order">#00BCD4</color>
+    <color name="pay">#009688</color>
+    <color name="message">#4CAF50</color>
+    <color name="profile">#8BC34A</color>
+
+    <color name="gray">#535557</color>
+    <color name="gray_soft">#838688</color>
+    <color name="gray_softy">#CCD0D3</color>
+</resources>
