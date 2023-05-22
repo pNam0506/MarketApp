@@ -88,14 +88,14 @@
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/sun_svgrepo_com"
+                android:src="@drawable/calendar_svgrepo_com"
 
 
                 />
             <TextView
                 android:layout_width="80dp"
                 android:layout_height="20dp"
-                android:text="อากาศ"
+                android:text="วันปัจจุบัน"
                 android:gravity="center"
 
                 />
@@ -120,7 +120,7 @@
             <TextView
                 android:layout_width="80dp"
                 android:layout_height="20dp"
-                android:text="อากาศ"
+                android:text="ฤดูกาล"
                 android:gravity="center"
 
                 />
@@ -138,14 +138,14 @@
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/sun_svgrepo_com"
+                android:src="@drawable/traffic_fine_svgrepo_com"
 
 
                 />
             <TextView
                 android:layout_width="80dp"
                 android:layout_height="20dp"
-                android:text="อากาศ"
+                android:text="จราจร"
                 android:gravity="center"
 
                 />
