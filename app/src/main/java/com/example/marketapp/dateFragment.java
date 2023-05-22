@@ -1,4 +1,5 @@
 package com.example.marketapp;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -14,7 +15,7 @@ import android.widget.TextView;
 import java.text.DateFormat;
 import java.util.Calendar;
 
-public class offerMarketFragment extends AppCompatActivity {
+public class dateFragment extends AppCompatActivity {
 
 
 
@@ -22,13 +23,12 @@ public class offerMarketFragment extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_offer_market);
+        setContentView(R.layout.fragment_date);
         Calendar calendar = Calendar.getInstance();
         String currentDate = DateFormat.getDateInstance(DateFormat.SHORT).format(calendar.getTime());
 
         TextView textDate = findViewById((int)R.id.Date_Text_1);
         textDate.setText(currentDate);
-
 
     }
 }
