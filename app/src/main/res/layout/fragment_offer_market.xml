@@ -9,7 +9,7 @@
 
 
 
-    <LinearLayout
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/background_market_Layout"
         android:layout_width="match_parent"
         android:layout_height="300dp"
@@ -20,13 +20,19 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/market_background"
+            android:background="@color/gray"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="UserName"
+            android:textSize="40dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             />
 
 
-
-
-
-    </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchBar"
@@ -163,6 +169,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/option_4"
+        android:layout_marginTop="20dp"
         >
 
 
