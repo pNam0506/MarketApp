@@ -47,6 +47,7 @@
     </androidx.appcompat.widget.SearchView>
 
     <LinearLayout
+        android:id="@+id/option_4"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_below="@+id/searchBar"
@@ -156,7 +157,17 @@
 
 
 
-
     </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/option_4"
+        >
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
 
 </RelativeLayout>
