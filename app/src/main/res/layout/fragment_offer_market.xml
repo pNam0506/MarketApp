@@ -27,6 +27,8 @@
         android:layout_below="@+id/background_market_Layout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginTop="-25dp"
+        android:background="@drawable/white_corner"
 
 
         >
