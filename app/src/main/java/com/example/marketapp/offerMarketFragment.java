@@ -26,7 +26,7 @@ public class offerMarketFragment extends AppCompatActivity {
         Calendar calendar = Calendar.getInstance();
         String currentDate = DateFormat.getDateInstance(DateFormat.SHORT).format(calendar.getTime());
 
-        TextView textDate = findViewById((int)R.id.Date_Text_1);
+        TextView textDate = findViewById((int)R.id.Date_Text);
         textDate.setText(currentDate);
 
 

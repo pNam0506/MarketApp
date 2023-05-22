@@ -23,7 +23,7 @@
 
         </activity>
 
-        <activity android:name=".dateFragment"
+        <activity android:name=".offerMarketFragment"
             android:exported="true">
 
 
