@@ -24,6 +24,7 @@ public class dateFragment extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_date);
+
         Calendar calendar = Calendar.getInstance();
         String currentDate = DateFormat.getDateInstance(DateFormat.SHORT).format(calendar.getTime());
 
