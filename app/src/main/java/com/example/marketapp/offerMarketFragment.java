@@ -30,8 +30,9 @@ public class offerMarketFragment extends AppCompatActivity {
         textDate.setText(currentDate);
 
         TextView season = findViewById((int)R.id.season_text);
+        ImageView sun = findViewById((int)R.id.summer_season);
         int current_day = calendar.get(Calendar.DAY_OF_MONTH);
-        int current_month = (calendar.get(Calendar.MONTH)+1) - 4;
+        int current_month = (calendar.get(Calendar.MONTH)+1);
         String current_season = "";
 
         if(current_month == 2 ){
@@ -42,6 +43,7 @@ public class offerMarketFragment extends AppCompatActivity {
             else{
                 current_season = "ฤดูหนาว";
                 season.setText(current_season);
+                sun.setImageResource(R.drawable.cold_heart_cute_svgrepo_com);
 
             }
         }
@@ -55,6 +57,7 @@ public class offerMarketFragment extends AppCompatActivity {
                 else {
                     current_season = "ฤดูฝน";
                     season.setText(current_season);
+                    sun.setImageResource(R.drawable.rain_svgrepo_com);
 
                 }
 
@@ -63,17 +66,21 @@ public class offerMarketFragment extends AppCompatActivity {
         else if(current_month == 6 ){
             current_season = "ฤดูฝน";
                 season.setText(current_season);
+            sun.setImageResource(R.drawable.rain_svgrepo_com);
         }
         else if (current_month > 6 && current_month < 11 ) {
             current_season = "ฤดูฝน";
             season.setText(current_season);
+            sun.setImageResource(R.drawable.rain_svgrepo_com);
             if(current_month == 10 ){
                 if(current_day <= 15){
                     current_season = "ฤดูฝน";
-                    season.setText(current_season);}
+                    season.setText(current_season);
+                    sun.setImageResource(R.drawable.rain_svgrepo_com);}
                 else {
                     current_season = "ฤดูหนาว";
                     season.setText(current_season);
+                    sun.setImageResource(R.drawable.cold_heart_cute_svgrepo_com);
 
                 }
 
@@ -82,10 +89,13 @@ public class offerMarketFragment extends AppCompatActivity {
         else if(current_month == 11 || current_month == 12){
             current_season = "ฤดูหนาว";
             season.setText(current_season);
+            sun.setImageResource(R.drawable.cold_heart_cute_svgrepo_com);
         }
         else if (current_month == 1) {
             current_season = "ฤดูหนาว";
             season.setText(current_season);
+            sun.setImageResource(R.drawable.cold_heart_cute_svgrepo_com);
+
         }
 
 
