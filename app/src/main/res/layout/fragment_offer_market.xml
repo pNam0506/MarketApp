@@ -126,6 +126,7 @@
 
                 />
             <TextView
+                android:id="@+id/season_text"
                 android:layout_width="80dp"
                 android:layout_height="20dp"
                 android:text="ฤดูกาล"
@@ -135,32 +136,6 @@
 
 
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:orientation="vertical"
-            android:gravity="center"
-
-            >
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/traffic_fine_svgrepo_com"
-
-
-                />
-            <TextView
-                android:layout_width="80dp"
-                android:layout_height="20dp"
-                android:text="จราจร"
-                android:gravity="center"
-
-                />
-
-
-        </LinearLayout>
-
 
 
 

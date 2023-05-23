@@ -23,12 +23,17 @@ public class offerMarketFragment extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_offer_market);
+
         Calendar calendar = Calendar.getInstance();
         String currentDate = DateFormat.getDateInstance(DateFormat.SHORT).format(calendar.getTime());
-
         TextView textDate = findViewById((int)R.id.Date_Text);
         textDate.setText(currentDate);
 
+        TextView season = findViewById((int)R.id.season_text);
+        int current_day = calendar.get(Calendar.DAY_OF_MONTH);
+        int current_month = calendar.get(Calendar.MONTH);
+        String CurrentDay_month = current_day + "/"+ current_month;
+        season.setText(CurrentDay_month);
 
     }
 }
