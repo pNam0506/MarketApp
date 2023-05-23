@@ -31,9 +31,64 @@ public class offerMarketFragment extends AppCompatActivity {
 
         TextView season = findViewById((int)R.id.season_text);
         int current_day = calendar.get(Calendar.DAY_OF_MONTH);
-        int current_month = calendar.get(Calendar.MONTH);
-        String CurrentDay_month = current_day + "/"+ current_month;
-        season.setText(CurrentDay_month);
+        int current_month = (calendar.get(Calendar.MONTH)+1) - 4;
+        String current_season = "";
+
+        if(current_month == 2 ){
+            if(current_day >= 14){
+            current_season = "ฤดูร้อน";
+            season.setText(current_season);
+            }
+            else{
+                current_season = "ฤดูหนาว";
+                season.setText(current_season);
+
+            }
+        }
+        else if (current_month > 2 && current_month < 6 ) {
+            current_season = "ฤดูร้อน";
+            season.setText(current_season);
+            if(current_month == 5 ){
+                if(current_day <= 15){
+                    current_season = "ฤดูร้อน";
+                    season.setText(current_season);}
+                else {
+                    current_season = "ฤดูฝน";
+                    season.setText(current_season);
+
+                }
+
+            }
+        }
+        else if(current_month == 6 ){
+            current_season = "ฤดูฝน";
+                season.setText(current_season);
+        }
+        else if (current_month > 6 && current_month < 11 ) {
+            current_season = "ฤดูฝน";
+            season.setText(current_season);
+            if(current_month == 10 ){
+                if(current_day <= 15){
+                    current_season = "ฤดูฝน";
+                    season.setText(current_season);}
+                else {
+                    current_season = "ฤดูหนาว";
+                    season.setText(current_season);
+
+                }
+
+            }
+        }
+        else if(current_month == 11 || current_month == 12){
+            current_season = "ฤดูหนาว";
+            season.setText(current_season);
+        }
+        else if (current_month == 1) {
+            current_season = "ฤดูหนาว";
+            season.setText(current_season);
+        }
+
+
 
     }
 }
