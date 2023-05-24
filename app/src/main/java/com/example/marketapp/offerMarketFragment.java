@@ -1,15 +1,20 @@
 package com.example.marketapp;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 import java.text.DateFormat;
 import java.util.Calendar;
@@ -23,6 +28,22 @@ public class offerMarketFragment extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_offer_market);
+
+        BottomNavigationView bottom = findViewById(R.id.bottomNavigationView);
+        bottom.setSelectedItemId(R.id.homeBottom);
+
+        bottom.setOnItemSelectedListener(item -> {
+            if (item.getItemId() == R.id.homeBottom) {
+                startActivity(new Intent(getApplicationContext(), offerMarketFragment.class));
+                overridePendingTransition(0,0);
+                return true;
+            } else if (item.getItemId() == R.id.orderBottom) {
+                startActivity(new Intent(getApplicationContext(), selectStatusFragment.class));
+                overridePendingTransition(0,0);
+                return true;
+            }
+            return false;
+        });
 
         Calendar calendar = Calendar.getInstance();
         String currentDate = DateFormat.getDateInstance(DateFormat.SHORT).format(calendar.getTime());

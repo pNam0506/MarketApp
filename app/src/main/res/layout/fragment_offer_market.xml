@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".offerMarketFragment">
+    tools:context=".offerMarketFragment"
+    android:id="@+id/offerMarket">
 
 
 
@@ -153,6 +154,16 @@
 
     </androidx.recyclerview.widget.RecyclerView>
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:menu="@menu/bottom_bar"
+        android:layout_alignParentBottom="true"
+        >
+
+</com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
 </RelativeLayout>
