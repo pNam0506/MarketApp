@@ -26,6 +26,6 @@
         android:id="@+id/profileBottom"
         android:enabled="true"
         android:title="บัญชี"
-        android:icon="@drawable/icons8_contacts_original_64"
+        android:icon="@drawable/profile_user_account_svgrepo_com"
         />
 </menu>

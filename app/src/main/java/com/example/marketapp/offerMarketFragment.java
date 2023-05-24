@@ -78,7 +78,7 @@ public class offerMarketFragment extends AppCompatActivity {
                 else {
                     current_season = "ฤดูฝน";
                     season.setText(current_season);
-                    sun.setImageResource(R.drawable.rain_svgrepo_com);
+                    sun.setImageResource(R.drawable.rain_svgrepo_com_1);
 
                 }
 
@@ -87,17 +87,17 @@ public class offerMarketFragment extends AppCompatActivity {
         else if(current_month == 6 ){
             current_season = "ฤดูฝน";
                 season.setText(current_season);
-            sun.setImageResource(R.drawable.rain_svgrepo_com);
+            sun.setImageResource(R.drawable.rain_svgrepo_com_1);
         }
         else if (current_month > 6 && current_month < 11 ) {
             current_season = "ฤดูฝน";
             season.setText(current_season);
-            sun.setImageResource(R.drawable.rain_svgrepo_com);
+            sun.setImageResource(R.drawable.rain_svgrepo_com_1);
             if(current_month == 10 ){
                 if(current_day <= 15){
                     current_season = "ฤดูฝน";
                     season.setText(current_season);
-                    sun.setImageResource(R.drawable.rain_svgrepo_com);}
+                    sun.setImageResource(R.drawable.rain_svgrepo_com_1);}
                 else {
                     current_season = "ฤดูหนาว";
                     season.setText(current_season);

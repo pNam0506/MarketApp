@@ -73,7 +73,7 @@
 
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/sun_svgrepo_com"
+                android:src="@drawable/sun_svgrepo_com_1__1_"
 
 
                 />
@@ -97,7 +97,7 @@
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/calendar_svgrepo_com"
+                android:src="@drawable/calendar_svgrepo_com__1_"
 
 
                 />
@@ -124,7 +124,7 @@
                 android:id="@+id/summer_season"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/sun_svgrepo_com"
+                android:src="@drawable/sun_svgrepo_com_1__1_"
 
 
                 />
