@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".offerMarketFragment">
+    tools:context=".offerMarketFragment"
+    android:id="@+id/offerMarket">
 
 
 
@@ -69,6 +70,7 @@
 
             >
             <ImageView
+
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:src="@drawable/sun_svgrepo_com"
@@ -119,6 +121,7 @@
 
             >
             <ImageView
+                android:id="@+id/summer_season"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:src="@drawable/sun_svgrepo_com"
@@ -126,6 +129,7 @@
 
                 />
             <TextView
+                android:id="@+id/season_text"
                 android:layout_width="80dp"
                 android:layout_height="20dp"
                 android:text="ฤดูกาล"
@@ -135,32 +139,6 @@
 
 
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:orientation="vertical"
-            android:gravity="center"
-
-            >
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/traffic_fine_svgrepo_com"
-
-
-                />
-            <TextView
-                android:layout_width="80dp"
-                android:layout_height="20dp"
-                android:text="จราจร"
-                android:gravity="center"
-
-                />
-
-
-        </LinearLayout>
-
 
 
 
@@ -176,6 +154,16 @@
 
     </androidx.recyclerview.widget.RecyclerView>
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:menu="@menu/bottom_bar"
+        android:layout_alignParentBottom="true"
+        >
+
+</com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
 </RelativeLayout>
