@@ -1,64 +1,125 @@
 package com.example.marketapp;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
-import android.view.LayoutInflater;
+import android.os.Handler;
+import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.ScaleAnimation;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link offerMarketFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class offerMarketFragment extends Fragment {
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+import java.text.DateFormat;
+import java.util.Calendar;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+public class offerMarketFragment extends AppCompatActivity {
 
-    public offerMarketFragment() {
-        // Required empty public constructor
-    }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment offerMarketFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static offerMarketFragment newInstance(String param1, String param2) {
-        offerMarketFragment fragment = new offerMarketFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+        setContentView(R.layout.fragment_offer_market);
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_offer_market, container, false);
+        BottomNavigationView bottom = findViewById(R.id.bottomNavigationView);
+        bottom.setSelectedItemId(R.id.homeBottom);
+
+        bottom.setOnItemSelectedListener(item -> {
+            if (item.getItemId() == R.id.homeBottom) {
+                startActivity(new Intent(getApplicationContext(), offerMarketFragment.class));
+                overridePendingTransition(0,0);
+                return true;
+            } else if (item.getItemId() == R.id.orderBottom) {
+                startActivity(new Intent(getApplicationContext(), selectStatusFragment.class));
+                overridePendingTransition(0,0);
+                return true;
+            }
+            return false;
+        });
+
+        Calendar calendar = Calendar.getInstance();
+        String currentDate = DateFormat.getDateInstance(DateFormat.SHORT).format(calendar.getTime());
+        TextView textDate = findViewById((int)R.id.Date_Text);
+        textDate.setText(currentDate);
+
+        TextView season = findViewById((int)R.id.season_text);
+        ImageView sun = findViewById((int)R.id.summer_season);
+        int current_day = calendar.get(Calendar.DAY_OF_MONTH);
+        int current_month = (calendar.get(Calendar.MONTH)+1);
+        String current_season = "";
+
+        if(current_month == 2 ){
+            if(current_day >= 14){
+            current_season = "ฤดูร้อน";
+            season.setText(current_season);
+            }
+            else{
+                current_season = "ฤดูหนาว";
+                season.setText(current_season);
+                sun.setImageResource(R.drawable.cold_heart_cute_svgrepo_com);
+
+            }
+        }
+        else if (current_month > 2 && current_month < 6 ) {
+            current_season = "ฤดูร้อน";
+            season.setText(current_season);
+            if(current_month == 5 ){
+                if(current_day <= 15){
+                    current_season = "ฤดูร้อน";
+                    season.setText(current_season);}
+                else {
+                    current_season = "ฤดูฝน";
+                    season.setText(current_season);
+                    sun.setImageResource(R.drawable.rain_svgrepo_com);
+
+                }
+
+            }
+        }
+        else if(current_month == 6 ){
+            current_season = "ฤดูฝน";
+                season.setText(current_season);
+            sun.setImageResource(R.drawable.rain_svgrepo_com);
+        }
+        else if (current_month > 6 && current_month < 11 ) {
+            current_season = "ฤดูฝน";
+            season.setText(current_season);
+            sun.setImageResource(R.drawable.rain_svgrepo_com);
+            if(current_month == 10 ){
+                if(current_day <= 15){
+                    current_season = "ฤดูฝน";
+                    season.setText(current_season);
+                    sun.setImageResource(R.drawable.rain_svgrepo_com);}
+                else {
+                    current_season = "ฤดูหนาว";
+                    season.setText(current_season);
+                    sun.setImageResource(R.drawable.cold_heart_cute_svgrepo_com);
+
+                }
+
+            }
+        }
+        else if(current_month == 11 || current_month == 12){
+            current_season = "ฤดูหนาว";
+            season.setText(current_season);
+            sun.setImageResource(R.drawable.cold_heart_cute_svgrepo_com);
+        }
+        else if (current_month == 1) {
+            current_season = "ฤดูหนาว";
+            season.setText(current_season);
+            sun.setImageResource(R.drawable.cold_heart_cute_svgrepo_com);
+
+        }
+
+
+
     }
 }

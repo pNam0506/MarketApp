@@ -1,10 +1,12 @@
 package com.example.marketapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
@@ -14,15 +16,34 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
+
 public class selectStatusFragment extends AppCompatActivity {
 
     private String selected = "";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_select_status);
+
+        BottomNavigationView bottom = findViewById(R.id.statusNavigationView);
+        bottom.setSelectedItemId(R.id.orderBottom);
+
+        bottom.setOnItemSelectedListener(item -> {
+            if (item.getItemId() == R.id.homeBottom) {
+                startActivity(new Intent(getApplicationContext(), offerMarketFragment.class));
+                overridePendingTransition(0,0);
+                return true;
+            } else if (item.getItemId() == R.id.orderBottom) {
+                startActivity(new Intent(getApplicationContext(), selectStatusFragment.class));
+                overridePendingTransition(0,0);
+                return true;
+            }
+            return false;
+        });
+
 
         final LinearLayout sellerLayout = findViewById((int)R.id.sellerLayout);
         final LinearLayout managerLayout = findViewById((int)R.id.managerLayout);
