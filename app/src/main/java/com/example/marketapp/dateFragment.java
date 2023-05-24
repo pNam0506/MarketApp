@@ -29,7 +29,7 @@ public class dateFragment extends AppCompatActivity {
         String currentDate = DateFormat.getDateInstance(DateFormat.SHORT).format(calendar.getTime());
 
         TextView textDate = findViewById((int)R.id.Date_Text_1);
-        textDate.setText(currentDate);
+        textDate.setText(currentDate);//wewe
 
     }
 }
