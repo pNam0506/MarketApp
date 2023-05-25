@@ -136,6 +136,7 @@
             android:textSize="20dp"
             />
         <Button
+            android:id="@+id/saveRulesButton"
             android:layout_width="110dp"
             android:layout_height="50dp"
             android:backgroundTint="@color/green"

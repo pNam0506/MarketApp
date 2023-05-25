@@ -31,7 +31,7 @@ import com.google.firebase.storage.UploadTask;
 public class informationMarketFragment extends AppCompatActivity {
 
     ImageView uploadImage;
-    Button saveButton;
+    Button saveButton,nextButton;
     EditText uploadTopic,uploadsir,uploadNameM,uploadNameMk,locationMk;
     String imageURL;
     Uri uri;
@@ -47,6 +47,7 @@ public class informationMarketFragment extends AppCompatActivity {
         uploadNameMk = findViewById(R.id.UploadNameOfMarket);
         locationMk = findViewById(R.id.UploadLocationOfMarket);
         saveButton = findViewById(R.id.saveButton);
+        nextButton = findViewById(R.id.nextButton);
 
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
@@ -81,6 +82,14 @@ public class informationMarketFragment extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 saveData();
+            }
+        });
+
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(informationMarketFragment.this,addItem.class);
+                startActivity(intent);
             }
         });
 
@@ -132,7 +141,6 @@ public class informationMarketFragment extends AppCompatActivity {
                         if(task.isSuccessful()){
                             Toast.makeText(informationMarketFragment.this,"Saved",Toast.LENGTH_SHORT)
                                     .show();
-                            Intent intent = new Intent(informationMarketFragment.this,offerMarketFragment.class);
 
 
                         }
