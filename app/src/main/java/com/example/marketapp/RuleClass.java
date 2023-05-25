@@ -14,4 +14,10 @@ public class RuleClass {
     public RuleClass(String dataRules) {
         this.dataRules = dataRules;
     }
+
+
+    public RuleClass() {
+
+
+    }
 }
