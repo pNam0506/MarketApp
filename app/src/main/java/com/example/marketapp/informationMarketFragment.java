@@ -143,6 +143,7 @@ public class informationMarketFragment extends AppCompatActivity {
                                     .show();
 
 
+
                         }
                     }
                 }).addOnFailureListener(new OnFailureListener() {
