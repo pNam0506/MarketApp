@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
@@ -13,41 +14,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MarketApp"
         tools:targetApi="31">
-
-        <activity android:name=".beginFragment"
+        <activity
+            android:name=".UploadItem"
+            android:exported="false" />
+        <activity
+            android:name=".addItem"
+            android:exported="false" />
+        <activity
+            android:name=".beginFragment"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
         </activity>
-
-
-        <activity android:name=".informationMarketFragment"
+        <activity
+            android:name=".informationMarketFragment"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
         </activity>
-        <activity android:name=".offerMarketFragment"
-
-            >
-
-        </activity>
-
-
-
-
-
-
+        <activity android:name=".offerMarketFragment" />
     </application>
 
 </manifest>

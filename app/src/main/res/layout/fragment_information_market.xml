@@ -35,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="75dp"
+                android:layout_marginTop="50dp"
                 android:layout_marginRight="20dp"
                 android:text="ลงทะเบียน"
                 android:textColor="@color/white"
@@ -237,6 +237,17 @@
                 android:text="บันทึก"
                 android:textSize="20dp"
                 android:backgroundTint="@color/green"
+                />
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginRight="10dp"
+                android:text="ถัดไป"
+                android:textSize="20dp"
+                android:backgroundTint="@color/gray_softy"
                 />
 
 
