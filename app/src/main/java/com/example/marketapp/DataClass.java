@@ -7,6 +7,8 @@ public class DataClass {
     private String dataLocationMarket;
     private String dataImage;
 
+    private String dataRules;
+
     public String getDataSir() {
         return dataSir;
     }
@@ -26,6 +28,9 @@ public class DataClass {
     public String getDataImage() {
         return dataImage;
     }
+    public String getDataRules() {
+        return dataRules;
+    }
 
     public DataClass(String dataSir, String dataNameManager, String dataNameMarket, String dataLocationMarket, String dataImage) {
         this.dataSir = dataSir;
@@ -33,5 +38,10 @@ public class DataClass {
         this.dataNameMarket = dataNameMarket;
         this.dataLocationMarket = dataLocationMarket;
         this.dataImage = dataImage;
+    }
+
+    public DataClass(String dataRules){
+        this.dataRules = dataRules;
+
     }
 }

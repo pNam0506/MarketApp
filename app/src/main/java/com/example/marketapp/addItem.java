@@ -27,7 +27,7 @@ public class addItem extends AppCompatActivity {
     Button saveButton;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference reference;
-    
+
 
 
     @Override
@@ -46,7 +46,7 @@ public class addItem extends AppCompatActivity {
 
                 String rules = uploadRules.getText().toString();
 
-                RuleClass ruleClass = new RuleClass(rules);
+                DataClass ruleClass = new DataClass(rules);
                 reference.child(rules).setValue(ruleClass);
 
                 Toast.makeText(addItem.this,"เพิ่มเรียบร้อย",Toast.LENGTH_SHORT).show();
