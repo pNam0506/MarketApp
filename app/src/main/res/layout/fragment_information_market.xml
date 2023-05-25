@@ -71,6 +71,7 @@
             android:layout_marginTop="20dp"
             >
             <ImageView
+                android:id="@+id/Uploadproflie"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
@@ -98,7 +99,7 @@
             >
 
             <EditText
-                android:id="@+id/Mr_or_Ms"
+                android:id="@+id/UploadSir"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/white_corner"
@@ -108,7 +109,7 @@
 
                 />
             <EditText
-                android:id="@+id/NameOfManager"
+                android:id="@+id/UploadNameOfManager"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/white_corner"
@@ -153,7 +154,7 @@
             >
 
             <EditText
-                android:id="@+id/NameOfMarket"
+                android:id="@+id/UploadNameOfMarket"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/white_corner"
@@ -202,7 +203,7 @@
             >
 
             <EditText
-                android:id="@+id/LocationOfMarket"
+                android:id="@+id/UploadLocationOfMarket"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/white_corner"
@@ -226,17 +227,9 @@
             android:layout_marginTop="20dp"
             android:gravity="center"
             >
+
             <Button
-                android:layout_width="110dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:layout_marginRight="10dp"
-                android:text="เพิ่ม"
-                android:textSize="20dp"
-                android:backgroundTint="@color/orange"
-                />
-            <Button
-                android:id="@+id/saveBottom"
+                android:id="@+id/saveButton"
                 android:layout_width="110dp"
                 android:layout_height="match_parent"
                 android:gravity="center"
