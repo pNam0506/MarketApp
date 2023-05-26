@@ -1,4 +1,4 @@
-package com.example.marketapp;
+/*package com.example.marketapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -23,7 +23,7 @@ import java.util.List;
 
 public class addItem extends AppCompatActivity {
 
-    EditText uploadRules;
+    EditText uploadRules,useNameOfMk;
     Button saveButton;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference reference;
@@ -36,13 +36,14 @@ public class addItem extends AppCompatActivity {
         setContentView(R.layout.activity_add_item);
         uploadRules = findViewById(R.id.UploadRule);
         saveButton = findViewById((int)R.id.saveRulesButton);
+        useNameOfMk = findViewById((int)R.id.UploadNameOfMarket);
 
 
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 firebaseDatabase = FirebaseDatabase.getInstance();
-                reference = firebaseDatabase.getReference("rules");
+                reference = firebaseDatabase.getReference("Manager");
 
                 String rules = uploadRules.getText().toString();
 
@@ -56,4 +57,4 @@ public class addItem extends AppCompatActivity {
 
 
     }
-}
+}*/
