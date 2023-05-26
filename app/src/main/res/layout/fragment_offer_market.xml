@@ -72,7 +72,7 @@
 
             >
             <ImageView
-
+                android:id="@+id/weatherImage"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:src="@drawable/sun_svgrepo_com_1__1_"
@@ -80,6 +80,7 @@
 
                 />
             <TextView
+                android:id="@+id/weatherText"
                 android:layout_width="80dp"
                 android:layout_height="20dp"
                 android:text="อากาศ"
