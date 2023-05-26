@@ -41,7 +41,7 @@ public class informationMarketFragment extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_information_market);
 
-        uploadImage = findViewById((int)R.id.Uploadproflie);
+        uploadImage = findViewById((int)R.id.marketImage);
         uploadsir = findViewById(R.id.UploadSir);
         uploadNameM = findViewById(R.id.UploadNameOfManager);
         uploadNameMk = findViewById(R.id.UploadNameOfMarket);
@@ -61,7 +61,7 @@ public class informationMarketFragment extends AppCompatActivity {
 
                         }else{
 
-                            Toast.makeText(informationMarketFragment.this,"No Image Selected",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(informationMarketFragment.this,"กรุณาเลือกรูปโปรไฟล์ตลาด",Toast.LENGTH_SHORT).show();
 
 
                         }
@@ -132,9 +132,10 @@ public class informationMarketFragment extends AppCompatActivity {
         String nameMk = uploadNameMk.getText().toString();
         String LMK = locationMk.getText().toString();
         String rules = uploadRules.getText().toString();
+        DataClass dataClass;
 
+        dataClass = new DataClass(sir,nameM,nameMk,LMK,rules,imageURL);
 
-        DataClass dataClass = new DataClass(sir,nameM,nameMk,LMK,rules,imageURL);
 
         FirebaseDatabase.getInstance().getReference("Manager").child(nameMk)
                 .setValue(dataClass).addOnCompleteListener(new OnCompleteListener<Void>() {

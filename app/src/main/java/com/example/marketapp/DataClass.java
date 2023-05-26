@@ -44,6 +44,18 @@ public class DataClass {
         this.dataImage = dataImage;
     }
 
+    public DataClass(String dataSir, String dataNameManager, String dataNameMarket, String dataLocationMarket,String dataRules) {
+        this.dataSir = dataSir;
+        this.dataNameManager = dataNameManager;
+        this.dataNameMarket = dataNameMarket;
+        this.dataLocationMarket = dataLocationMarket;
+        this.dataRules = dataRules;
+    }
+
+    public DataClass(){
+
+    }
+
 
 
 

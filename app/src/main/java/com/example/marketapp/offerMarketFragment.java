@@ -1,6 +1,9 @@
 package com.example.marketapp;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,11 +18,23 @@ import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class offerMarketFragment extends AppCompatActivity {
+
+    RecyclerView recyclerView;
+    List<DataClass> dataList;
+    DatabaseReference databaseReference;
+    ValueEventListener eventListener;
 
 
 
@@ -28,6 +43,45 @@ public class offerMarketFragment extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_offer_market);
+
+        recyclerView = findViewById((int)R.id.recycleView);
+
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(offerMarketFragment.this,1);
+        recyclerView.setLayoutManager(gridLayoutManager);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(offerMarketFragment.this);
+        builder.setCancelable(false);
+        builder.setView(R.layout.progress_layout);
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+        dataList = new ArrayList<>();
+
+        MyAdapter adapter = new MyAdapter(offerMarketFragment.this,dataList);
+        recyclerView.setAdapter(adapter);
+
+        databaseReference = FirebaseDatabase.getInstance().getReference("Manager");
+        dialog.show();
+
+        eventListener = databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                dataList.clear();
+                for(DataSnapshot itemSnapshot : snapshot.getChildren() ){
+                    DataClass dataClass = itemSnapshot.getValue(DataClass.class);
+                    dataList.add(dataClass);
+
+                }
+                adapter.notifyDataSetChanged();
+                dialog.dismiss();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                dialog.dismiss();
+            }
+        });
+
 
         BottomNavigationView bottom = findViewById(R.id.bottomNavigationView);
         bottom.setSelectedItemId(R.id.homeBottom);

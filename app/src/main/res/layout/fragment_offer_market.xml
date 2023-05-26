@@ -35,6 +35,8 @@
 
     </com.google.android.material.card.MaterialCardView>
 
+
+
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchBar"
         android:layout_below="@+id/background_market_Layout"
@@ -143,16 +145,28 @@
 
 
     </LinearLayout>
-    <androidx.recyclerview.widget.RecyclerView
-
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/option_4"
+        android:layout_below="@+id/option_4">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
         android:layout_marginTop="20dp"
         >
 
 
     </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+    </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
@@ -164,6 +178,8 @@
         >
 
 </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
 
 
 </RelativeLayout>

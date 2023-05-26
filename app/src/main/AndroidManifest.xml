@@ -14,7 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MarketApp"
         tools:targetApi="31">
-
+        <activity
+            android:name=".detailOfMarket"
+            android:exported="false" />
         <activity
             android:name=".beginFragment"
             android:exported="true">
@@ -33,11 +35,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".offerMarketFragment"
-            android:exported="true"
-            />
-
-
+        <activity
+            android:name=".offerMarketFragment"
+            android:exported="true" />
     </application>
 
 </manifest>
