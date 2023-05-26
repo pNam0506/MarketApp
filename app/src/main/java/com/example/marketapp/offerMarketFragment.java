@@ -27,6 +27,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 public class offerMarketFragment extends AppCompatActivity {
@@ -100,9 +101,13 @@ public class offerMarketFragment extends AppCompatActivity {
         });
 
         Calendar calendar = Calendar.getInstance();
-        String currentDate = DateFormat.getDateInstance(DateFormat.SHORT).format(calendar.getTime());
+        Date date = new Date();
+        calendar.setTime(date);
+
+        String[] Days = new String[]{"จันทร์","อังคาร","พุธ","พฤหัส","ศุกร์","เสาร์","อาทิตย์"};
         TextView textDate = findViewById((int)R.id.Date_Text);
-        textDate.setText(currentDate);
+        String currentDay = Days[calendar.get(Calendar.DAY_OF_WEEK)-2];
+        textDate.setText(currentDay);
 
         TextView season = findViewById((int)R.id.season_text);
         ImageView sun = findViewById((int)R.id.summer_season);

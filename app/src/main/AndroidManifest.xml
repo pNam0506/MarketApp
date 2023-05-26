@@ -26,7 +26,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
+            android:name=".offerMarketFragment"
+            android:exported="true" />
+
+        <!--<activity
             android:name=".informationMarketFragment"
             android:exported="true">
             <intent-filter>
@@ -34,10 +39,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".offerMarketFragment"
-            android:exported="true" />
+        </activity>-->
+
     </application>
 
 </manifest>
