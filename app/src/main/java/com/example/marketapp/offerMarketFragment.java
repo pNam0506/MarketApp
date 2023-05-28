@@ -11,11 +11,14 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.DisplayMetrics;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
@@ -43,6 +46,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import cz.msebera.android.httpclient.Header;
 
@@ -70,8 +74,10 @@ public class offerMarketFragment extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
+
+        setAppLocale("th");
+
         setContentView(R.layout.fragment_offer_market);
 
         recyclerView = findViewById((int) R.id.recycleView);
@@ -133,9 +139,11 @@ public class offerMarketFragment extends AppCompatActivity {
         Date date = new Date();
         calendar.setTime(date);
 
-        String[] Days = new String[]{"จันทร์", "อังคาร", "พุธ", "พฤหัส", "ศุกร์", "เสาร์", "อาทิตย์"};
+
+
+        String[] Days = new String[]{ "เสาร์","อาทิตย์","จันทร์", "อังคาร", "พุธ", "พฤหัส", "ศุกร์" };
         TextView textDate = findViewById((int) R.id.Date_Text);
-        String currentDay = Days[calendar.get(Calendar.DAY_OF_WEEK) - 2];
+        String currentDay = Days[calendar.get(Calendar.DAY_OF_WEEK)];
         textDate.setText(currentDay);
 
         TextView season = findViewById((int) R.id.season_text);
@@ -203,111 +211,122 @@ public class offerMarketFragment extends AppCompatActivity {
 
         weather = findViewById(R.id.weatherText);
         status_weather = findViewById(R.id.weatherImage);
-
-
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        getWeatherForCurrentLocation();
 
-    }
-
-    private void getWeatherForCurrentLocation() {
-        mLocationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        locationListener = new LocationListener() {
-            @Override
-            public void onLocationChanged(@NonNull Location location) {
-                String Latitude = String.valueOf(location.getLatitude());
-                String Longitude = String.valueOf(location.getLongitude());
-
-                RequestParams params = new RequestParams();
-                params.put("lat",Latitude);
-                params.put("lon",Longitude);
-                params.put("appid",APP_ID);
-                letdoSumeNetworking(params);
-
-            }
-        };
-
-        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION},REQUEST_CODE);
-            return;
-        }
-        mLocationManager.requestLocationUpdates(Location_provider, MIN_TIME, MIN_DISTANCE, locationListener);
-
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-
-        if(requestCode==REQUEST_CODE){
-
-            if(grantResults.length>0 && grantResults[0]==PackageManager.PERMISSION_GRANTED) {
-
-                Toast.makeText(offerMarketFragment.this,"Locationget Sucsessfully",Toast.LENGTH_SHORT).show();
-                getWeatherForCurrentLocation();
-            }
-            else {
-
-                //
-            }
+        @Override
+        protected void onResume () {
+            super.onResume();
+            getWeatherForCurrentLocation();
 
         }
-    }
 
-    private void letdoSumeNetworking(RequestParams params){
+        private void getWeatherForCurrentLocation () {
+            mLocationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+            locationListener = new LocationListener() {
+                @Override
+                public void onLocationChanged(@NonNull Location location) {
+                    String Latitude = String.valueOf(location.getLatitude());
+                    String Longitude = String.valueOf(location.getLongitude());
 
-        AsyncHttpClient client = new AsyncHttpClient();
+                    RequestParams params = new RequestParams();
+                    params.put("lat", Latitude);
+                    params.put("lon", Longitude);
+                    params.put("appid", APP_ID);
+                    letdoSumeNetworking(params);
 
-        client.get(WEATHER_URL,params,new JsonHttpResponseHandler(){
+                }
+            };
 
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-
-                Toast.makeText(offerMarketFragment.this,"Data get Success",Toast.LENGTH_SHORT).show();
-
-                weatherData weatherD = weatherData.fromJson(response);
-                updateUI(weatherD);
-
-
-                //super.onSuccess(statusCode, headers, response);
+            if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                // TODO: Consider calling
+                //    ActivityCompat#requestPermissions
+                // here to request the missing permissions, and then overriding
+                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                //                                          int[] grantResults)
+                // to handle the case where the user grants the permission. See the documentation
+                // for ActivityCompat#requestPermissions for more details.
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_CODE);
+                return;
             }
-
-            @Override
-            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
-                super.onFailure(statusCode, headers, throwable, errorResponse);
-            }
-        });
-
-    }
-
-
-    public void updateUI(weatherData w){
-
-        weather.setText(w.getmWeather());
-        int resourceID = getResources().getIdentifier(w.getmImage(),"drawable",getPackageName());
-        status_weather.setImageResource(resourceID);
-
-
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        if(mLocationManager != null){
-
-            mLocationManager.removeUpdates(locationListener);
+            mLocationManager.requestLocationUpdates(Location_provider, MIN_TIME, MIN_DISTANCE, locationListener);
 
         }
-    }
+
+        @Override
+        public void onRequestPermissionsResult ( int requestCode, @NonNull String[] permissions,
+        @NonNull int[] grantResults){
+            super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+            if (requestCode == REQUEST_CODE) {
+
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    Toast.makeText(offerMarketFragment.this, "Locationget Sucsessfully", Toast.LENGTH_SHORT).show();
+                    getWeatherForCurrentLocation();
+                } else {
+
+                    //
+                }
+
+            }
+        }
+
+        private void letdoSumeNetworking (RequestParams params){
+
+            AsyncHttpClient client = new AsyncHttpClient();
+
+            client.get(WEATHER_URL, params, new JsonHttpResponseHandler() {
+
+                @Override
+                public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+
+                    Toast.makeText(offerMarketFragment.this, "Data get Success", Toast.LENGTH_SHORT).show();
+
+                    weatherData weatherD = weatherData.fromJson(response);
+                    updateUI(weatherD);
+
+
+                    //super.onSuccess(statusCode, headers, response);
+                }
+
+                @Override
+                public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                    super.onFailure(statusCode, headers, throwable, errorResponse);
+                }
+            });
+
+        }
+
+
+        public void updateUI (weatherData w){
+
+            weather.setText(w.getmWeather());
+            int resourceID = getResources().getIdentifier(w.getmImage(), "drawable", getPackageName());
+            status_weather.setImageResource(resourceID);
+
+
+        }
+
+        @Override
+        protected void onPause () {
+            super.onPause();
+            if (mLocationManager != null) {
+
+                mLocationManager.removeUpdates(locationListener);
+
+            }
+        }
+
+        public void setAppLocale(String locale){
+
+            Resources res = getResources();
+            DisplayMetrics dm = res.getDisplayMetrics();
+            Configuration conf = res.getConfiguration();
+            conf.setLocale(new Locale(locale.toLowerCase()));
+            res.updateConfiguration(conf,dm);
+
+
+        }
+
 }

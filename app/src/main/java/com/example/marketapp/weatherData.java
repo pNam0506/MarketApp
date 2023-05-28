@@ -37,7 +37,7 @@ public class weatherData {
 
         } else if (condition >= 300 && condition <= 500) {
 
-            return "lightrain";
+            return "rain_svgrepo_com_1";
 
         } else if (condition >= 500 && condition <= 600) {
 
