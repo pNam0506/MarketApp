@@ -24,6 +24,7 @@
             android:background="@color/gray"
             />
         <TextView
+            android:id="@+id/userName"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="UserName"
@@ -34,6 +35,8 @@
 
 
     </com.google.android.material.card.MaterialCardView>
+
+
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchBar"
@@ -70,7 +73,7 @@
 
             >
             <ImageView
-
+                android:id="@+id/weatherImage"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:src="@drawable/sun_svgrepo_com_1__1_"
@@ -78,6 +81,7 @@
 
                 />
             <TextView
+                android:id="@+id/weatherText"
                 android:layout_width="80dp"
                 android:layout_height="20dp"
                 android:text="อากาศ"
@@ -143,16 +147,28 @@
 
 
     </LinearLayout>
-    <androidx.recyclerview.widget.RecyclerView
-
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/option_4"
+        android:layout_below="@+id/option_4">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
         android:layout_marginTop="20dp"
         >
 
 
     </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+    </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
@@ -164,6 +180,8 @@
         >
 
 </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
 
 
 </RelativeLayout>
