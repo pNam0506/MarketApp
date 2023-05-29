@@ -3,6 +3,7 @@ package com.example.marketapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -70,6 +71,8 @@ public class offerMarketFragment extends AppCompatActivity {
 
     LocationManager mLocationManager;
     LocationListener locationListener;
+    SearchView searchView;
+    MyAdapter adapter;
 
 
     @Override
@@ -81,6 +84,8 @@ public class offerMarketFragment extends AppCompatActivity {
         setContentView(R.layout.fragment_offer_market);
 
         recyclerView = findViewById((int) R.id.recycleView);
+        searchView = findViewById(R.id.searchBar);
+        searchView.clearFocus();
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager(offerMarketFragment.this, 1);
         recyclerView.setLayoutManager(gridLayoutManager);
@@ -93,7 +98,7 @@ public class offerMarketFragment extends AppCompatActivity {
 
         dataList = new ArrayList<>();
 
-        MyAdapter adapter = new MyAdapter(offerMarketFragment.this, dataList);
+        adapter = new MyAdapter(offerMarketFragment.this, dataList);
         recyclerView.setAdapter(adapter);
 
         databaseReference = FirebaseDatabase.getInstance().getReference("Manager");
@@ -115,6 +120,19 @@ public class offerMarketFragment extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 dialog.dismiss();
+            }
+        });
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                searchList(newText);
+                return true;
             }
         });
 
@@ -326,6 +344,22 @@ public class offerMarketFragment extends AppCompatActivity {
             conf.setLocale(new Locale(locale.toLowerCase()));
             res.updateConfiguration(conf,dm);
 
+
+        }
+
+        public void searchList(String text){
+
+        ArrayList<DataClass> searchList = new ArrayList<>();
+        for(DataClass dataClass: dataList){
+            if(dataClass.getDataNameMarket().toLowerCase().contains(text.toLowerCase())){
+
+                searchList.add(dataClass);
+
+            }
+
+        }
+
+        adapter.searthDataList(searchList);
 
         }
 
