@@ -298,7 +298,7 @@
                 android:layout_marginRight="10dp"
                 android:text="บันทึก"
                 android:textSize="20dp"
-                android:backgroundTint="@color/green"
+                android:backgroundTint="@color/green_soft"
                 />
 
 

@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">MarketApp</string>
+    <string name="centrial">Central Rama 9 </string>
+    <string name="road">road</string>
+    <string name="road_RM">Rama 9 Road</string>
+    <string name="price_600">600 Bath</string>
+    <string name="price_350">350 Bath</string>
+    <string name="price_400">400 Bath</string>
+    <string name="building">City Tower</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

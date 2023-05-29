@@ -3,11 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -20,6 +18,18 @@
         android:theme="@style/Theme.MarketApp"
         tools:targetApi="31">
         <activity
+            android:name=".tuomom"
+            android:exported="false" />
+        <activity
+            android:name=".nama"
+            android:exported="false" />
+        <activity
+            android:name=".freeFeel"
+            android:exported="false" />
+        <activity
+            android:name=".night_fairs"
+            android:exported="false" />
+        <activity
             android:name=".detailOfMarket"
             android:exported="false" />
         <activity
@@ -31,25 +41,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-      <activity
+        <activity
             android:name=".informationMarketFragment"
-          android:exported="true">
-      </activity>
-
+            android:exported="true" />
         <activity
             android:name=".offerMarketFragment"
-            android:exported="false"
-            >
-        </activity>
-
-
-
-
-
-
-
+            android:exported="false" />
     </application>
 
 </manifest>
