@@ -36,18 +36,20 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".informationMarketFragment"
+            android:exported="true" />
+        <activity
+            android:name=".offerMarketFragment"
+            android:exported="false" />
+        <activity
             android:name=".night_fairs"
             android:exported="true" />
         <activity
             android:name=".nama"
             android:exported="false" />
         <activity android:name=".selectStatusFragment" />
-        <activity
-            android:name=".informationMarketFragment"
-            android:exported="true" />
-        <activity
-            android:name=".offerMarketFragment"
-            android:exported="false" />
+
+
     </application>
 
 </manifest>

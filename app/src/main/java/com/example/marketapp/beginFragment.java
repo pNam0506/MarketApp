@@ -34,7 +34,7 @@ public class beginFragment extends AppCompatActivity {
 
                 }
                finally {
-                   Intent intent = new Intent(beginFragment.this, night_fairs.class);
+                   Intent intent = new Intent(beginFragment.this, informationMarketFragment.class);
                    startActivity(intent);
                }
             }

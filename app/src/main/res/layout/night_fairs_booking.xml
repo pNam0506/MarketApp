@@ -85,8 +85,6 @@
          android:layout_margin="10dp"
          android:background="#E496F1"
          android:gravity="center"
-         android:onClick="reservedPlace"
-         android:enabled="true"
          >
       <TextView
           android:id="@+id/price_600"
@@ -428,16 +426,17 @@
 
   </LinearLayout>
 
-  <Button
-      android:id="@+id/Success"
-      android:layout_width="110dp"
-      android:layout_height="60dp"
-      android:onClick="Success"
-      android:enabled="true"
-      android:text="Success"
 
+
+
+  <EditText
+      android:layout_width="200dp"
+      android:layout_height="50dp"
+      android:layout_margin="20dp"
+   android:background="@drawable/white_corner"
+      android:hint="จองพื้นที่หมายเลข"
+      android:padding="16dp"
       />
-
 
 
 
