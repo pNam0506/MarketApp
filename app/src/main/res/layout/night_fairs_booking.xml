@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".night_fairs"
-    android:id="@+id/night_fairs"
+
     >
 
  <LinearLayout
@@ -79,13 +79,17 @@
         android:columnCount="2"
         >
      <LinearLayout
+         android:id="@+id/NF_600"
          android:layout_height="50dp"
          android:layout_width="75dp"
          android:layout_margin="10dp"
          android:background="#E496F1"
          android:gravity="center"
+         android:onClick="reservedPlace"
+         android:enabled="true"
          >
       <TextView
+          android:id="@+id/price_600"
           android:layout_width="wrap_content"
           android:layout_height="match_parent"
           android:text="@string/price_600"
@@ -132,7 +136,7 @@
           android:layout_height="20dp"
           android:layout_width="30dp"
 
-          android:nextFocusRight="10dp"
+          android:layout_marginRight="10dp"
           android:background="#FF5CE4"
           android:gravity="center"
           >
@@ -190,7 +194,7 @@
           android:layout_height="20dp"
           android:layout_width="30dp"
           android:layout_marginTop="5dp"
-          android:nextFocusRight="10dp"
+          android:layout_marginRight="10dp"
 
           android:background="#FF5CE4"
           android:gravity="center"
@@ -423,6 +427,16 @@
 
 
   </LinearLayout>
+
+  <Button
+      android:id="@+id/Success"
+      android:layout_width="110dp"
+      android:layout_height="60dp"
+      android:onClick="Success"
+      android:enabled="true"
+      android:text="Success"
+
+      />
 
 
 

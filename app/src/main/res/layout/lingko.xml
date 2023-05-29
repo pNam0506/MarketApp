@@ -135,7 +135,7 @@
 
                             android:background="#FF5CE4"
                             android:gravity="center"
-                            android:nextFocusRight="10dp">
+                            android:layout_marginRight="10dp">
 
 
                         </LinearLayout>
@@ -188,7 +188,7 @@
                             android:background="#FF5CE4"
 
                             android:gravity="center"
-                            android:nextFocusRight="10dp">
+                            android:layout_marginRight="10dp">
 
 
                         </LinearLayout>

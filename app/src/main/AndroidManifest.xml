@@ -21,13 +21,7 @@
             android:name=".tuomom"
             android:exported="false" />
         <activity
-            android:name=".nama"
-            android:exported="false" />
-        <activity
             android:name=".freeFeel"
-            android:exported="false" />
-        <activity
-            android:name=".night_fairs"
             android:exported="false" />
         <activity
             android:name=".detailOfMarket"
@@ -41,6 +35,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".night_fairs"
+            android:exported="true" />
+        <activity
+            android:name=".nama"
+            android:exported="false" />
+        <activity android:name=".selectStatusFragment" />
         <activity
             android:name=".informationMarketFragment"
             android:exported="true" />

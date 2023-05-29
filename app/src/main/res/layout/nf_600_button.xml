@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/night_fairs"
+    >
+
+    <LinearLayout
+        android:id="@+id/NF_600"
+        android:layout_height="50dp"
+        android:layout_width="75dp"
+        android:layout_margin="10dp"
+        android:background="#E496F1"
+        android:gravity="center"
+        >
+        <TextView
+            android:id="@+id/price_600"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/price_600"
+            android:gravity="center"
+            android:textColor="@color/white"
+            />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
