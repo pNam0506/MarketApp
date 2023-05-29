@@ -19,7 +19,11 @@
         <LinearLayout
             android:layout_width="50dp"
             android:layout_height="match_parent"
-            android:background="@color/gray_soft" />
+            android:background="@color/gray_soft" >
+
+
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -128,7 +132,7 @@
                                 <LinearLayout
                                     android:layout_height="20dp"
                                     android:layout_width="40dp"
-                                    android:nextFocusRight="10dp"
+                                    android:layout_marginRight="10dp"
                                     android:background="@color/green"
                                     android:gravity="center"
                                     >
@@ -186,7 +190,7 @@
                                     android:layout_height="20dp"
                                     android:layout_width="40dp"
                                     android:layout_marginTop="5dp"
-                                    android:nextFocusRight="10dp"
+                                    android:layout_marginRight="10dp"
 
                                     android:background="@color/green"
                                     android:gravity="center"
