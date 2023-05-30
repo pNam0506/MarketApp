@@ -9,6 +9,20 @@ public class DataClass {
 
     private String dataRules;
 
+    private String dataTime_Booking;
+
+    private String dataTime_Market;
+
+    public String getDataTime_Booking() {
+        return dataTime_Booking;
+    }
+
+    public String getDataTime_Market() {
+        return dataTime_Market;
+    }
+
+
+
     public String getDataRules() {return dataRules;}
 
 
@@ -35,22 +49,18 @@ public class DataClass {
 
 
 
-    public DataClass(String dataSir, String dataNameManager, String dataNameMarket, String dataLocationMarket,String dataRules, String dataImage) {
+    public DataClass(String dataSir, String dataNameManager, String dataNameMarket, String dataLocationMarket,String dataRules,String dataTimeB,String dataTimeM, String dataImage) {
         this.dataSir = dataSir;
         this.dataNameManager = dataNameManager;
         this.dataNameMarket = dataNameMarket;
         this.dataLocationMarket = dataLocationMarket;
         this.dataRules = dataRules;
         this.dataImage = dataImage;
+        this.dataTime_Market = "เวลาเปิดปิดตลาด:"+dataTimeM;
+        this.dataTime_Booking = "เวลาเปิดปิดการจอง"+dataTimeB;
+
     }
 
-    public DataClass(String dataSir, String dataNameManager, String dataNameMarket, String dataLocationMarket,String dataRules) {
-        this.dataSir = dataSir;
-        this.dataNameManager = dataNameManager;
-        this.dataNameMarket = dataNameMarket;
-        this.dataLocationMarket = dataLocationMarket;
-        this.dataRules = dataRules;
-    }
 
     public DataClass(){
 

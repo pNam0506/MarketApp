@@ -277,6 +277,107 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/timeToBooking"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            >
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/location_2955"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="เวลาเปิดปิดการจอง"
+                android:gravity="center_vertical"
+                android:textSize="20dp"
+                />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/timeBooking"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            >
+
+            <EditText
+                android:id="@+id/UploadTimeToBooking"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/white_corner"
+                android:padding="16dp"
+                android:hint="เวลาเปิดปิดการจอง"
+
+
+                />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/timeFoMarket_"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            >
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/location_2955"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="เวลาเปิดปิดการจอง"
+                android:gravity="center_vertical"
+                android:textSize="20dp"
+                />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/timeOfMarket"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            >
+
+            <EditText
+                android:id="@+id/UploadTimeOfMarket"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/white_corner"
+                android:padding="16dp"
+                android:hint="เวลาเปิดปิดตลาด"
+
+
+                />
+
+
+        </LinearLayout>
+
 
 
 
@@ -298,7 +399,7 @@
                 android:layout_marginRight="10dp"
                 android:text="บันทึก"
                 android:textSize="20dp"
-                android:backgroundTint="@color/green_soft"
+                android:backgroundTint="@color/green"
                 />
 
 

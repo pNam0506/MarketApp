@@ -48,6 +48,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
                 intent.putExtra("image",dataList.get(holder.getAdapterPosition()).getDataImage());
                 intent.putExtra("NameMk",dataList.get(holder.getAdapterPosition()).getDataNameMarket());
                 intent.putExtra("LocationMk",dataList.get(holder.getAdapterPosition()).getDataLocationMarket());
+                intent.putExtra("Rules",dataList.get(holder.getAdapterPosition()).getDataRules());
+                intent.putExtra("timeM",dataList.get(holder.getAdapterPosition()).getDataTime_Market());
+                intent.putExtra("timeB",dataList.get(holder.getAdapterPosition()).getDataTime_Booking());
 
                 context.startActivity(intent);
 

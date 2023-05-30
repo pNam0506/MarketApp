@@ -36,7 +36,7 @@
             android:layout_height="30dp"
             android:id="@+id/recNameMk"
             android:text="ชื่อตลาด"
-            android:textColor="@color/gray_softy"
+            android:textColor="@color/gray"
             android:textSize="20sp"
             android:layout_toEndOf="@+id/recImage"
             android:layout_marginTop="20dp"
