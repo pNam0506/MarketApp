@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/background_market_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/gray"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/shop_groceries_svgrepo_com"
+            android:background="@color/home"
+            />
+        <TextView
+            android:id="@+id/userNameM"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="UserName"
+            android:textSize="40dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchBar"
+        android:layout_below="@+id/background_market_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="-25dp"
+        android:background="@drawable/white_corner"
+        app:searchHintIcon="@null"
+        app:iconifiedByDefault="false"
+        app:searchIcon="@drawable/search_circle_svgrepo_com"
+        android:focusable="false"
+        app:queryHint="search..."
+
+        >
+
+
+    </androidx.appcompat.widget.SearchView>
+
+    <LinearLayout
+        android:id="@+id/option_4"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/searchBar"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+
+        >
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:gravity="center"
+
+            >
+            <ImageView
+                android:id="@+id/weatherImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/sun_svgrepo_com_1__1_"
+
+
+                />
+            <TextView
+                android:id="@+id/weatherText"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:text="อากาศ"
+                android:gravity="center"
+
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:gravity="center"
+
+            >
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/calendar_svgrepo_com__1_"
+
+
+                />
+            <TextView
+                android:id="@+id/Date_Text"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:text="วันปัจจุบัน"
+                android:gravity="center"
+
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:gravity="center"
+
+            >
+            <ImageView
+                android:id="@+id/summer_season"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/sun_svgrepo_com_1__1_"
+
+
+                />
+            <TextView
+                android:id="@+id/season_text"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:text="ฤดูกาล"
+                android:gravity="center"
+
+                />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/AddMarket"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/orange"
+            android:text="เพิ่มตลาด"
+
+            />
+
+
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/option_4">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_marginTop="20dp"
+                >
+
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationViewM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:menu="@menu/bottom_bar"
+        android:layout_alignParentBottom="true"
+        >
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+
+</RelativeLayout>

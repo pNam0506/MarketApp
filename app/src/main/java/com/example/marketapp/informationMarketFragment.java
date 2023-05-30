@@ -149,7 +149,7 @@ public class informationMarketFragment extends AppCompatActivity {
                         if(task.isSuccessful()){
                             Toast.makeText(informationMarketFragment.this,"Saved",Toast.LENGTH_SHORT)
                                     .show();
-                            Intent intent = new Intent(informationMarketFragment.this,offerMarketFragment.class);
+                            Intent intent = new Intent(informationMarketFragment.this,mainMarketFragment.class);
                             startActivity(intent);
 
 
