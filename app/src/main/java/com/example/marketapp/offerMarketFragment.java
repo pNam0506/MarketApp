@@ -146,7 +146,7 @@ public class offerMarketFragment extends AppCompatActivity {
                 overridePendingTransition(0, 0);
                 return true;
             } else if (item.getItemId() == R.id.orderBottom) {
-                startActivity(new Intent(getApplicationContext(), selectStatusFragment.class));
+                startActivity(new Intent(getApplicationContext(), OrderSeller.class));
                 overridePendingTransition(0, 0);
                 return true;
             }

@@ -28,8 +28,6 @@ public class selectStatusFragment extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_select_status);
 
-
-
         final LinearLayout sellerLayout = findViewById((int)R.id.sellerLayout);
         final LinearLayout managerLayout = findViewById((int)R.id.managerLayout);
 
@@ -75,7 +73,7 @@ public class selectStatusFragment extends AppCompatActivity {
 
                 }
                 else if (selected =="ผู้ขาย") {
-                    Intent intent = new Intent(selectStatusFragment.this, sellerFragment.class);
+                    Intent intent = new Intent(selectStatusFragment.this, offerMarketFragment.class);
 
                     startActivity(intent);
 
@@ -89,7 +87,6 @@ public class selectStatusFragment extends AppCompatActivity {
             }
         });
 
-// test Program by bombenten
 
 
     }

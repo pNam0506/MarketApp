@@ -20,6 +20,9 @@
         android:theme="@style/Theme.MarketApp"
         tools:targetApi="31">
         <activity
+            android:name=".OrderSeller"
+            android:exported="false" />
+        <activity
             android:name=".addMarket"
             android:exported="false" />
         <activity
