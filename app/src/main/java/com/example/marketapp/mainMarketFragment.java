@@ -161,7 +161,7 @@ public class mainMarketFragment extends AppCompatActivity {
         addMarket.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mainMarketFragment.this,informationMarketFragment.class);
+                Intent intent = new Intent(mainMarketFragment.this,addMarket.class);
                 startActivity(intent);
             }
         });

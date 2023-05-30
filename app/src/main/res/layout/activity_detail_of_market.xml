@@ -93,13 +93,13 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/timeB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TimeB"
-            android:textSize="15dp"
-            android:id="@+id/timeB"
-            android:textColor="@color/gray"
             android:layout_margin="20dp"
+            android:text="TimeB"
+            android:textColor="@color/gray"
+            android:textSize="15dp"
 
 
             />
@@ -110,6 +110,30 @@
             android:text="TimeM"
             android:textSize="15dp"
             android:id="@+id/timeM"
+            android:textColor="@color/gray"
+            android:layout_margin="20dp"
+
+
+            />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="phone"
+            android:textColor="@color/gray"
+            android:textSize="15dp"
+
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="15dp"
+            android:id="@+id/EmailM"
             android:textColor="@color/gray"
             android:layout_margin="20dp"
 

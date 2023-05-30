@@ -15,7 +15,7 @@ import com.bumptech.glide.Glide;
 public class detailOfMarket extends AppCompatActivity {
 
     TextView detailNameMk;
-    TextView detailRules,detailLocation,detailTimeM,detailTimeB;
+    TextView detailRules,detailLocation,detailTimeM,detailTimeB,detailphon,detailemail;
     ImageView detailImage;
 
     Button Map,direc;
@@ -33,6 +33,9 @@ public class detailOfMarket extends AppCompatActivity {
         detailRules = findViewById((int)R.id.rules);
         detailTimeM = findViewById((int)R.id.timeM);
         detailTimeB = findViewById((int)R.id.timeB);
+        detailphon = findViewById((int)R.id.phone);
+        detailemail = findViewById((int)R.id.EmailM);
+
 
         Bundle bundle = getIntent().getExtras();
         if(bundle != null){
@@ -41,6 +44,9 @@ public class detailOfMarket extends AppCompatActivity {
             detailRules.setText(bundle.getString("Rules"));
             detailTimeM.setText(bundle.getString("timeM"));
             detailTimeB.setText(bundle.getString("timeB"));
+            detailphon.setText(bundle.getString("phone"));
+            detailemail.setText(bundle.getString("email"));
+
             Glide.with(this).load(bundle.getString("image")).into(detailImage);
 
         }

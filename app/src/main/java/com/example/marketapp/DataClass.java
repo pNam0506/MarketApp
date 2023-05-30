@@ -13,6 +13,18 @@ public class DataClass {
 
     private String dataTime_Market;
 
+    private String dataphoneNumber;
+
+    private String dataEmail;
+
+    public String getDataphoneNumber() {
+        return dataphoneNumber;
+    }
+
+    public String getDataEmail() {
+        return dataEmail;
+    }
+
     public String getDataTime_Booking() {
         return dataTime_Booking;
     }
@@ -49,7 +61,7 @@ public class DataClass {
 
 
 
-    public DataClass(String dataSir, String dataNameManager, String dataNameMarket, String dataLocationMarket,String dataRules,String dataTimeB,String dataTimeM, String dataImage) {
+    public DataClass(String dataSir, String dataNameManager, String dataNameMarket, String dataLocationMarket,String dataRules,String dataTimeB,String dataTimeM,String dataphone,String dataE, String dataImage) {
         this.dataSir = dataSir;
         this.dataNameManager = dataNameManager;
         this.dataNameMarket = dataNameMarket;
@@ -58,6 +70,8 @@ public class DataClass {
         this.dataImage = dataImage;
         this.dataTime_Market = "เวลาเปิดปิดตลาด:"+dataTimeM;
         this.dataTime_Booking = "เวลาเปิดปิดการจอง"+dataTimeB;
+        this.dataphoneNumber = "เบอร์โทร:"+dataphone;
+        this.dataEmail = "อีเมล:"+ dataE;
 
     }
 

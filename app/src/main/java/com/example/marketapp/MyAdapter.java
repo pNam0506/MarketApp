@@ -52,7 +52,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
                 intent.putExtra("timeM",dataList.get(holder.getAdapterPosition()).getDataTime_Market());
                 intent.putExtra("timeB",dataList.get(holder.getAdapterPosition()).getDataTime_Booking());
                 intent.putExtra("NameMa",dataList.get(holder.getAdapterPosition()).getDataNameManager());
-
+                intent.putExtra("phone",dataList.get(holder.getAdapterPosition()).getDataphoneNumber());
+                intent.putExtra("email",dataList.get(holder.getAdapterPosition()).getDataEmail());
 
                 context.startActivity(intent);
 
