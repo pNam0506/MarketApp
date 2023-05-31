@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeBottom"
+        android:enabled="true"
+        android:title="หน้าหลัก"
+        android:icon="@drawable/icons8_home_original_64"
+    />
+
+    <item
+        android:id="@+id/orderBottom"
+        android:enabled="true"
+        android:title="รายการ"
+        android:icon="@drawable/icons8_document_original_64"
+        />
+
+
+    <item
+        android:id="@+id/messageBottom"
+        android:enabled="true"
+        android:title="ข้อความ"
+        android:icon="@drawable/icons8_speech_bubble_original_64"
+        />
+
+    <item
+        android:id="@+id/profileBottom"
+        android:enabled="true"
+        android:title="บัญชี"
+        android:icon="@drawable/profile_user_account_svgrepo_com"
+        />
+</menu>

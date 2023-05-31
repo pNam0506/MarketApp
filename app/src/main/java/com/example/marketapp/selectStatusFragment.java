@@ -1,10 +1,12 @@
 package com.example.marketapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
@@ -14,10 +16,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
+
 public class selectStatusFragment extends AppCompatActivity {
 
     private String selected = "";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,13 +73,13 @@ public class selectStatusFragment extends AppCompatActivity {
 
                 }
                 else if (selected =="ผู้ขาย") {
-                    Intent intent = new Intent(selectStatusFragment.this, sellerFragment.class);
+                    Intent intent = new Intent(selectStatusFragment.this, offerMarketFragment.class);
 
                     startActivity(intent);
 
                 }
                 else{
-                    Intent intent = new Intent(selectStatusFragment.this, managerFragment.class);
+                    Intent intent = new Intent(selectStatusFragment.this, informationMarketFragment.class);
 
                     startActivity(intent);
 
@@ -83,7 +87,6 @@ public class selectStatusFragment extends AppCompatActivity {
             }
         });
 
-// test Program by bombenten
 
 
     }

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".detailOfMarket">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            >
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                android:id="@+id/detailImage"
+                android:padding="8dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/shop_groceries_svgrepo_com"
+                android:scaleType="fitXY"
+                android:background="@drawable/white_corner"
+                android:layout_marginTop="50dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NameOfMarket"
+                    android:textSize="20dp"
+                    android:id="@+id/detailNameMk"
+                    android:textColor="@color/gray"
+                    android:layout_gravity="center"
+
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    android:textSize="15dp"
+                    android:id="@+id/detailInform"
+                    android:textColor="@color/gray"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+
+
+                    />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rules"
+                    android:textSize="15dp"
+                    android:id="@+id/rules"
+                    android:textColor="@color/gray"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/timeB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="TimeB"
+            android:textColor="@color/gray"
+            android:textSize="15dp"
+
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TimeM"
+            android:textSize="15dp"
+            android:id="@+id/timeM"
+            android:textColor="@color/gray"
+            android:layout_margin="20dp"
+
+
+            />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="phone"
+            android:textColor="@color/gray"
+            android:textSize="15dp"
+
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="15dp"
+            android:id="@+id/EmailM"
+            android:textColor="@color/gray"
+            android:layout_margin="20dp"
+
+
+            />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            >
+            <Button
+                android:id="@+id/map"
+                android:layout_marginTop="20dp"
+                android:layout_margin="20dp"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:text="Map"
+                android:backgroundTint="@color/orange"
+
+                />
+
+            <Button
+                android:id="@+id/direction"
+                android:layout_marginTop="20dp"
+                android:layout_margin="20dp"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:text="Direction"
+                android:backgroundTint="@color/green"
+
+                />
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
