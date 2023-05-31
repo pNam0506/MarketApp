@@ -7,6 +7,7 @@
     tools:context=".tuomom">
 
     <LinearLayout
+        android:id="@+id/tuomom_Layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -29,7 +30,7 @@
 
 
                 android:gravity="center"
-                android:text="Narathiwat Ratchanakarin Rd. (1)">
+                android:text="Narathiwat Ratchanakarin Rd. (1)"/>
         </LinearLayout>
 
         <LinearLayout
@@ -88,7 +89,7 @@
                                 android:layout_row="0"
                                 android:layout_column="0"
                                 android:gravity="center"
-                                android:text="4">
+                                android:text="4"/>
 
                             <LinearLayout
                                 android:layout_width="42dp"
@@ -101,7 +102,7 @@
                                     android:layout_row="0"
                                     android:layout_column="0"
                                     android:gravity="center"
-                                    android:text="8">                                 android:layout_width=&quot;wrap_content&quot;&#xA;                                    android:layout_height=&quot;wrap_content&quot;&#xA;                                    android:layout_weight=&quot;1&quot;&#xA;                                    android:text=&quot;    6&quot;                                   android:id=&amp;quot;" />
+                                    android:text="8"/>
                             </LinearLayout>
 
                             <LinearLayout
@@ -115,7 +116,9 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:text="    5"                                android:layout_width=&quot;35dp&quot;&#xA;                                android:layout_height=&quot;wrap_content&quot;&#xA;                                android:layout_row=&quot;0&quot;&#xA;                                android:layout_column=&quot;0&quot;&#xA;                                android:gravity=&quot;center&quot;&#xA;                                android:text=&quot;5&quot;>" />
+                                    android:text="5"
+                                    android:gravity="center"
+                                    />
                             </LinearLayout>
 
                             <LinearLayout
@@ -130,8 +133,7 @@
                                     android:layout_row="0"
                                     android:layout_column="0"
                                     android:gravity="center"
-                                    android:text="9">
-                                android:layout_width=&quot;35dp&quot;&#xA;                                    android:layout_height=&quot;wrap_content&quot;&#xA;                                    android:layout_row=&quot;0&quot;&#xA;                                    android:layout_column=&quot;0&quot;&#xA;                                    android:gravity=&quot;center&quot;&#xA;                                    android:text=&quot;8&quot;>" />
+                                    android:text="9"/>
                             </LinearLayout>
 
 
@@ -149,7 +151,9 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:text="    6"                                   android:id=&quot;@+id/textView&quot;&#xA;                                    android:layout_width=&quot;wrap_content&quot;&#xA;                                    android:layout_height=&quot;wrap_content&quot;&#xA;                                    android:layout_weight=&quot;1&quot;&#xA;                                    android:text=&quot;    5&quot;                                android:layout_width=&amp;quot;" />
+                                    android:text="6"
+                                    android:gravity="center"
+                                    />
                             </LinearLayout>
 
                             <LinearLayout
@@ -164,8 +168,7 @@
                                     android:layout_row="0"
                                     android:layout_column="0"
                                     android:gravity="center"
-                                    android:text="10">
-                                android:layout_width=&quot;35dp&quot;&#xA;                                    android:layout_height=&quot;wrap_content&quot;&#xA;                                    android:layout_row=&quot;0&quot;&#xA;                                    android:layout_column=&quot;0&quot;&#xA;                                    android:gravity=&quot;center&quot;&#xA;                                    android:text=&quot;8&quot;>" />
+                                    android:text="10"/>
                             </LinearLayout>
 
                             <LinearLayout
@@ -181,7 +184,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:text="    7"                                    android:id=&quot;@+id/textView2&quot;&#xA;                                    android:layout_width=&quot;wrap_content&quot;&#xA;                                    android:layout_height=&quot;wrap_content&quot;&#xA;                                    android:layout_weight=&quot;1&quot;&#xA;                                    android:text=&quot;    6&quot;                                   android:id=&amp;quot;" />
+                                    android:text="    7"    />
                             </LinearLayout>
 
                             <LinearLayout
@@ -196,8 +199,7 @@
                                     android:layout_row="0"
                                     android:layout_column="0"
                                     android:gravity="center"
-                                    android:text="11">
-                                android:layout_width=&quot;35dp&quot;&#xA;                                    android:layout_height=&quot;wrap_content&quot;&#xA;                                    android:layout_row=&quot;0&quot;&#xA;                                    android:layout_column=&quot;0&quot;&#xA;                                    android:gravity=&quot;center&quot;&#xA;                                    android:text=&quot;8&quot;>" />
+                                    android:text="11"/>
                             </LinearLayout>
 
                             <TextView
@@ -206,7 +208,7 @@
                                 android:layout_row="0"
                                 android:layout_column="0"
                                 android:gravity="center"
-                                android:text="">
+                                android:text=""/>
 
 
                         </GridLayout>
@@ -223,7 +225,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="400 bath(12)">
+                            android:text="400 bath(12)"/>
 
                     </LinearLayout>
 
@@ -237,7 +239,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="450 bath(3)">
+                            android:text="450 bath(3)"/>
 
                     </LinearLayout>
 
@@ -251,7 +253,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="400 bath(13)">
+                            android:text="400 bath(13)"/>
 
                     </LinearLayout>
 
@@ -265,7 +267,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="400 bath(14)">
+                            android:text="400 bath(14)"/>
 
                     </LinearLayout>
 
@@ -279,7 +281,7 @@
                             android:layout_width="75dp"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="450 bath  (15)">
+                            android:text="450 bath  (15)"/>
 
                     </LinearLayout>
 
@@ -294,7 +296,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="400 bath (16)">
+                            android:text="400 bath (16)"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -307,7 +309,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="400 bath (17)">
+                            android:text="400 bath (17)"/>
 
                     </LinearLayout>
 
@@ -333,7 +335,7 @@
                             android:text="seat (18)"
 
 
-                            >
+                            />
 
 
                     </LinearLayout>
@@ -348,7 +350,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="Parking(19)">
+                            android:text="Parking(19)"/>
                     </LinearLayout>
 
 
@@ -372,7 +374,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="PARKING(19)">
+                    android:text="PARKING(19)"/>
 
             </LinearLayout>
 
@@ -385,7 +387,8 @@
             android:layout_width="50dp"
             android:layout_height="match_parent"
             android:background="#E496F1"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="match_parent"
@@ -407,5 +410,39 @@
 
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/tuomom_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        >
+
+
+
+
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/white_corner"
+            android:hint="จองพื้นที่หมายเลข"
+            android:padding="5dp"
+            />
+
+        <Button
+            android:id="@+id/Success"
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:text="Success"
+            android:layout_marginLeft="20dp"
+            />
+
+
+
+    </LinearLayout>
+
 
 </RelativeLayout>

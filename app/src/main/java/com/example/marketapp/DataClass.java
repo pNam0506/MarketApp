@@ -17,6 +17,12 @@ public class DataClass {
 
     private String dataEmail;
 
+    private String dataOrder;
+
+    public String getDataOrder() {
+        return dataOrder;
+    }
+
     public String getDataphoneNumber() {
         return dataphoneNumber;
     }
@@ -61,7 +67,7 @@ public class DataClass {
 
 
 
-    public DataClass(String dataSir, String dataNameManager, String dataNameMarket, String dataLocationMarket,String dataRules,String dataTimeB,String dataTimeM,String dataphone,String dataE, String dataImage) {
+    public DataClass(String dataSir, String dataNameManager, String dataNameMarket, String dataLocationMarket,String dataRules,String dataTimeB,String dataTimeM,String dataphone,String dataE,String Order, String dataImage) {
         this.dataSir = dataSir;
         this.dataNameManager = dataNameManager;
         this.dataNameMarket = dataNameMarket;
@@ -72,6 +78,7 @@ public class DataClass {
         this.dataTime_Booking = "เวลาเปิดปิดการจอง"+dataTimeB;
         this.dataphoneNumber = "เบอร์โทร:"+dataphone;
         this.dataEmail = "อีเมล:"+ dataE;
+        this.dataOrder = "รายการของขาย:"+ Order;
 
     }
 

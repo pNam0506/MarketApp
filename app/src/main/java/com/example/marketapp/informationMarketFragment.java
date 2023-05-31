@@ -32,7 +32,7 @@ public class informationMarketFragment extends AppCompatActivity {
 
     ImageView uploadImage;
     Button saveButton;
-    EditText uploadsir,uploadNameM,uploadNameMk,locationMk,uploadRules,uploadTimeM,uploadTimeB,uploadphoneNumber,uploadEmail;
+    EditText uploadsir,uploadNameM,uploadNameMk,locationMk,uploadRules,uploadTimeM,uploadTimeB,uploadphoneNumber,uploadEmail,uploadOrder;
     String imageURL;
     Uri uri;
 
@@ -52,6 +52,7 @@ public class informationMarketFragment extends AppCompatActivity {
         uploadTimeB = findViewById(R.id.UploadTimeToBooking);
         uploadEmail = findViewById((int)R.id.UploadEmail);
         uploadphoneNumber = findViewById((int)R.id.UploadPhoneNumber);
+        uploadOrder = findViewById((int)R.id.UploadOrder);
 
 
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
@@ -141,11 +142,11 @@ public class informationMarketFragment extends AppCompatActivity {
         String tb = uploadTimeB.getText().toString();
         String ph = uploadphoneNumber.getText().toString();
         String Em = uploadEmail.getText().toString();
-
+        String Or = uploadOrder.getText().toString();
 
         DataClass dataClass;
 
-        dataClass = new DataClass(sir,nameM,nameMk,LMK,rules,tb,tm,ph,Em,imageURL);
+        dataClass = new DataClass(sir,nameM,nameMk,LMK,rules,tb,tm,ph,Em,Or,imageURL);
 
 
         FirebaseDatabase.getInstance().getReference("Manager").child(nameMk)

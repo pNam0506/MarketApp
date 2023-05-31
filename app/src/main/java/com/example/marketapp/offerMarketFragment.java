@@ -226,13 +226,7 @@ public class offerMarketFragment extends AppCompatActivity {
             sun.setImageResource(R.drawable.cold_heart_cute_svgrepo_com);
 
         }
-<<<<<<< HEAD
-    }
 
-
-    //*pgสวสัดีคับhp
-}
-=======
 
         weather = findViewById(R.id.weatherText);
         status_weather = findViewById(R.id.weatherImage);
@@ -371,4 +365,4 @@ public class offerMarketFragment extends AppCompatActivity {
         }
 
 }
->>>>>>> Nam
+

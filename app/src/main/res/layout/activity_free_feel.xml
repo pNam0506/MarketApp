@@ -9,6 +9,7 @@
 
 
     <LinearLayout
+        android:id="@+id/free_feel_Layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -59,7 +60,8 @@
                             android:layout_height="30dp"
                             android:layout_marginLeft="5dp"
                             android:background="#ff6080"
-                            android:gravity="center">
+                            android:gravity="center"
+                            android:orientation="horizontal">
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -274,7 +276,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/school"
+            android:id="@+id/bath_300"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginStart="10dp"
@@ -294,7 +296,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/school"
+            android:id="@+id/scharoen_road"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginStart="10dp"
@@ -313,32 +315,6 @@
                 android:textColor="@color/black" />
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/school"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@color/gray_soft"
-            android:gravity="center">
-
-            <TextView
-                android:layout_width="177dp"
-                android:layout_height="65dp"
-                android:gravity="center"
-                android:text="Charoenkrung Road"
-                android:textColor="@color/black" />
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="500$ (15)"
-            android:textColor="@color/black">
 
     </LinearLayout>
 
@@ -365,7 +341,6 @@
 
         </LinearLayout>
 
-    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -373,9 +348,8 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp">
-        android:layout_width="259dp"
-        android:layout_height="151dp">
+        android:layout_marginBottom="10dp"/>
+
 
     <LinearLayout
         android:layout_width="160dp"
@@ -420,7 +394,7 @@
         android:layout_width="160dp"
         android:layout_height="60dp"
         android:layout_marginStart="250dp"
-        android:layout_marginTop="210dp">
+        android:layout_marginTop="210dp"/>
 
     <LinearLayout
         android:layout_width="152dp"
@@ -456,5 +430,39 @@
 
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/free_feel_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        >
+
+
+
+
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/white_corner"
+            android:hint="จองพื้นที่หมายเลข"
+            android:padding="5dp"
+            />
+
+        <Button
+            android:id="@+id/Success"
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:text="Success"
+            android:layout_marginLeft="20dp"
+            />
+
+
+
+    </LinearLayout>
+
 
 </RelativeLayout>
