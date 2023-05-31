@@ -387,7 +387,7 @@
             android:layout_width="70dp"
             android:layout_height="44dp"
             android:layout_marginTop="10dp"
-            android:background="#ff6080"
+            android:background="#c020a0"
             android:gravity="center">
             <TextView
                 android:layout_width="match_parent"
@@ -402,7 +402,7 @@
             android:layout_height="44dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:background="#ff6080"
+            android:background="#c020a0"
             android:gravity="center">
 
             <TextView
@@ -428,7 +428,7 @@
         android:layout_marginLeft="250dp"
         android:layout_marginTop="280dp"
         android:layout_marginRight="280dp"
-        android:background="#ff6080"
+        android:background="#F1E153"
         android:gravity="center">
         <TextView
             android:layout_width="match_parent"
