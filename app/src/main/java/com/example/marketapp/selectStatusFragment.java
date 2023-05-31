@@ -73,7 +73,7 @@ public class selectStatusFragment extends AppCompatActivity {
 
                 }
                 else if (selected =="ผู้ขาย") {
-                    Intent intent = new Intent(selectStatusFragment.this, offerMarketFragment.class);
+                    Intent intent = new Intent(selectStatusFragment.this, infoseller.class);
 
                     startActivity(intent);
 
