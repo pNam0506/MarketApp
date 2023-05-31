@@ -78,6 +78,7 @@
         app:strokeColor="#EF0505" />
 
     <TextView
+
         android:layout_width="130sp"
         android:layout_height="130sp"
         android:layout_marginTop="16dp"

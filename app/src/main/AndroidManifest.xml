@@ -68,12 +68,6 @@
             android:exported="true" />
 
         <activity
-            android:name=".slip"
-            android:exported="false"
-            android:parentActivityName=".offerMarketFragment"
-            />
-
-        <activity
             android:name=".offerMarketFragment"
             android:exported="false" />
         <activity
