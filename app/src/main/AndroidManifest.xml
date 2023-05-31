@@ -19,6 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MarketApp"
         tools:targetApi="31">
+
         <activity
             android:name=".OrderSeller"
             android:exported="false" />
@@ -53,12 +54,19 @@
         <activity
             android:name=".informationMarketFragment"
             android:exported="true" />
+
+        <activity
+            android:name=".slip"
+            android:exported="false"
+            android:parentActivityName=".offerMarketFragment"
+            />
+
         <activity
             android:name=".offerMarketFragment"
             android:exported="false" />
         <activity
             android:name=".night_fairs"
-            android:exported="true" />
+            android:parentActivityName=".offerMarketFragment" />
         <activity
             android:name=".nama"
             android:exported="false" />

@@ -553,7 +553,7 @@
              />
 
          <Button
-             android:id="@+id/Success"
+             android:id="@+id/Success2"
              android:layout_width="110dp"
              android:layout_height="60dp"
              android:text="Success"

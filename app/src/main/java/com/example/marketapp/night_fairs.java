@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class night_fairs extends AppCompatActivity {
 
-    int selected = 0;
+    Button success;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -19,6 +19,16 @@ public class night_fairs extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.night_fairs_booking);
+
+        success = findViewById((int)R.id.Success2);
+
+        success.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(night_fairs.this,offerMarketFragment.class);
+                startActivity(intent);
+            }
+        });
 
 
 
