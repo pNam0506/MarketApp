@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">วางเเผนการตลาด</string>
+    <string name="centrial">เซ็นทรัลพระราม 9 </string>
+    <string name="road">ถนน</string>
+    <string name="road_RM">ถนนพระราม 9</string>
+    <string name="price_600">600 บ.</string>
+    <string name="price_350">350 บ.</string>
+    <string name="price_400">400 บ.</string>
+    <string name="building">อาคาร ซิตี้ทาวเวอร์</string>
+
+</resources>

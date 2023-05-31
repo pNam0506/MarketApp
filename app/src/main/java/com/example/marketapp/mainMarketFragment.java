@@ -1,13 +1,5 @@
 package com.example.marketapp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
-import androidx.core.app.ActivityCompat;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
@@ -18,19 +10,22 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.DisplayMetrics;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.ScaleAnimation;
+import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.core.app.ActivityCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -42,7 +37,6 @@ import com.loopj.android.http.RequestParams;
 
 import org.json.JSONObject;
 
-import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -51,7 +45,7 @@ import java.util.Locale;
 
 import cz.msebera.android.httpclient.Header;
 
-public class offerMarketFragment extends AppCompatActivity {
+public class mainMarketFragment extends AppCompatActivity {
 
     RecyclerView recyclerView;
     List<DataClass> dataList;
@@ -74,6 +68,9 @@ public class offerMarketFragment extends AppCompatActivity {
     SearchView searchView;
     MyAdapter adapter;
 
+    Button addMarket;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,16 +78,18 @@ public class offerMarketFragment extends AppCompatActivity {
 
         setAppLocale("th");
 
-        setContentView(R.layout.fragment_offer_market);
+        setContentView(R.layout.main_market);
 
         recyclerView = findViewById((int) R.id.recycleView);
         searchView = findViewById(R.id.searchBar);
         searchView.clearFocus();
 
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(offerMarketFragment.this, 1);
+
+
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(mainMarketFragment.this, 1);
         recyclerView.setLayoutManager(gridLayoutManager);
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(offerMarketFragment.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(mainMarketFragment.this);
         builder.setCancelable(false);
         builder.setView(R.layout.progress_layout);
         AlertDialog dialog = builder.create();
@@ -98,7 +97,7 @@ public class offerMarketFragment extends AppCompatActivity {
 
         dataList = new ArrayList<>();
 
-        adapter = new MyAdapter(offerMarketFragment.this, dataList);
+        adapter = new MyAdapter(mainMarketFragment.this, dataList);
         recyclerView.setAdapter(adapter);
 
         databaseReference = FirebaseDatabase.getInstance().getReference("Manager");
@@ -137,16 +136,16 @@ public class offerMarketFragment extends AppCompatActivity {
         });
 
 
-        BottomNavigationView bottom = findViewById(R.id.bottomNavigationView);
+        BottomNavigationView bottom = findViewById((int)R.id.bottomNavigationViewM);
         bottom.setSelectedItemId(R.id.homeBottom);
 
         bottom.setOnItemSelectedListener(item -> {
             if (item.getItemId() == R.id.homeBottom) {
-                startActivity(new Intent(getApplicationContext(), offerMarketFragment.class));
+                startActivity(new Intent(getApplicationContext(), mainMarketFragment.class));
                 overridePendingTransition(0, 0);
                 return true;
             } else if (item.getItemId() == R.id.orderBottom) {
-                startActivity(new Intent(getApplicationContext(), OrderSeller.class));
+                startActivity(new Intent(getApplicationContext(), orderManager.class));
                 overridePendingTransition(0, 0);
                 return true;
             }
@@ -156,6 +155,17 @@ public class offerMarketFragment extends AppCompatActivity {
         Calendar calendar = Calendar.getInstance();
         Date date = new Date();
         calendar.setTime(date);
+
+        addMarket = findViewById(R.id.AddMarket);
+
+        addMarket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mainMarketFragment.this,addMarket.class);
+                startActivity(intent);
+            }
+        });
+
 
 
 
@@ -256,7 +266,7 @@ public class offerMarketFragment extends AppCompatActivity {
                 }
             };
 
-            if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                 // TODO: Consider calling
                 //    ActivityCompat#requestPermissions
                 // here to request the missing permissions, and then overriding
@@ -280,7 +290,7 @@ public class offerMarketFragment extends AppCompatActivity {
 
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
-                    Toast.makeText(offerMarketFragment.this, "Locationget Sucsessfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mainMarketFragment.this, "Locationget Sucsessfully", Toast.LENGTH_SHORT).show();
                     getWeatherForCurrentLocation();
                 } else {
 
@@ -299,7 +309,7 @@ public class offerMarketFragment extends AppCompatActivity {
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
 
-                    Toast.makeText(offerMarketFragment.this, "Data get Success", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mainMarketFragment.this, "Data get Success", Toast.LENGTH_SHORT).show();
 
                     weatherData weatherD = weatherData.fromJson(response);
                     updateUI(weatherD);

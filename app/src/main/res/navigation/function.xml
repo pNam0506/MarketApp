@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/function"
+    app:startDestination="@id/offerMarketFragment">
+
+    <activity
+        android:id="@+id/offerMarketFragment"
+        android:name="com.example.marketapp.offerMarketFragment"
+        android:label="fragment_offer_market"
+        tools:layout="@layout/fragment_offer_market" />
+    <fragment
+        android:id="@+id/orderFragment"
+        android:name="com.example.marketapp.orderFragment"
+        android:label="fragment_order"
+        tools:layout="@layout/fragment_order" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.marketapp.profileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.marketapp.homeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+
+
+</navigation>
