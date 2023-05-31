@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".offerMarketFragment"
-    android:id="@+id/offerMarket">
-
-
-
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/background_market_Layout"
@@ -20,18 +14,16 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/market_background"
-            android:background="@color/gray"
+            android:src="@drawable/shop_groceries_svgrepo_com"
+            android:background="@color/home"
             />
         <TextView
-            android:id="@+id/userName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ภัคจิราณัฐ "
+            android:id="@+id/userNameM"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="UserName"
             android:textSize="40dp"
-            android:layout_margin="20dp"
             android:textColor="@color/white"
-            android:background="@color/gray"
             android:textStyle="bold"
             />
 
@@ -146,6 +138,15 @@
 
         </LinearLayout>
 
+        <Button
+            android:id="@+id/AddMarket"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/orange"
+            android:text="เพิ่มตลาด"
+
+            />
+
 
 
     </LinearLayout>
@@ -160,20 +161,21 @@
             android:layout_height="match_parent">
 
             <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycleView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+                android:id="@+id/recycleView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
 
-        android:layout_marginTop="20dp"
-        >
+                android:layout_marginTop="20dp"
+                >
 
 
-    </androidx.recyclerview.widget.RecyclerView>
+            </androidx.recyclerview.widget.RecyclerView>
         </LinearLayout>
     </ScrollView>
 
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
+        android:id="@+id/bottomNavigationViewM"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
@@ -181,8 +183,7 @@
         android:layout_alignParentBottom="true"
         >
 
-</com.google.android.material.bottomnavigation.BottomNavigationView>
-
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
 

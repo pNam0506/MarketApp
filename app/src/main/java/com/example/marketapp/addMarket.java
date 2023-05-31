@@ -1,6 +1,5 @@
 package com.example.marketapp;
 
-
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
@@ -28,7 +27,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-public class informationMarketFragment extends AppCompatActivity {
+public class addMarket extends AppCompatActivity {
 
     ImageView uploadImage;
     Button saveButton;
@@ -39,20 +38,19 @@ public class informationMarketFragment extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_information_market);
+        setContentView(R.layout.activity_add_market);
 
         uploadImage = findViewById((int)R.id.marketImage);
-        uploadsir = findViewById(R.id.UploadSir);
-        uploadNameM = findViewById(R.id.UploadNameOfManager);
-        uploadNameMk = findViewById(R.id.UploadNameOfMarket);
-        locationMk = findViewById(R.id.UploadLocationOfMarket);
-        saveButton = findViewById(R.id.saveButton);
-        uploadRules = findViewById(R.id.UploadRule);
-        uploadTimeM = findViewById(R.id.UploadTimeOfMarket);
-        uploadTimeB = findViewById(R.id.UploadTimeToBooking);
+        uploadsir = findViewById((int)R.id.UploadSir);
+        uploadNameM = findViewById((int)R.id.UploadNameOfManager);
+        uploadNameMk = findViewById((int)R.id.UploadNameOfMarket);
+        locationMk = findViewById((int)R.id.UploadLocationOfMarket);
+        saveButton = findViewById((int)R.id.saveButton);
+        uploadRules = findViewById((int)R.id.UploadRule);
+        uploadTimeM = findViewById((int)R.id.UploadTimeOfMarket);
+        uploadTimeB = findViewById((int)R.id.UploadTimeToBooking);
         uploadEmail = findViewById((int)R.id.UploadEmail);
         uploadphoneNumber = findViewById((int)R.id.UploadPhoneNumber);
-
 
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
@@ -66,7 +64,7 @@ public class informationMarketFragment extends AppCompatActivity {
 
                         }else{
 
-                            Toast.makeText(informationMarketFragment.this,"กรุณาเลือกรูปโปรไฟล์ตลาด",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(addMarket.this,"กรุณาเลือกรูปโปรไฟล์ตลาด",Toast.LENGTH_SHORT).show();
 
 
                         }
@@ -105,7 +103,7 @@ public class informationMarketFragment extends AppCompatActivity {
         StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("Android Image")
                 .child(uri.getLastPathSegment());
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(informationMarketFragment.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(addMarket.this);
         builder.setCancelable(false);
         builder.setView(R.layout.progress_layout);
         AlertDialog dialog = builder.create();
@@ -153,9 +151,9 @@ public class informationMarketFragment extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()){
-                            Toast.makeText(informationMarketFragment.this,"Saved",Toast.LENGTH_SHORT)
+                            Toast.makeText(addMarket.this,"Saved",Toast.LENGTH_SHORT)
                                     .show();
-                            Intent intent = new Intent(informationMarketFragment.this,mainMarketFragment.class);
+                            Intent intent = new Intent(addMarket.this,mainMarketFragment.class);
                             startActivity(intent);
 
 
@@ -165,12 +163,13 @@ public class informationMarketFragment extends AppCompatActivity {
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(informationMarketFragment.this,e.getMessage().toString(), Toast.LENGTH_SHORT)
+                        Toast.makeText(addMarket.this,e.getMessage().toString(), Toast.LENGTH_SHORT)
                                 .show();
                     }
                 });
 
 
-    }
-}
 
+    }
+
+}

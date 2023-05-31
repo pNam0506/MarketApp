@@ -81,10 +81,15 @@
          android:layout_height="50dp"
          android:layout_margin="10dp"
          android:background="#E496F1"
+<<<<<<< HEAD
          android:enabled="true"
          android:gravity="center"
          android:onClick="reservedPlace">
 
+=======
+         android:gravity="center"
+         >
+>>>>>>> Nam
       <TextView
           android:layout_width="match_parent"
           android:layout_height="match_parent"
@@ -490,6 +495,7 @@
 
   </LinearLayout>
 
+<<<<<<< HEAD
   <Button
       android:id="@+id/Success"
       android:layout_width="110dp"
@@ -497,10 +503,30 @@
       android:enabled="true"
       android:onClick="Success"
       android:text="Success"
+=======
+>>>>>>> Nam
 
+
+
+  <EditText
+      android:layout_width="200dp"
+      android:layout_height="50dp"
+      android:layout_margin="20dp"
+   android:background="@drawable/white_corner"
+      android:hint="จองพื้นที่หมายเลข"
+      android:padding="16dp"
       />
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+>>>>>>> Nam
  </LinearLayout>
 
 

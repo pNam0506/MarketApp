@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
@@ -47,6 +48,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
                 intent.putExtra("image",dataList.get(holder.getAdapterPosition()).getDataImage());
                 intent.putExtra("NameMk",dataList.get(holder.getAdapterPosition()).getDataNameMarket());
                 intent.putExtra("LocationMk",dataList.get(holder.getAdapterPosition()).getDataLocationMarket());
+                intent.putExtra("Rules",dataList.get(holder.getAdapterPosition()).getDataRules());
+                intent.putExtra("timeM",dataList.get(holder.getAdapterPosition()).getDataTime_Market());
+                intent.putExtra("timeB",dataList.get(holder.getAdapterPosition()).getDataTime_Booking());
+                intent.putExtra("NameMa",dataList.get(holder.getAdapterPosition()).getDataNameManager());
+                intent.putExtra("phone",dataList.get(holder.getAdapterPosition()).getDataphoneNumber());
+                intent.putExtra("email",dataList.get(holder.getAdapterPosition()).getDataEmail());
 
                 context.startActivity(intent);
 
@@ -57,6 +64,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     @Override
     public int getItemCount() {
         return dataList.size();
+    }
+
+    public void searthDataList(ArrayList<DataClass> searchList){
+
+        dataList = searchList;
+        notifyDataSetChanged();
+
     }
 }
 

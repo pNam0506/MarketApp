@@ -28,23 +28,6 @@ public class selectStatusFragment extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_select_status);
 
-        BottomNavigationView bottom = findViewById(R.id.statusNavigationView);
-        bottom.setSelectedItemId(R.id.orderBottom);
-
-        bottom.setOnItemSelectedListener(item -> {
-            if (item.getItemId() == R.id.homeBottom) {
-                startActivity(new Intent(getApplicationContext(), offerMarketFragment.class));
-                overridePendingTransition(0,0);
-                return true;
-            } else if (item.getItemId() == R.id.orderBottom) {
-                startActivity(new Intent(getApplicationContext(), selectStatusFragment.class));
-                overridePendingTransition(0,0);
-                return true;
-            }
-            return false;
-        });
-
-
         final LinearLayout sellerLayout = findViewById((int)R.id.sellerLayout);
         final LinearLayout managerLayout = findViewById((int)R.id.managerLayout);
 
@@ -90,13 +73,13 @@ public class selectStatusFragment extends AppCompatActivity {
 
                 }
                 else if (selected =="ผู้ขาย") {
-                    Intent intent = new Intent(selectStatusFragment.this, sellerFragment.class);
+                    Intent intent = new Intent(selectStatusFragment.this, offerMarketFragment.class);
 
                     startActivity(intent);
 
                 }
                 else{
-                    Intent intent = new Intent(selectStatusFragment.this, managerFragment.class);
+                    Intent intent = new Intent(selectStatusFragment.this, informationMarketFragment.class);
 
                     startActivity(intent);
 
@@ -104,7 +87,6 @@ public class selectStatusFragment extends AppCompatActivity {
             }
         });
 
-// test Program by bombenten
 
 
     }
