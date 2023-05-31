@@ -27,7 +27,7 @@ public class infoseller extends AppCompatActivity {
         phone = (EditText) findViewById(R.id.phone);
         product = (EditText) findViewById(R.id.product);
         save = (Button) findViewById(R.id.save);
-        Intent intent = new Intent(this, profile.class);
+
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +38,7 @@ public class infoseller extends AppCompatActivity {
                 Sphone = phone.getText().toString();
                 Sproduct = product.getText().toString();
                 Toast.makeText(infoseller.this,"บันทึกข้อมูลเรียบร้อย",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(infoseller.this, offerMarketFragment.class);
                 startActivity(intent);
 
             }

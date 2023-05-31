@@ -59,13 +59,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".mainMarketFragment"
-            android:exported="true" />
-        <activity android:name=".selectStatusFragment" />
+
+        <activity android:name=".selectStatusFragment"
+            android:exported="false"
+            />
+
         <activity
             android:name=".informationMarketFragment"
             android:exported="true" />
+
+        <activity
+            android:name=".mainMarketFragment"
+            android:exported="true" />
+
 
         <activity
             android:name=".offerMarketFragment"

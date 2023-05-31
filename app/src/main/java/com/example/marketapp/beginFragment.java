@@ -34,7 +34,7 @@ public class beginFragment extends AppCompatActivity {
 
                 }
                finally {
-                   Intent intent = new Intent(beginFragment.this, Login.class);
+                   Intent intent = new Intent(beginFragment.this, mainMarketFragment.class);
                    startActivity(intent);
                }
             }
