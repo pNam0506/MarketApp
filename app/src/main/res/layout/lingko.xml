@@ -11,77 +11,112 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/school"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:id="@+id/school"
-            android:background="@color/gray_soft"
             android:layout_margin="10dp"
+            android:background="@color/gray_soft"
             android:gravity="center"
 
             >
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/centrial"
-                android:textSize="25dp"
-                android:textColor="@color/white"
                 android:layout_gravity="center"
+                android:text="phetkasem rd."
+                android:textColor="@color/black"
+                android:textSize="25dp"
 
                 />
-
 
 
         </LinearLayout>
 
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            >
+            android:layout_margin="10dp">
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
-
-
+                android:orientation="vertical">
 
 
                 <LinearLayout
                     android:layout_width="180dp"
                     android:layout_height="110dp"
-                    android:background="#FF5CE4"
-                    />
+                    android:background="#ff6020">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="DINING AREA"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="10dp"
-                    android:background="@color/profile"
-                    />
+                    android:background="#F1E153">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="400 bath (1)"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="10dp"
-                    android:background="#F1E153"
-                    />
+                    android:background="#F1E153">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="350 bath (2)"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="10dp"
-                    android:background="#F1E153"
-                    />
+                    android:background="#F1E153">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="350 bath (3)"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="10dp"
-                    android:background="#F1E153"
-                    />
+                    android:background="#ff40c0">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="350 bath (4)"
+                        android:textColor="@color/black" />
+                </LinearLayout>
 
 
             </LinearLayout>
@@ -89,8 +124,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_marginLeft="25dp"
+                android:orientation="vertical"
 
                 >
 
@@ -98,28 +133,24 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="110dp"
-                    android:background="#FF5CE4"
-                    android:gravity="center"
-                    >
+                    android:background="#4080ff"
+                    android:gravity="center">
+
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/price_350"
+                        android:layout_height="match_parent"
                         android:gravity="center"
-                        android:textColor="@color/white"
-                        />
-
+                        android:text="PARKING"
+                        android:textColor="@color/black" />
 
 
                 </LinearLayout>
 
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:layout_gravity="center"
-                    >
+                    android:layout_marginTop="10dp">
 
                     <GridLayout
                         android:layout_width="match_parent"
@@ -133,10 +164,30 @@
                             android:layout_width="30dp"
                             android:layout_height="20dp"
 
-                            android:background="#FF5CE4"
+                            android:background="#F1E153"
                             android:gravity="center"
-                            android:nextFocusRight="10dp">
+                            android:layout_marginRight="10dp">
 
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="5"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="30dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="#F1E153"
+                            android:gravity="center">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="7"
+                                android:textColor="@color/black" />
 
                         </LinearLayout>
 
@@ -144,30 +195,32 @@
                             android:layout_width="30dp"
                             android:layout_height="20dp"
                             android:layout_marginLeft="5dp"
-                            android:background="#FF5CE4"
+                            android:background="#F1E153"
                             android:gravity="center">
-
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="9"
+                                android:textColor="@color/black" />
 
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="30dp"
                             android:layout_height="20dp"
+                            android:layout_row="0"
+                            android:layout_column="3"
                             android:layout_marginLeft="5dp"
-                            android:background="#FF5CE4"
+                            android:background="#F1E153"
                             android:gravity="center">
 
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="30dp"
-                            android:layout_height="20dp"
-                            android:layout_marginLeft="5dp"
-                            android:background="#FF5CE4"
-                            android:gravity="center">
-
-
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="11"
+                                android:textColor="@color/black" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -175,32 +228,31 @@
                             android:layout_height="20dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
-                            android:background="#FF5CE4"
+                            android:background="#F1E153"
                             android:gravity="center">
 
-
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="13"
+                                android:textColor="@color/black" />
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="30dp"
                             android:layout_height="20dp"
                             android:layout_marginTop="5dp"
-                            android:background="#FF5CE4"
+                            android:background="#F1E153"
 
                             android:gravity="center"
-                            android:nextFocusRight="10dp">
-
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="30dp"
-                            android:layout_height="20dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginTop="5dp"
-                            android:background="#FF5CE4"
-                            android:gravity="center">
-
+                            android:layout_marginRight="10dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="6"
+                                android:textColor="@color/black" />
 
                         </LinearLayout>
 
@@ -209,9 +261,31 @@
                             android:layout_height="20dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="5dp"
-                            android:background="#FF5CE4"
+                            android:background="#F1E153"
                             android:gravity="center">
 
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="8"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="30dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="#F1E153"
+                            android:gravity="center">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="10"
+                                android:textColor="@color/black" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -220,10 +294,15 @@
                             android:layout_marginLeft="5dp"
 
                             android:layout_marginTop="5dp"
-                            android:background="#FF5CE4"
+                            android:background="#F1E153"
                             android:gravity="center">
 
-
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="12"
+                                android:textColor="@color/black" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -232,10 +311,15 @@
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="5dp"
                             android:layout_marginRight="5dp"
-                            android:background="#FF5CE4"
+                            android:background="#F1E153"
                             android:gravity="center">
 
-
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="14"
+                                android:textColor="@color/black" />
                         </LinearLayout>
 
 
@@ -243,68 +327,54 @@
 
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="10dp"
                     android:background="#F1E153"
-                    android:gravity="center"
-                    >
+                    android:gravity="center">
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/price_350"
+                        android:layout_height="match_parent"
                         android:gravity="center"
-                        android:textColor="@color/white"
-                        />
-
+                        android:text="15"
+                        android:textColor="@color/black" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="10dp"
                     android:background="#F1E153"
-                    android:gravity="center"
-                    >
+                    android:gravity="center">
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/price_350"
+                        android:layout_height="match_parent"
                         android:gravity="center"
-                        android:textColor="@color/white"
-                        />
-
+                        android:text="16"
+                        android:textColor="@color/black" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="10dp"
-                    android:background="#F1E153"
-                    android:gravity="center"
-                    >
+                    android:background="#ff40c0"
+                    android:gravity="center">
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/price_350"
+                        android:layout_height="match_parent"
                         android:gravity="center"
-                        android:textColor="@color/white"
-                        />
-
+                        android:text="17"
+                        android:textColor="@color/black" />
                 </LinearLayout>
 
 
             </LinearLayout>
 
 
-
         </LinearLayout>
-
-
-
-
-
-
-
 
 
     </LinearLayout>

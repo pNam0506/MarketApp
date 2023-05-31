@@ -34,11 +34,11 @@ public class beginFragment extends AppCompatActivity {
 
                 }
                finally {
-                   Intent intent = new Intent(beginFragment.this, informationMarketFragment.class);
+                   Intent intent = new Intent(beginFragment.this, night_fairs.class);
                    startActivity(intent);
                }
             }
 
         };thread.start();
     }
-}
+}//จบๆๆๆ +งมอีกสามชม หฟมกแยงนฟำพ่รเพกะนย

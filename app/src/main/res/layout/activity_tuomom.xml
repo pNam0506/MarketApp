@@ -18,9 +18,19 @@
         >
 
         <LinearLayout
-            android:layout_width="50dp"
+            android:layout_width="36dp"
             android:layout_height="match_parent"
-            android:background="@color/gray_soft" />
+            android:background="@color/gray_soft"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+
+                android:gravity="center"
+                android:text="Narathiwat Ratchanakarin Rd. (1)">
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -40,11 +50,17 @@
                     android:rowCount="3">
 
                     <LinearLayout
-                        android:layout_width="70dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         android:background="#FDF078">
 
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="450 bath (2)">
 
+                        </TextView>
 
 
                     </LinearLayout>
@@ -66,22 +82,59 @@
                                 android:layout_marginRight="5dp"
                                 android:background="#FDF078" />
 
+                            <TextView
+                                android:layout_width="35dp"
+                                android:layout_height="wrap_content"
+                                android:layout_row="0"
+                                android:layout_column="0"
+                                android:gravity="center"
+                                android:text="4">
+
                             <LinearLayout
                                 android:layout_width="42dp"
                                 android:layout_height="20dp"
-                                android:background="#FDF078" />
+                                android:background="#FDF078" >
+
+                                <TextView
+                                    android:layout_width="35dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_row="0"
+                                    android:layout_column="0"
+                                    android:gravity="center"
+                                    android:text="8">                                 android:layout_width=&quot;wrap_content&quot;&#xA;                                    android:layout_height=&quot;wrap_content&quot;&#xA;                                    android:layout_weight=&quot;1&quot;&#xA;                                    android:text=&quot;    6&quot;                                   android:id=&amp;quot;" />
+                            </LinearLayout>
 
                             <LinearLayout
                                 android:layout_width="35dp"
                                 android:layout_height="20dp"
                                 android:layout_marginTop="5dp"
-                                android:background="#FDF078" />
+                                android:background="#FDF078" >
+
+                                <TextView
+                                    android:id="@+id/textView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="    5"                                android:layout_width=&quot;35dp&quot;&#xA;                                android:layout_height=&quot;wrap_content&quot;&#xA;                                android:layout_row=&quot;0&quot;&#xA;                                android:layout_column=&quot;0&quot;&#xA;                                android:gravity=&quot;center&quot;&#xA;                                android:text=&quot;5&quot;>" />
+                            </LinearLayout>
 
                             <LinearLayout
                                 android:layout_width="35dp"
                                 android:layout_height="20dp"
                                 android:layout_marginTop="5dp"
-                                android:background="#FDF078" />
+                                android:background="#FDF078">
+
+                                <TextView
+                                    android:layout_width="35dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_row="0"
+                                    android:layout_column="0"
+                                    android:gravity="center"
+                                    android:text="9">
+                                android:layout_width=&quot;35dp&quot;&#xA;                                    android:layout_height=&quot;wrap_content&quot;&#xA;                                    android:layout_row=&quot;0&quot;&#xA;                                    android:layout_column=&quot;0&quot;&#xA;                                    android:gravity=&quot;center&quot;&#xA;                                    android:text=&quot;8&quot;>" />
+                            </LinearLayout>
+
+
 
                             <LinearLayout
                                 android:layout_width="35dp"
@@ -89,7 +142,31 @@
                                 android:layout_marginTop="5dp"
                                 android:background="#FDF078"
 
-                                />
+                                >
+
+                                <TextView
+                                    android:id="@+id/textView2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="    6"                                   android:id=&quot;@+id/textView&quot;&#xA;                                    android:layout_width=&quot;wrap_content&quot;&#xA;                                    android:layout_height=&quot;wrap_content&quot;&#xA;                                    android:layout_weight=&quot;1&quot;&#xA;                                    android:text=&quot;    5&quot;                                android:layout_width=&amp;quot;" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="35dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="5dp"
+                                android:background="#FDF078"
+                                >
+                                <TextView
+                                    android:layout_width="35dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_row="0"
+                                    android:layout_column="0"
+                                    android:gravity="center"
+                                    android:text="10">
+                                android:layout_width=&quot;35dp&quot;&#xA;                                    android:layout_height=&quot;wrap_content&quot;&#xA;                                    android:layout_row=&quot;0&quot;&#xA;                                    android:layout_column=&quot;0&quot;&#xA;                                    android:gravity=&quot;center&quot;&#xA;                                    android:text=&quot;8&quot;>" />
+                            </LinearLayout>
 
                             <LinearLayout
                                 android:layout_width="35dp"
@@ -97,24 +174,39 @@
                                 android:layout_marginTop="5dp"
                                 android:background="#FDF078"
 
+                                >
 
-                                />
+                                <TextView
+                                    android:id="@+id/textView3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="    7"                                    android:id=&quot;@+id/textView2&quot;&#xA;                                    android:layout_width=&quot;wrap_content&quot;&#xA;                                    android:layout_height=&quot;wrap_content&quot;&#xA;                                    android:layout_weight=&quot;1&quot;&#xA;                                    android:text=&quot;    6&quot;                                   android:id=&amp;quot;" />
+                            </LinearLayout>
 
                             <LinearLayout
                                 android:layout_width="35dp"
                                 android:layout_height="20dp"
                                 android:layout_marginTop="5dp"
                                 android:background="#FDF078"
+                                >
+                                <TextView
+                                    android:layout_width="35dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_row="0"
+                                    android:layout_column="0"
+                                    android:gravity="center"
+                                    android:text="11">
+                                android:layout_width=&quot;35dp&quot;&#xA;                                    android:layout_height=&quot;wrap_content&quot;&#xA;                                    android:layout_row=&quot;0&quot;&#xA;                                    android:layout_column=&quot;0&quot;&#xA;                                    android:gravity=&quot;center&quot;&#xA;                                    android:text=&quot;8&quot;>" />
+                            </LinearLayout>
 
-                                />
-
-                            <LinearLayout
-                                android:layout_width="35dp"
-                                android:layout_height="20dp"
-                                android:layout_marginTop="5dp"
-                                android:background="#FDF078"
-
-                                />
+                            <TextView
+                                android:layout_width="26dp"
+                                android:layout_height="4dp"
+                                android:layout_row="0"
+                                android:layout_column="0"
+                                android:gravity="center"
+                                android:text="">
 
 
                         </GridLayout>
@@ -127,45 +219,25 @@
                         android:layout_height="100dp"
                         android:layout_marginLeft="10dp"
                         android:background="#FDF078">
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="70dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="10dp"
-                        android:background="#FDF078">
-
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="400 bath(12)">
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="70dp"
-                        android:layout_height="100dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:background="#FDF078">
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="70dp"
-                        android:layout_height="100dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:background="#FDF078">
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="70dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         android:layout_marginTop="10dp"
                         android:background="#FDF078">
 
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="450 bath(3)">
 
                     </LinearLayout>
 
@@ -175,7 +247,11 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
                         android:background="#FDF078">
-
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="400 bath(13)">
 
                     </LinearLayout>
 
@@ -185,7 +261,53 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
                         android:background="#FDF078">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="400 bath(14)">
 
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#80ff00">
+
+                        <TextView
+                            android:layout_width="75dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="450 bath  (15)">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#ff00a0">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="400 bath (16)">
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#ff00a0">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="400 bath (17)">
 
                     </LinearLayout>
 
@@ -201,25 +323,32 @@
                     <LinearLayout
                         android:layout_width="50dp"
                         android:layout_height="210dp"
-                        android:background="@color/green"
+                        android:background="#ff8020"
                         >
+
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="seat (18)"
 
 
-                        </TextView>
+                            >
+
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="50dp"
-                        android:layout_height="110dp"
+                        android:layout_height="99dp"
                         android:layout_marginTop="10dp"
-                        android:background="@color/orange"
-                        >
+                        android:background="#40c0ff">
 
-
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Parking(19)">
                     </LinearLayout>
 
 
@@ -235,11 +364,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
-                android:background="@color/orange"
+                android:background="#40c0ff"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 >
-
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="PARKING(19)">
 
             </LinearLayout>
 
@@ -257,12 +390,15 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/building"
                 android:gravity="center"
+                android:text="City tower (20)">
 
 
+            </TextView>
 
-                >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
 
             </TextView>
