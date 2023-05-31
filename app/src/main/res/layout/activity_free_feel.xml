@@ -430,9 +430,52 @@
 
 
     </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Order_det"
+        android:layout_below="@+id/free_feel_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="1.อาหาร"
+            android:textColor="#FFC107"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="2.ของใช้"
+            android:textColor="#E91E7D"
+            android:layout_marginLeft="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="3.ของใช้"
+            android:textColor="#9C27B0"
+            android:layout_marginLeft="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="3.ของใช้"
+            android:textColor="#8BC34A"
+            android:layout_marginLeft="10dp"
+            />
+
+
+    </LinearLayout>
+
+
 
     <LinearLayout
-        android:layout_below="@+id/free_feel_Layout"
+        android:layout_below="@+id/Order_det"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

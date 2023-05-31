@@ -412,6 +412,43 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/Order_det"
+        android:layout_below="@+id/tuomom_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="1.อาหาร"
+            android:textColor="#FFC107"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="2.ของใช้"
+            android:textColor="#F436AE"
+            android:layout_marginLeft="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="3.ต้นไม้"
+            android:textColor="#4CAF50"
+            android:layout_marginLeft="10dp"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
         android:layout_below="@+id/tuomom_Layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
