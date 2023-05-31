@@ -27,6 +27,12 @@ public class orderManager extends AppCompatActivity {
                 overridePendingTransition(0, 0);
                 return true;
             }
+
+            else if (item.getItemId() == R.id.profileBottom) {
+                startActivity(new Intent(getApplicationContext(), profileM.class));
+                overridePendingTransition(0, 0);
+                return true;
+            }
             return false;
         });
     }

@@ -28,6 +28,11 @@ public class OrderSeller extends AppCompatActivity {
                 overridePendingTransition(0, 0);
                 return true;
             }
+            else if (item.getItemId() == R.id.profileBottom) {
+                startActivity(new Intent(getApplicationContext(), profile.class));
+                overridePendingTransition(0, 0);
+                return true;
+            }
             return false;
         });
     }
