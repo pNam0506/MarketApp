@@ -19,9 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MarketApp"
         tools:targetApi="31">
-        <activity
-            android:name=".payBill"
-            android:exported="false" />
+
         <activity
             android:name=".profileM"
             android:exported="false" />
@@ -64,15 +62,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".selectStatusFragment"
-            android:exported="false" />
+
+        <activity android:name=".selectStatusFragment"
+            android:exported="false"
+            />
+
         <activity
             android:name=".informationMarketFragment"
             android:exported="true" />
+
         <activity
             android:name=".mainMarketFragment"
             android:exported="true" />
+
+
         <activity
             android:name=".offerMarketFragment"
             android:exported="false" />
