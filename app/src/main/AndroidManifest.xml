@@ -85,6 +85,10 @@
         <activity
             android:name=".nama"
             android:exported="false" />
+
+        <activity android:name=".slip"
+            android:exported="false"
+            />
     </application>
 
 </manifest>

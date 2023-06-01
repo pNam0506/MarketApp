@@ -25,7 +25,7 @@ public class night_fairs extends AppCompatActivity {
         success.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(night_fairs.this,offerMarketFragment.class);
+                Intent intent = new Intent(night_fairs.this,slip.class);
                 startActivity(intent);
             }
         });

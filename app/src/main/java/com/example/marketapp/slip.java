@@ -117,15 +117,16 @@ public class slip extends AppCompatActivity {
         slipClass = new slipClass(imageURL);
 
 
-        FirebaseDatabase.getInstance().getReference("Manager")
+        FirebaseDatabase.getInstance().getReference("slip")
                 .setValue(slipClass).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(slip.this,"Saved",Toast.LENGTH_SHORT)
                                     .show();
+                            Intent intent = new Intent(slip.this,offerMarketFragment.class);
 
-                            finish();
+                            startActivity(intent);
 
 
 
