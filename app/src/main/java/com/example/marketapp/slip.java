@@ -12,6 +12,7 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -31,6 +32,9 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.util.Locale;
+import java.util.concurrent.TimeUnit;
+
 public class slip extends AppCompatActivity {
 
     ImageView uploadImageSlip;
@@ -38,7 +42,7 @@ public class slip extends AppCompatActivity {
     Uri uri;
     Button booking;
 
-    private TextView log_selected,price_Log;
+    private TextView log_selected,price_Log,time_Booking;
 
     public static final String LOG = "LOG";
     public static final String PRICE = "PRICE";
@@ -54,6 +58,7 @@ public class slip extends AppCompatActivity {
 
         log_selected = findViewById(R.id.log_B);
         price_Log = findViewById((int)R.id.price_log);
+        time_Booking = findViewById((int)R.id.time_booking);
 
         slipClass slipClass_s = new slipClass();
 
@@ -68,6 +73,30 @@ public class slip extends AppCompatActivity {
              price = price_Log.getText().toString();
             slipClass_s.setDatalog(log_s);
             slipClass_s.setDataprice(price);
+
+            long duration = TimeUnit.MINUTES.toMillis(1);
+
+            new CountDownTimer(duration, 1000) {
+                @Override
+                public void onTick(long millisUntilFinished) {
+                    String sDuration = String.format(Locale.ENGLISH,"%02d : %02d"
+                    ,TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)
+                            ,TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished)-
+                                    TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)));
+
+                    time_Booking.setText(sDuration);
+
+                }
+
+                @Override
+                public void onFinish() {
+
+                    time_Booking.setVisibility(View.GONE);
+
+                    Toast.makeText(getApplicationContext(),"ทำการจองใหม่",Toast.LENGTH_LONG).show();
+
+                }
+            }.start();
 
 
         uploadImageSlip = findViewById((int)R.id.UploadSlip);
