@@ -22,9 +22,10 @@ public class night_fairs extends AppCompatActivity {
 
     Button success;
 
-    private EditText log_selected;
+    EditText log_selected;
 
     private int log;
+
 
    FirebaseDatabase mDatabase;
 
@@ -52,11 +53,6 @@ public class night_fairs extends AppCompatActivity {
 
                 setData();
 
-
-
-
-
-
             }
         });
 
@@ -67,13 +63,15 @@ public class night_fairs extends AppCompatActivity {
 
     public void setData(){
 
-         log = Integer.parseInt(log_selected.getText().toString().trim());
+
+        log = Integer.parseInt(log_selected.getText().toString().trim());
 
         Intent intent = new Intent(night_fairs.this,slip.class);
 
         intent.putExtra(slip.LOG,log);
 
         startActivity(intent);
+
 
 
 

@@ -44,6 +44,8 @@ public class slip extends AppCompatActivity {
 
     private int log_int;
 
+    private String log_s,price;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,19 +55,34 @@ public class slip extends AppCompatActivity {
         log_selected = findViewById(R.id.log_B);
         price_Log = findViewById((int)R.id.price_log);
 
+        slipClass slipClass_s = new slipClass();
+
         Intent intent = getIntent();
         log_int = intent.getIntExtra(LOG,0);
 
         log_selected.setText("จองล็อคที่ "+log_int);
 
+
+
+
         if(log_int <=  4){
 
             price_Log.setText("ราคา 600 บาท");
+             log_s = log_selected.getText().toString();
+             price = price_Log.getText().toString();
+            slipClass_s.setDatalog(log_s);
+            slipClass_s.setDataprice(price);
 
 
         }
         else if (log_int >=  5 && log_int <= 20 ){
             price_Log.setText("ราคา 350 บาท");
+
+            log_s = log_selected.getText().toString();
+            price = price_Log.getText().toString();
+            slipClass_s.setDatalog(log_s);
+            slipClass_s.setDataprice(price);
+
 
         }
 
@@ -146,10 +163,10 @@ public class slip extends AppCompatActivity {
 
         slipClass slipClass;
 
-        slipClass = new slipClass(imageURL);
+        slipClass = new slipClass(log_s,price,imageURL);
 
 
-        FirebaseDatabase.getInstance().getReference("slip")
+        FirebaseDatabase.getInstance().getReference("slip").child(log_s)
                 .setValue(slipClass).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
