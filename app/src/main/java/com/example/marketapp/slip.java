@@ -15,13 +15,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -32,10 +37,37 @@ public class slip extends AppCompatActivity {
     String imageURL;
     Uri uri;
     Button booking;
+
+    private TextView log_selected,price_Log;
+
+    public static final String LOG = "LOG";
+
+    private int log_int;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_slip);
+
+        log_selected = findViewById(R.id.log_B);
+        price_Log = findViewById((int)R.id.price_log);
+
+        Intent intent = getIntent();
+        log_int = intent.getIntExtra(LOG,0);
+
+        log_selected.setText("จองล็อคที่ "+log_int);
+
+        if(log_int <=  4){
+
+            price_Log.setText("ราคา 600 บาท");
+
+
+        }
+        else if (log_int >=  5 && log_int <= 20 ){
+            price_Log.setText("ราคา 350 บาท");
+
+        }
 
         uploadImageSlip = findViewById((int)R.id.UploadSlip);
         booking = findViewById((int)R.id.booking);
@@ -52,7 +84,7 @@ public class slip extends AppCompatActivity {
 
                         }else{
 
-                            Toast.makeText(slip.this,"กรุณาเลือกรูปโปรไฟล์ตลาด",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(slip.this,"กรุณาเเนบสลิป",Toast.LENGTH_SHORT).show();
 
 
                         }
@@ -122,7 +154,7 @@ public class slip extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()){
-                            Toast.makeText(slip.this,"Saved",Toast.LENGTH_SHORT)
+                            Toast.makeText(slip.this,"ได้ทำการจองเเล้ว",Toast.LENGTH_SHORT)
                                     .show();
                             Intent intent = new Intent(slip.this,offerMarketFragment.class);
 
@@ -141,5 +173,16 @@ public class slip extends AppCompatActivity {
                 });
 
 
+
+
+
+
+
+
+
     }
+
+
+
+
 }

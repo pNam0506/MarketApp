@@ -58,6 +58,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/testLog"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
@@ -86,13 +87,15 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/log_B"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="จองล็อคที่ 1"
+                android:text="log 1"
                 android:textSize="20dp"
                 android:layout_marginLeft="20dp"
                 />
             <TextView
+                android:id="@+id/price_log"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="ราคา 600 บาท"
