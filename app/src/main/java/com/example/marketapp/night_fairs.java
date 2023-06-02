@@ -26,6 +26,8 @@ public class night_fairs extends AppCompatActivity {
 
     private int log;
 
+    private String price;
+
 
    FirebaseDatabase mDatabase;
 
@@ -41,6 +43,7 @@ public class night_fairs extends AppCompatActivity {
 
         success = findViewById((int)R.id.Success2);
         log_selected = findViewById((int)R.id.log_night_fair);
+
 
         mDatabase = FirebaseDatabase.getInstance();
         mRef = mDatabase.getReference().child("Log");
@@ -66,11 +69,32 @@ public class night_fairs extends AppCompatActivity {
 
         log = Integer.parseInt(log_selected.getText().toString().trim());
 
-        Intent intent = new Intent(night_fairs.this,slip.class);
 
-        intent.putExtra(slip.LOG,log);
+        if(log <= 4){
+            price = "ราคา 600 บาท";
 
-        startActivity(intent);
+            Intent intent = new Intent(night_fairs.this,slip.class);
+
+            intent.putExtra(slip.LOG,log);
+            intent.putExtra(slip.PRICE,price);
+
+            startActivity(intent);
+
+
+        }
+        else if(log > 4 && log <= 20){
+            price = "ราคา 350 บาท";
+
+            Intent intent = new Intent(night_fairs.this,slip.class);
+
+            intent.putExtra(slip.LOG,log);
+            intent.putExtra(slip.PRICE,price);
+
+            startActivity(intent);
+
+
+        }
+
 
 
 

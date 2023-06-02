@@ -41,10 +41,10 @@ public class slip extends AppCompatActivity {
     private TextView log_selected,price_Log;
 
     public static final String LOG = "LOG";
-
+    public static final String PRICE = "PRICE";
     private int log_int;
 
-    private String log_s,price;
+    private String log_s,price,price_set;
 
 
     @Override
@@ -59,32 +59,16 @@ public class slip extends AppCompatActivity {
 
         Intent intent = getIntent();
         log_int = intent.getIntExtra(LOG,0);
+        price_set = intent.getStringExtra(PRICE);
 
         log_selected.setText("จองล็อคที่ "+log_int);
+        price_Log.setText(price_set);
 
-
-
-
-        if(log_int <=  4){
-
-            price_Log.setText("ราคา 600 บาท");
-             log_s = log_selected.getText().toString();
+        log_s = log_selected.getText().toString();
              price = price_Log.getText().toString();
             slipClass_s.setDatalog(log_s);
             slipClass_s.setDataprice(price);
 
-
-        }
-        else if (log_int >=  5 && log_int <= 20 ){
-            price_Log.setText("ราคา 350 บาท");
-
-            log_s = log_selected.getText().toString();
-            price = price_Log.getText().toString();
-            slipClass_s.setDatalog(log_s);
-            slipClass_s.setDataprice(price);
-
-
-        }
 
         uploadImageSlip = findViewById((int)R.id.UploadSlip);
         booking = findViewById((int)R.id.booking);
