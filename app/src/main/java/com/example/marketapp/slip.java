@@ -74,7 +74,7 @@ public class slip extends AppCompatActivity {
             slipClass_s.setDatalog(log_s);
             slipClass_s.setDataprice(price);
 
-            long duration = TimeUnit.MINUTES.toMillis(1);
+            long duration = TimeUnit.MINUTES.toMillis(15);
 
             new CountDownTimer(duration, 1000) {
                 @Override
