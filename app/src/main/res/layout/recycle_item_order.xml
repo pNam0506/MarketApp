@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/recCard_bill"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="10dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="8dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16sp"
+        android:orientation="vertical"
+        >
+
+
+
+        <TextView
+            android:id="@+id/log_rec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ล็อคที่"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:id="@+id/log_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ราคา"
+            android:textSize="20sp"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

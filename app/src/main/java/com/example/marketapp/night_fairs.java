@@ -29,9 +29,6 @@ public class night_fairs extends AppCompatActivity {
     private String price;
 
 
-   FirebaseDatabase mDatabase;
-
-   DatabaseReference mRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,8 +42,7 @@ public class night_fairs extends AppCompatActivity {
         log_selected = findViewById((int)R.id.log_night_fair);
 
 
-        mDatabase = FirebaseDatabase.getInstance();
-        mRef = mDatabase.getReference().child("Log");
+
 
 
         success.setOnClickListener(new View.OnClickListener() {

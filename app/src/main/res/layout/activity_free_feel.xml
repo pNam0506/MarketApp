@@ -487,6 +487,7 @@
 
 
         <EditText
+            android:id="@+id/log_free_feel"
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_marginLeft="20dp"

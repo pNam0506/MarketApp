@@ -53,6 +53,8 @@ import cz.msebera.android.httpclient.Header;
 
 public class offerMarketFragment extends AppCompatActivity {
 
+    public static final String NAME_SELLER = "NAME_SELLER";
+    public static final String NAME_BOOT = "NAME_BOOT";
     RecyclerView recyclerView;
     List<DataClass> dataList;
     DatabaseReference databaseReference;
@@ -66,22 +68,53 @@ public class offerMarketFragment extends AppCompatActivity {
 
     String Location_provider = LocationManager.GPS_PROVIDER;
 
-    TextView weather;
+    TextView weather,nameUser,name_boot;
     ImageView status_weather;
 
     LocationManager mLocationManager;
     LocationListener locationListener;
     SearchView searchView;
     MyAdapter adapter;
+    String nameUser_s,nameBoot_s,nameUser_d,nameBoot_d;
+
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setAppLocale("th");
 
         setContentView(R.layout.fragment_offer_market);
+
+        nameUser = findViewById((int)R.id.userName_Seller);
+        name_boot = findViewById((int)R.id.Name_boot);
+
+
+        Intent intent = getIntent();
+        nameUser_s = intent.getStringExtra(NAME_SELLER);
+        nameBoot_s = intent.getStringExtra(NAME_BOOT);
+        nameUser.setText(nameUser_s);
+        name_boot.setText(nameBoot_s);
+
+        nameUser_d = nameUser.getText().toString();
+        nameBoot_d = name_boot.getText().toString();
+
+        userClass userClass_s = new userClass();
+        userClass_s.setDataNameUser(nameUser_d);
+        userClass_s.setDataNameBoot(nameBoot_d);
+
+        userClass userClass_ss;
+
+        userClass_ss = new userClass(nameUser_d,nameBoot_d);
+
+
+        FirebaseDatabase.getInstance().getReference("User").child(nameUser_d).setValue(userClass_ss);
+
+
+
+
+
 
         recyclerView = findViewById((int) R.id.recycleView);
         searchView = findViewById(R.id.searchBar);
@@ -342,16 +375,6 @@ public class offerMarketFragment extends AppCompatActivity {
             }
         }
 
-        public void setAppLocale(String locale){
-
-            Resources res = getResources();
-            DisplayMetrics dm = res.getDisplayMetrics();
-            Configuration conf = res.getConfiguration();
-            conf.setLocale(new Locale(locale.toLowerCase()));
-            res.updateConfiguration(conf,dm);
-
-
-        }
 
         public void searchList(String text){
 

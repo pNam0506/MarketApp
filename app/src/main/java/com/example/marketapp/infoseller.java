@@ -11,8 +11,8 @@ import android.widget.Toast;
 
 public class infoseller extends AppCompatActivity {
 
-    private Button save;
-    private EditText name,boot,email,phone,product;
+    private Button saveS;
+    private EditText nameS,bootS,emailS,phoneS,productS;
 
     private String Sname,Sboot,Semail,Sphone,Sproduct;
 
@@ -21,28 +21,38 @@ public class infoseller extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_infoseller);
-        name = (EditText) findViewById(R.id.name);
-        boot = (EditText) findViewById(R.id.boot);
-        email = (EditText) findViewById(R.id.email);
-        phone = (EditText) findViewById(R.id.phone);
-        product = (EditText) findViewById(R.id.product);
-        save = (Button) findViewById(R.id.save);
+        nameS = (EditText) findViewById((int)R.id.nameinfoSeller);
+        bootS = (EditText) findViewById(R.id.boot);
+        emailS = (EditText) findViewById(R.id.email);
+        phoneS = (EditText) findViewById(R.id.phone);
+        productS = (EditText) findViewById(R.id.product);
+        saveS = (Button) findViewById(R.id.save);
 
 
-        save.setOnClickListener(new View.OnClickListener() {
+        saveS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Sname = name.getText().toString();
-                Sboot = boot.getText().toString();
-                Semail = email.getText().toString();
-                Sphone = phone.getText().toString();
-                Sproduct = product.getText().toString();
+                saveData();
                 Toast.makeText(infoseller.this,"บันทึกข้อมูลเรียบร้อย",Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(infoseller.this, offerMarketFragment.class);
-                startActivity(intent);
+
 
             }
         });
+
+    }
+    public void saveData(){
+
+        Sname = nameS.getText().toString().trim();
+        Sboot = bootS.getText().toString().trim();
+        Semail = emailS.getText().toString().trim();
+        Sphone = phoneS.getText().toString().trim();
+        Sproduct = productS.getText().toString().trim();
+
+        Intent intent = new Intent(infoseller.this,offerMarketFragment.class);
+        intent.putExtra(offerMarketFragment.NAME_SELLER,Sname);
+        intent.putExtra(offerMarketFragment.NAME_BOOT,Sboot);
+        startActivity(intent);
+
 
     }
 }
