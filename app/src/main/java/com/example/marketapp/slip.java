@@ -93,7 +93,10 @@ public class slip extends AppCompatActivity {
 
                     time_Booking.setVisibility(View.GONE);
 
-                    Toast.makeText(getApplicationContext(),"ทำการจองใหม่",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"ทำการจองใหม่อีกครั้ง",Toast.LENGTH_LONG).show();
+
+                    Intent intent = new Intent(slip.this,night_fairs.class);
+                    startActivity(intent);
 
                 }
             }.start();
