@@ -53,8 +53,6 @@ import cz.msebera.android.httpclient.Header;
 
 public class offerMarketFragment extends AppCompatActivity {
 
-    public static final String NAME_SELLER = "NAME_SELLER";
-    public static final String NAME_BOOT = "NAME_BOOT";
     RecyclerView recyclerView;
     List<DataClass> dataList;
     DatabaseReference databaseReference;
@@ -77,6 +75,9 @@ public class offerMarketFragment extends AppCompatActivity {
     MyAdapter adapter;
     String nameUser_s, nameBoot_s, nameUser_d, nameBoot_d;
 
+    FirebaseDatabase mDatabase;
+    DatabaseReference mRef;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,26 +89,32 @@ public class offerMarketFragment extends AppCompatActivity {
         nameUser = findViewById((int) R.id.userName_Seller);
         name_boot = findViewById((int) R.id.Name_boot);
 
+        mDatabase = FirebaseDatabase.getInstance();
+        mRef = mDatabase.getReference("User");
 
-        Intent intent = getIntent();
-        nameUser_s = intent.getStringExtra(NAME_SELLER);
-        nameBoot_s = intent.getStringExtra(NAME_BOOT);
-        nameUser.setText(nameUser_s);
-        name_boot.setText(nameBoot_s);
+        mRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-        nameUser_d = nameUser.getText().toString();
-        nameBoot_d = name_boot.getText().toString();
+                for(DataSnapshot ds:snapshot.getChildren()) {
 
-        userClass userClass_s = new userClass();
-        userClass_s.setDataNameUser(nameUser_d);
-        userClass_s.setDataNameBoot(nameBoot_d);
+                    userClass userClass_s = ds.getValue(userClass.class);
+                    nameUser_s = userClass_s.getDataNameUser();
+                    nameBoot_s = userClass_s.getDataNameBoot();
 
-        userClass userClass_ss;
+                    nameUser.setText(nameUser_s);
+                    name_boot.setText(nameBoot_s);
 
-        userClass_ss = new userClass(nameUser_d, nameBoot_d);
+                }
 
+            }
 
-        FirebaseDatabase.getInstance().getReference("User").child(nameUser_d).setValue(userClass_ss);
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
 
 
         recyclerView = findViewById((int) R.id.recycleView);

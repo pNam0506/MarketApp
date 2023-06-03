@@ -1,5 +1,7 @@
 package com.example.marketapp;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,12 +11,19 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class infoseller extends AppCompatActivity {
 
     private Button saveS;
     private EditText nameS,bootS,emailS,phoneS,productS;
 
     private String Sname,Sboot,Semail,Sphone,Sproduct;
+
+    FirebaseDatabase mDatabase;
+    DatabaseReference mRef;
 
 
     @Override
@@ -28,31 +37,71 @@ public class infoseller extends AppCompatActivity {
         productS = (EditText) findViewById(R.id.product);
         saveS = (Button) findViewById(R.id.save);
 
+        mDatabase = FirebaseDatabase.getInstance();
+        mRef = mDatabase.getReference("User");
+
 
         saveS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                saveData();
-                Toast.makeText(infoseller.this,"บันทึกข้อมูลเรียบร้อย",Toast.LENGTH_SHORT).show();
+                Sname = nameS.getText().toString();
+                Sboot = bootS.getText().toString();
+                Semail = emailS.getText().toString();
+                Sphone = phoneS.getText().toString();
+                Sproduct = productS.getText().toString();
+
+                if(Sname.isEmpty()||Sboot.isEmpty()||Semail.isEmpty()||Sphone.isEmpty()||Sproduct.isEmpty()){
+
+                    Toast.makeText(infoseller.this,"กรุณากรอกข้อมูลให้ครบถ้วน",Toast.LENGTH_SHORT).show();
+
+
+                }
+                else {
+
+
+                    userClass userClass_s = new userClass();
+                    userClass_s.setDataNameUser(Sname);
+                    userClass_s.setDataNameBoot(Sboot);
+                    userClass_s.setDataEmailUser(Semail);
+                    userClass_s.setDataPhoneUser(Sphone);
+                    userClass_s.setDataProduct(Sproduct);
+                    mRef.child(Sboot).setValue(userClass_s, new DatabaseReference.CompletionListener() {
+                        @Override
+                        public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
+
+                            if(error == null){
+
+                                Toast.makeText(infoseller.this,"บันทึกข้อมูลเรียบร้อย",Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(infoseller.this,offerMarketFragment.class);
+                                startActivity(intent);
+
+                            }else {
+
+                                Toast.makeText(infoseller.this,"เกิดปัญหาในการบันทึก",Toast.LENGTH_SHORT).show();
+
+                            }
+
+                        }
+                    });
+
+
+
+
+
+                }
+
 
 
             }
         });
 
     }
-    public void saveData(){
-
-        Sname = nameS.getText().toString().trim();
-        Sboot = bootS.getText().toString().trim();
-        Semail = emailS.getText().toString().trim();
-        Sphone = phoneS.getText().toString().trim();
-        Sproduct = productS.getText().toString().trim();
-
-        Intent intent = new Intent(infoseller.this,offerMarketFragment.class);
-        intent.putExtra(offerMarketFragment.NAME_SELLER,Sname);
-        intent.putExtra(offerMarketFragment.NAME_BOOT,Sboot);
-        startActivity(intent);
 
 
-    }
+
+
+
+
+
+
 }
