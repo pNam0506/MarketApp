@@ -68,16 +68,14 @@ public class offerMarketFragment extends AppCompatActivity {
 
     String Location_provider = LocationManager.GPS_PROVIDER;
 
-    TextView weather,nameUser,name_boot;
+    TextView weather, nameUser, name_boot;
     ImageView status_weather;
 
     LocationManager mLocationManager;
     LocationListener locationListener;
     SearchView searchView;
     MyAdapter adapter;
-    String nameUser_s,nameBoot_s,nameUser_d,nameBoot_d;
-
-
+    String nameUser_s, nameBoot_s, nameUser_d, nameBoot_d;
 
 
     @Override
@@ -87,8 +85,8 @@ public class offerMarketFragment extends AppCompatActivity {
 
         setContentView(R.layout.fragment_offer_market);
 
-        nameUser = findViewById((int)R.id.userName_Seller);
-        name_boot = findViewById((int)R.id.Name_boot);
+        nameUser = findViewById((int) R.id.userName_Seller);
+        name_boot = findViewById((int) R.id.Name_boot);
 
 
         Intent intent = getIntent();
@@ -106,14 +104,10 @@ public class offerMarketFragment extends AppCompatActivity {
 
         userClass userClass_ss;
 
-        userClass_ss = new userClass(nameUser_d,nameBoot_d);
+        userClass_ss = new userClass(nameUser_d, nameBoot_d);
 
 
         FirebaseDatabase.getInstance().getReference("User").child(nameUser_d).setValue(userClass_ss);
-
-
-
-
 
 
         recyclerView = findViewById((int) R.id.recycleView);
@@ -182,8 +176,7 @@ public class offerMarketFragment extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), OrderSeller.class));
                 overridePendingTransition(0, 0);
                 return true;
-            }
-            else if (item.getItemId() == R.id.profileBottom) {
+            } else if (item.getItemId() == R.id.profileBottom) {
                 startActivity(new Intent(getApplicationContext(), profile.class));
                 overridePendingTransition(0, 0);
                 return true;
@@ -191,16 +184,17 @@ public class offerMarketFragment extends AppCompatActivity {
             return false;
         });
 
+
         Calendar calendar = Calendar.getInstance();
         Date date = new Date();
         calendar.setTime(date);
 
 
-
-        String[] Days = new String[]{ "เสาร์","อาทิตย์","จันทร์", "อังคาร", "พุธ", "พฤหัส", "ศุกร์" };
+        String[] Days = new String[]{"อาทิตย์", "จันทร์", "อังคาร", "พุธ", "พฤหัส", "ศุกร์","เสาร์"};
         TextView textDate = findViewById((int) R.id.Date_Text);
-        String currentDay = Days[calendar.get(Calendar.DAY_OF_WEEK)];
+        String currentDay = Days[calendar.get(Calendar.DAY_OF_WEEK)-1];
         textDate.setText(currentDay);
+
 
         TextView season = findViewById((int) R.id.season_text);
         ImageView sun = findViewById((int) R.id.summer_season);
@@ -376,21 +370,20 @@ public class offerMarketFragment extends AppCompatActivity {
         }
 
 
-        public void searchList(String text){
+        public void searchList (String text){
 
-        ArrayList<DataClass> searchList = new ArrayList<>();
-        for(DataClass dataClass: dataList){
-            if(dataClass.getDataNameMarket().toLowerCase().contains(text.toLowerCase())){
+            ArrayList<DataClass> searchList = new ArrayList<>();
+            for (DataClass dataClass : dataList) {
+                if (dataClass.getDataNameMarket().toLowerCase().contains(text.toLowerCase())) {
 
-                searchList.add(dataClass);
+                    searchList.add(dataClass);
+
+                }
 
             }
 
+            adapter.searthDataList(searchList);
+
+
         }
-
-        adapter.searthDataList(searchList);
-
-        }
-
-}
-
+    }

@@ -78,7 +78,7 @@ public class night_fairs extends AppCompatActivity {
 
 
         }
-        else if(log > 4 && log <= 20){
+        else if(log <= 20){
             price = "ราคา 350 บาท";
 
             Intent intent = new Intent(night_fairs.this,slip.class);

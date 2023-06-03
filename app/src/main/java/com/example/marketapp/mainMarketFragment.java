@@ -176,9 +176,9 @@ public class mainMarketFragment extends AppCompatActivity {
 
 
 
-        String[] Days = new String[]{ "เสาร์","อาทิตย์","จันทร์", "อังคาร", "พุธ", "พฤหัส", "ศุกร์" };
+        String[] Days = new String[]{ "อาทิตย์","จันทร์", "อังคาร", "พุธ", "พฤหัส", "ศุกร์","เสาร์" };
         TextView textDate = findViewById((int) R.id.Date_Text);
-        String currentDay = Days[calendar.get(Calendar.DAY_OF_WEEK)];
+        String currentDay = Days[calendar.get(Calendar.DAY_OF_WEEK)-1];
         textDate.setText(currentDay);
 
         TextView season = findViewById((int) R.id.season_text);
