@@ -7,6 +7,7 @@
     tools:context=".tuomom">
 
     <LinearLayout
+        android:id="@+id/tuomom_Layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -18,9 +19,19 @@
         >
 
         <LinearLayout
-            android:layout_width="50dp"
+            android:layout_width="36dp"
             android:layout_height="match_parent"
-            android:background="@color/gray_soft" />
+            android:background="@color/gray_soft"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+
+                android:gravity="center"
+                android:text="Narathiwat Ratchanakarin Rd. (1)"/>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -40,11 +51,17 @@
                     android:rowCount="3">
 
                     <LinearLayout
-                        android:layout_width="70dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         android:background="#FDF078">
 
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="450 bath (2)">
 
+                        </TextView>
 
 
                     </LinearLayout>
@@ -66,22 +83,60 @@
                                 android:layout_marginRight="5dp"
                                 android:background="#FDF078" />
 
+                            <TextView
+                                android:layout_width="35dp"
+                                android:layout_height="wrap_content"
+                                android:layout_row="0"
+                                android:layout_column="0"
+                                android:gravity="center"
+                                android:text="4"/>
+
                             <LinearLayout
                                 android:layout_width="42dp"
                                 android:layout_height="20dp"
-                                android:background="#FDF078" />
+                                android:background="#FDF078" >
+
+                                <TextView
+                                    android:layout_width="35dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_row="0"
+                                    android:layout_column="0"
+                                    android:gravity="center"
+                                    android:text="8"/>
+                            </LinearLayout>
 
                             <LinearLayout
                                 android:layout_width="35dp"
                                 android:layout_height="20dp"
                                 android:layout_marginTop="5dp"
-                                android:background="#FDF078" />
+                                android:background="#FDF078" >
+
+                                <TextView
+                                    android:id="@+id/textView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="5"
+                                    android:gravity="center"
+                                    />
+                            </LinearLayout>
 
                             <LinearLayout
                                 android:layout_width="35dp"
                                 android:layout_height="20dp"
                                 android:layout_marginTop="5dp"
-                                android:background="#FDF078" />
+                                android:background="#FDF078">
+
+                                <TextView
+                                    android:layout_width="35dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_row="0"
+                                    android:layout_column="0"
+                                    android:gravity="center"
+                                    android:text="9"/>
+                            </LinearLayout>
+
+
 
                             <LinearLayout
                                 android:layout_width="35dp"
@@ -89,7 +144,32 @@
                                 android:layout_marginTop="5dp"
                                 android:background="#FDF078"
 
-                                />
+                                >
+
+                                <TextView
+                                    android:id="@+id/textView2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="6"
+                                    android:gravity="center"
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="35dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="5dp"
+                                android:background="#FDF078"
+                                >
+                                <TextView
+                                    android:layout_width="35dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_row="0"
+                                    android:layout_column="0"
+                                    android:gravity="center"
+                                    android:text="10"/>
+                            </LinearLayout>
 
                             <LinearLayout
                                 android:layout_width="35dp"
@@ -97,24 +177,38 @@
                                 android:layout_marginTop="5dp"
                                 android:background="#FDF078"
 
+                                >
 
-                                />
+                                <TextView
+                                    android:id="@+id/textView3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="    7"    />
+                            </LinearLayout>
 
                             <LinearLayout
                                 android:layout_width="35dp"
                                 android:layout_height="20dp"
                                 android:layout_marginTop="5dp"
                                 android:background="#FDF078"
+                                >
+                                <TextView
+                                    android:layout_width="35dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_row="0"
+                                    android:layout_column="0"
+                                    android:gravity="center"
+                                    android:text="11"/>
+                            </LinearLayout>
 
-                                />
-
-                            <LinearLayout
-                                android:layout_width="35dp"
-                                android:layout_height="20dp"
-                                android:layout_marginTop="5dp"
-                                android:background="#FDF078"
-
-                                />
+                            <TextView
+                                android:layout_width="26dp"
+                                android:layout_height="4dp"
+                                android:layout_row="0"
+                                android:layout_column="0"
+                                android:gravity="center"
+                                android:text=""/>
 
 
                         </GridLayout>
@@ -127,45 +221,25 @@
                         android:layout_height="100dp"
                         android:layout_marginLeft="10dp"
                         android:background="#FDF078">
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="70dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="10dp"
-                        android:background="#FDF078">
-
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="400 bath(12)"/>
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="70dp"
-                        android:layout_height="100dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:background="#FDF078">
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="70dp"
-                        android:layout_height="100dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:background="#FDF078">
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="70dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         android:layout_marginTop="10dp"
                         android:background="#FDF078">
 
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="450 bath(3)"/>
 
                     </LinearLayout>
 
@@ -175,7 +249,11 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
                         android:background="#FDF078">
-
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="400 bath(13)"/>
 
                     </LinearLayout>
 
@@ -185,7 +263,53 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
                         android:background="#FDF078">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="400 bath(14)"/>
 
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#80ff00">
+
+                        <TextView
+                            android:layout_width="75dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="450 bath  (15)"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#ff00a0">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="400 bath (16)"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#ff00a0">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="400 bath (17)"/>
 
                     </LinearLayout>
 
@@ -201,25 +325,32 @@
                     <LinearLayout
                         android:layout_width="50dp"
                         android:layout_height="210dp"
-                        android:background="@color/green"
+                        android:background="#ff8020"
                         >
+
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="seat (18)"
 
 
-                        </TextView>
+                            />
+
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="50dp"
-                        android:layout_height="110dp"
+                        android:layout_height="99dp"
                         android:layout_marginTop="10dp"
-                        android:background="@color/orange"
-                        >
+                        android:background="#40c0ff">
 
-
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Parking(19)"/>
                     </LinearLayout>
 
 
@@ -235,11 +366,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
-                android:background="@color/orange"
+                android:background="#40c0ff"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 >
-
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="PARKING(19)"/>
 
             </LinearLayout>
 
@@ -252,17 +387,21 @@
             android:layout_width="50dp"
             android:layout_height="match_parent"
             android:background="#E496F1"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/building"
                 android:gravity="center"
+                android:text="City tower (20)">
 
 
+            </TextView>
 
-                >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
 
             </TextView>
@@ -271,5 +410,76 @@
 
 
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Order_det"
+        android:layout_below="@+id/tuomom_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="1.อาหาร"
+            android:textColor="#FFC107"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="2.ของใช้"
+            android:textColor="#F436AE"
+            android:layout_marginLeft="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="3.ต้นไม้"
+            android:textColor="#4CAF50"
+            android:layout_marginLeft="10dp"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_below="@+id/tuomom_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        >
+
+
+
+
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/white_corner"
+            android:hint="จองพื้นที่หมายเลข"
+            android:padding="5dp"
+            />
+
+        <Button
+            android:id="@+id/Success"
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:text="Success"
+            android:layout_marginLeft="20dp"
+            />
+
+
+
+    </LinearLayout>
+
 
 </RelativeLayout>

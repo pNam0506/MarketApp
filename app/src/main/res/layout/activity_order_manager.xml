@@ -31,43 +31,11 @@
 
 
 
-            <LinearLayout
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/order_bill"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@drawable/white_corner"
-                android:layout_margin="10dp"
-                android:padding="16dp"
-                >
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="นางสาว..."
-                    android:textSize="20dp"
-                    />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="ได้ทำการจองพื้นที่ของตลาด Night Fair"
-                    android:textSize="20dp"
-                    />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="จองพื้นที่หมายเลขที่ 1 ราคา 600 บาท"
-                    android:textSize="20dp"
-                    />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="ในวันที่ 31/5/2566"
-                    android:textSize="20dp"
-                    />
-
-
-
-            </LinearLayout>
+                android:layout_height="match_parent" />
 
 
 

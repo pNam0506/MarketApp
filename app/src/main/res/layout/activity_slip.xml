@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".slip"
+    android:background="#D6D6D6"
+    >
+
+    <LinearLayout
+        android:id="@+id/topic"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginBottom="10dp"
+        android:background="#424242"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="35dp"
+            android:text="จองที่"
+            android:textColor="@color/white"
+            android:textSize="38sp" />
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="-49dp"
+            android:background="@drawable/shop_groceries_svgrepo_com"
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="183dp"
+        android:text="ผู้ขาย"
+        android:textColor="@color/white"
+
+        android:textSize="25sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="558dp"
+        android:layout_below="@+id/topic"
+        android:layout_marginTop="-7dp"
+        android:background="#FFFFFF">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_marginStart="20dp"
+
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/slip_shape"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+
+
+                <TextView
+                    android:id="@+id/testLog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="130dp"
+                    android:text="ธนาคารกสิกรไทย"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_marginEnd="5dp"
+                    android:text="เลขบัญชี 065*******"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="211dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_marginEnd="5dp"
+                    android:text="นางสาวรวงข้าว โพธิ์ทอง"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="-77dp"
+                    android:background="@drawable/bank_svgrepo_com" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/log_B"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="160dp"
+                android:text="ล็อกที่จอง 1"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/price_log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="160dp"
+                android:text="ราคา 600 บาท"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/time_booking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="160dp"
+                android:text="จับเวลา"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="เเนบรูปสลิป"
+                android:textSize="20dp"
+                android:layout_marginTop="30dp"
+                />
+
+            <ImageView
+                android:id="@+id/UploadSlip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/pay_in_cash_money_dollar_bill_svgrepo_com"
+
+                />
+
+            <Button
+                android:id="@+id/booking"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:text="ทำการจอง" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="-415dp"
+                android:background="@drawable/food_stall_stall_svgrepo_com" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/pay_in_cash_money_dollar_bill_svgrepo_original_com"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="15dp"
+                />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/clock_svgrepo_com"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="15dp"
+                />
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>
+
+
+
+
+

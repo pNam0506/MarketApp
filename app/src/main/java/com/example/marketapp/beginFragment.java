@@ -41,4 +41,4 @@ public class beginFragment extends AppCompatActivity {
 
         };thread.start();
     }
-}
+}//จบๆๆๆ +งมอีกสามชม หฟมกแยงนฟำพ่รเพกะนย

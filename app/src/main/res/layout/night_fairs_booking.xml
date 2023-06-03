@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,53 +10,50 @@
  <LinearLayout
      android:layout_width="match_parent"
      android:layout_height="wrap_content"
-     android:orientation="vertical"
-     >
+     android:orientation="vertical">
 
   <LinearLayout
+      android:id="@+id/mall"
       android:layout_width="match_parent"
       android:layout_height="100dp"
-      android:id="@+id/mall"
-      android:background="@color/home"
       android:layout_margin="10dp"
+      android:background="@color/home"
       android:gravity="center"
 
       >
+
    <TextView
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:text="@string/centrial"
-       android:textSize="25dp"
-       android:textColor="@color/white"
        android:layout_gravity="center"
+       android:text="@string/centrial"
+       android:textColor="@color/white"
+       android:textSize="25sp"
 
        />
-
 
 
   </LinearLayout>
 
   <LinearLayout
+      android:id="@+id/Way"
       android:layout_width="match_parent"
       android:layout_height="50dp"
-      android:id="@+id/Way"
-      android:background="@color/gray_soft"
       android:layout_margin="10dp"
+      android:background="@color/gray_soft"
       android:gravity="center"
 
       >
+
    <TextView
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:text="@string/road"
-       android:textSize="25dp"
-       android:textColor="@color/white"
        android:layout_gravity="center"
+       android:text="@string/road"
+       android:textColor="@color/white"
+       android:textSize="25sp"
 
        />
-
-
-
 
 
   </LinearLayout>
@@ -65,56 +61,58 @@
   <LinearLayout
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_margin="10dp"
-      >
+      android:layout_margin="10dp">
+
    <LinearLayout
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:orientation="vertical"
-       >
+       android:orientation="vertical">
+
     <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:rowCount="1"
         android:columnCount="2"
-        >
+        android:rowCount="1">
+
      <LinearLayout
          android:id="@+id/NF_600"
-         android:layout_height="50dp"
          android:layout_width="75dp"
+         android:layout_height="50dp"
          android:layout_margin="10dp"
          android:background="#E496F1"
+
+         android:enabled="true"
          android:gravity="center"
          >
+
+
+
       <TextView
-          android:id="@+id/price_600"
-          android:layout_width="wrap_content"
+          android:layout_width="match_parent"
           android:layout_height="match_parent"
-          android:text="@string/price_600"
           android:gravity="center"
-          android:textColor="@color/white"
-          />
+          android:text="600$ (1)"
+          android:textColor="@color/black" />
 
 
      </LinearLayout>
+
      <LinearLayout
-         android:layout_height="50dp"
          android:layout_width="75dp"
+         android:layout_height="50dp"
          android:layout_margin="10dp"
          android:background="#E496F1"
-         android:gravity="center"
-         >
+         android:gravity="center">
+
       <TextView
-          android:layout_width="wrap_content"
+          android:layout_width="match_parent"
           android:layout_height="match_parent"
-          android:text="@string/price_600"
           android:gravity="center"
-          android:textColor="@color/white"
-          />
+          android:text="600$ (2)"
+          android:textColor="@color/black" />
 
 
      </LinearLayout>
-
 
 
     </GridLayout>
@@ -126,126 +124,176 @@
      <GridLayout
          android:layout_width="match_parent"
          android:layout_height="50dp"
-         android:rowCount="2"
-         android:columnCount="5"
          android:layout_margin="10dp"
-         >
+         android:columnCount="5"
+         android:rowCount="2">
+
       <LinearLayout
-          android:layout_height="20dp"
           android:layout_width="30dp"
-
-          android:layout_marginRight="10dp"
-          android:background="#FF5CE4"
-          android:gravity="center"
-          >
-
-
-
-      </LinearLayout>
-      <LinearLayout
           android:layout_height="20dp"
-          android:layout_width="30dp"
           android:layout_marginLeft="5dp"
           android:background="#FF5CE4"
-          android:gravity="center"
-          >
+          android:gravity="center">
 
-
-
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:gravity="center"
+           android:text="4"
+           android:textColor="@color/black" />
       </LinearLayout>
+
       <LinearLayout
-          android:layout_height="20dp"
           android:layout_width="30dp"
+          android:layout_height="20dp"
           android:layout_marginLeft="5dp"
           android:background="#FF5CE4"
-          android:gravity="center"
-          >
+          android:gravity="center">
 
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:gravity="center"
+           android:text="5"
+           android:textColor="@color/black" />
 
 
       </LinearLayout>
 
       <LinearLayout
-          android:layout_height="20dp"
           android:layout_width="30dp"
+          android:layout_height="20dp"
           android:layout_marginLeft="5dp"
           android:background="#FF5CE4"
-          android:gravity="center"
-          >
+          android:gravity="center">
 
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:gravity="center"
+           android:text="6"
+           android:textColor="@color/black" />
 
 
       </LinearLayout>
+
       <LinearLayout
-          android:layout_height="20dp"
           android:layout_width="30dp"
+          android:layout_height="20dp"
+          android:layout_marginLeft="5dp"
+          android:background="#FF5CE4"
+          android:gravity="center">
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:gravity="center"
+           android:text="7"
+           android:textColor="@color/black" />
+
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="30dp"
+          android:layout_height="20dp"
           android:layout_marginLeft="5dp"
           android:layout_marginRight="5dp"
           android:background="#FF5CE4"
-          android:gravity="center"
-          >
+          android:gravity="center">
 
-
-
-      </LinearLayout>
-      <LinearLayout
-          android:layout_height="20dp"
-          android:layout_width="30dp"
-          android:layout_marginTop="5dp"
-          android:layout_marginRight="10dp"
-
-          android:background="#FF5CE4"
-          android:gravity="center"
-          >
-
-
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:gravity="center"
+           android:text="8"
+           android:textColor="@color/black" />
 
       </LinearLayout>
-      <LinearLayout
-          android:layout_height="20dp"
-          android:layout_width="30dp"
-          android:layout_marginTop="5dp"
-          android:layout_marginLeft="5dp"
-          android:background="#FF5CE4"
-          android:gravity="center"
-          >
 
-
-      </LinearLayout>
       <LinearLayout
-          android:layout_height="20dp"
           android:layout_width="30dp"
+          android:layout_height="20dp"
           android:layout_marginLeft="5dp"
           android:layout_marginTop="5dp"
           android:background="#FF5CE4"
-          android:gravity="center"
-          >
+          android:gravity="center">
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:gravity="center"
+           android:text="9"
+           android:textColor="@color/black" />
+
 
       </LinearLayout>
 
       <LinearLayout
-          android:layout_height="20dp"
           android:layout_width="30dp"
-          android:layout_marginTop="5dp"
-
+          android:layout_height="20dp"
           android:layout_marginLeft="5dp"
+          android:layout_marginTop="5dp"
           android:background="#FF5CE4"
-          android:gravity="center"
-          >
+          android:gravity="center">
 
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:gravity="center"
+           android:text="10"
+           android:textColor="@color/black" />
 
       </LinearLayout>
+
       <LinearLayout
-          android:layout_height="20dp"
           android:layout_width="30dp"
+          android:layout_height="20dp"
+          android:layout_marginLeft="5dp"
+          android:layout_marginTop="5dp"
+          android:background="#FF5CE4"
+          android:gravity="center">
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:gravity="center"
+           android:text="11"
+           android:textColor="@color/black" />
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="30dp"
+          android:layout_height="20dp"
+          android:layout_marginLeft="5dp"
+
+          android:layout_marginTop="5dp"
+          android:background="#FF5CE4"
+          android:gravity="center">
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:gravity="center"
+           android:text="12"
+           android:textColor="@color/black" />
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="30dp"
+          android:layout_height="20dp"
+          android:layout_marginLeft="5dp"
           android:layout_marginTop="5dp"
           android:layout_marginRight="5dp"
-          android:layout_marginLeft="5dp"
           android:background="#FF5CE4"
-          android:gravity="center"
-          >
+          android:gravity="center">
 
-
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:gravity="center"
+           android:text="13"
+           android:textColor="@color/black" />
 
       </LinearLayout>
 
@@ -259,20 +307,43 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="10dp"
-        android:background="#F1E153"
-        />
+        android:background="#F1E153">
+
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:gravity="center"
+         android:text="350 bath (18)"
+         android:textColor="@color/white" />
+    </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="10dp"
-        android:background="#F1E153"
-        />
+        android:background="#F1E153">
+
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:gravity="center"
+         android:text="350 bath (19)"
+         android:textColor="@color/white" />
+    </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="10dp"
-        android:background="#F1E153"
-        />
+        android:background="#F1E153">
+
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:gravity="center"
+         android:text="350 bath (20)"
+         android:textColor="@color/white" />
+    </LinearLayout>
 
 
    </LinearLayout>
@@ -283,47 +354,46 @@
        android:orientation="vertical"
 
        >
+
     <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:rowCount="1"
         android:columnCount="2"
-        >
+        android:rowCount="1">
+
      <LinearLayout
-         android:layout_height="50dp"
          android:layout_width="75dp"
+         android:layout_height="50dp"
          android:layout_margin="10dp"
          android:background="#E496F1"
-         android:gravity="center"
-         >
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="match_parent"
-          android:text="@string/price_600"
-          android:gravity="center"
-          android:textColor="@color/white"
-          />
+         android:gravity="center">
 
-
-     </LinearLayout>
-     <LinearLayout
-         android:layout_height="50dp"
-         android:layout_width="75dp"
-         android:layout_margin="10dp"
-         android:background="#E496F1"
-         android:gravity="center"
-         >
       <TextView
-          android:layout_width="wrap_content"
+          android:layout_width="match_parent"
           android:layout_height="match_parent"
-          android:text="@string/price_600"
           android:gravity="center"
-          android:textColor="@color/white"
-          />
+          android:text="600$ (3)"
+          android:textColor="@color/black" />
 
 
      </LinearLayout>
 
+     <LinearLayout
+         android:layout_width="75dp"
+         android:layout_height="50dp"
+         android:layout_margin="10dp"
+         android:background="#E496F1"
+         android:gravity="center">
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:text="600$ (4)"
+          android:textColor="@color/black" />
+
+
+     </LinearLayout>
 
 
     </GridLayout>
@@ -331,18 +401,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_margin="10dp"
         android:background="#FF5CE4"
-        android:layout_margin="10dp"
-        android:gravity="center"
-        >
+        android:gravity="center">
+
      <TextView
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
-         android:text="@string/price_350"
          android:gravity="center"
-         android:textColor="@color/white"
-         />
-
+         android:text="350 bath (14)"
+         android:textColor="@color/white" />
 
 
     </LinearLayout>
@@ -352,47 +420,46 @@
         android:layout_height="50dp"
         android:layout_margin="10dp"
         android:background="#F1E153"
-        android:gravity="center"
-        >
+        android:gravity="center">
+
      <TextView
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
-         android:text="@string/price_350"
          android:gravity="center"
-         android:textColor="@color/white"
-         />
+         android:text="350 bath (15)"
+         android:textColor="@color/white" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="10dp"
         android:background="#F1E153"
-        android:gravity="center"
-        >
+        android:gravity="center">
+
      <TextView
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
-         android:text="@string/price_350"
          android:gravity="center"
-         android:textColor="@color/white"
-         />
+         android:text="350 bath (16)"
+         android:textColor="@color/white" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="10dp"
         android:background="#F1E153"
-        android:gravity="center"
-        >
+        android:gravity="center">
+
      <TextView
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
-         android:text="@string/price_400"
          android:gravity="center"
-         android:textColor="@color/white"
-         />
+         android:text="400 bath (17)"
+         android:textColor="@color/white" />
 
     </LinearLayout>
 
@@ -400,43 +467,104 @@
    </LinearLayout>
 
 
-
   </LinearLayout>
 
   <LinearLayout
+      android:id="@+id/road2"
       android:layout_width="match_parent"
       android:layout_height="50dp"
-      android:id="@+id/road2"
-      android:background="@color/gray_soft"
       android:layout_margin="10dp"
+      android:background="@color/gray_soft"
       android:gravity="center"
 
       >
+
    <TextView
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:text="@string/road_RM"
-       android:textSize="25dp"
-       android:textColor="@color/white"
        android:layout_gravity="center"
+       android:text="@string/road_RM"
+       android:textColor="@color/white"
+       android:textSize="25dp"
 
        />
 
 
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/Order_det"
+      android:layout_below="@+id/Market_nama"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+   <TextView
+
+       android:layout_width="wrap_content"
+       android:layout_height="match_parent"
+       android:text="1.อาหาร"
+       android:textColor="#FFC107"
+
+       />
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="match_parent"
+       android:text="2.ของใช้"
+       android:textColor="#F436AE"
+       android:layout_marginLeft="10dp"
+       />
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="match_parent"
+       android:text="3.ร้านขนาดใหญ่"
+       android:textColor="#9C27B0"
+       android:layout_marginLeft="10dp"
+       />
+
+
+
 
   </LinearLayout>
 
 
+  <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center"
+         >
 
 
-  <EditText
-      android:layout_width="200dp"
-      android:layout_height="50dp"
-      android:layout_margin="20dp"
-   android:background="@drawable/white_corner"
-      android:hint="จองพื้นที่หมายเลข"
-      android:padding="16dp"
-      />
+
+
+
+
+
+
+         <EditText
+             android:id="@+id/log_night_fair"
+             android:layout_width="200dp"
+             android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+             android:background="@drawable/white_corner"
+             android:hint="จองพื้นที่หมายเลข"
+             android:padding="5dp"
+             />
+
+         <Button
+             android:id="@+id/Success2"
+             android:layout_width="120dp"
+             android:layout_height="60dp"
+             android:text="ทำการจอง"
+             android:layout_marginLeft="20dp"
+             />
+
+
+
+     </LinearLayout>
+
+
 
 
 
@@ -446,7 +574,6 @@
 
 
  </LinearLayout>
-
 
 
 </RelativeLayout>

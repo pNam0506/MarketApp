@@ -1,17 +1,17 @@
 package com.example.marketapp;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class profile extends AppCompatActivity {
+public class profileM extends AppCompatActivity {
 
     Button b1,b2,b3,b4;
 
@@ -21,7 +21,7 @@ public class profile extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_profile_m);
         b1 = (Button) findViewById(R.id.profile);
         b2 = (Button) findViewById(R.id.safty);
         b3 = (Button) findViewById(R.id.delete);
@@ -29,7 +29,7 @@ public class profile extends AppCompatActivity {
 
         delete = new AlertDialog.Builder(this);
 
-        Intent Bp = new Intent(this, infoseller.class);
+        Intent Bp = new Intent(this, informationMarketFragment.class);
         Intent login = new Intent(this,Login.class);
 
 
@@ -78,24 +78,27 @@ public class profile extends AppCompatActivity {
             }
         });
 
-        BottomNavigationView bottom = findViewById((int)R.id.bottomNavigationView);
+
+        BottomNavigationView bottom = findViewById((int)R.id.bottomNavigationViewM);
         bottom.setSelectedItemId(R.id.profileBottom);
 
         bottom.setOnItemSelectedListener(item -> {
             if (item.getItemId() == R.id.homeBottom) {
-                startActivity(new Intent(getApplicationContext(), offerMarketFragment.class));
+                startActivity(new Intent(getApplicationContext(), mainMarketFragment.class));
                 overridePendingTransition(0, 0);
                 return true;
             } else if (item.getItemId() == R.id.orderBottom) {
-                startActivity(new Intent(getApplicationContext(), OrderSeller.class));
+                startActivity(new Intent(getApplicationContext(), orderManager.class));
                 overridePendingTransition(0, 0);
                 return true;
             }
             else if (item.getItemId() == R.id.profileBottom) {
-                startActivity(new Intent(getApplicationContext(), profile.class));
+                startActivity(new Intent(getApplicationContext(), profileM.class));
                 overridePendingTransition(0, 0);
                 return true;
             }
+
+
             return false;
         });
 
