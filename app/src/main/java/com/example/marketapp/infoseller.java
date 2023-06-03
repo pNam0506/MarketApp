@@ -32,27 +32,22 @@ public class infoseller extends AppCompatActivity {
         saveS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                saveData();
-                Toast.makeText(infoseller.this,"บันทึกข้อมูลเรียบร้อย",Toast.LENGTH_SHORT).show();
+                Sname = nameS.getText().toString();
+                Sboot = bootS.getText().toString();
+                Semail = emailS.getText().toString();
+                Sphone = phoneS.getText().toString();
+                Sproduct = productS.getText().toString();
+
+                Toast.makeText(infoseller.this,"บันทึกข้อมูลเรียบร้อย",Toast.LENGTH_SHORT)
+                        .show();
+                Intent intent = new Intent(infoseller.this,offerMarketFragment.class);
+                startActivity(intent);
+
+
 
 
             }
         });
-
-    }
-    public void saveData(){
-
-        Sname = nameS.getText().toString().trim();
-        Sboot = bootS.getText().toString().trim();
-        Semail = emailS.getText().toString().trim();
-        Sphone = phoneS.getText().toString().trim();
-        Sproduct = productS.getText().toString().trim();
-
-        Intent intent = new Intent(infoseller.this,offerMarketFragment.class);
-        intent.putExtra(offerMarketFragment.NAME_SELLER,Sname);
-        intent.putExtra(offerMarketFragment.NAME_BOOT,Sboot);
-        startActivity(intent);
-
 
     }
 }
