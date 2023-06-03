@@ -87,35 +87,6 @@ public class offerMarketFragment extends AppCompatActivity {
 
         setContentView(R.layout.fragment_offer_market);
 
-        nameUser = findViewById((int)R.id.userName_Seller);
-        name_boot = findViewById((int)R.id.Name_boot);
-
-
-        Intent intent = getIntent();
-        nameUser_s = intent.getStringExtra(NAME_SELLER);
-        nameBoot_s = intent.getStringExtra(NAME_BOOT);
-        nameUser.setText(nameUser_s);
-        name_boot.setText(nameBoot_s);
-
-        nameUser_d = nameUser.getText().toString();
-        nameBoot_d = name_boot.getText().toString();
-
-        userClass userClass_s = new userClass();
-        userClass_s.setDataNameUser(nameUser_d);
-        userClass_s.setDataNameBoot(nameBoot_d);
-
-        userClass userClass_ss;
-
-        userClass_ss = new userClass(nameUser_d,nameBoot_d);
-
-
-        FirebaseDatabase.getInstance().getReference("User").child(nameUser_d).setValue(userClass_ss);
-
-
-
-
-
-
         recyclerView = findViewById((int) R.id.recycleView);
         searchView = findViewById(R.id.searchBar);
         searchView.clearFocus();
