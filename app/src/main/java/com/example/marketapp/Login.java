@@ -58,7 +58,11 @@ public class Login extends AppCompatActivity {
     }
 
     public void openofferMarketFragment(){
+
+        //Intent offer = new Intent(this, night_fairs.class);
+
         Intent offer = new Intent(this, offerMarketFragment.class);
+
         startActivity(offer);
     }
 }
