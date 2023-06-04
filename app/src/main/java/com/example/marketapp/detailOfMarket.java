@@ -172,7 +172,7 @@ public class detailOfMarket extends AppCompatActivity {
             Map.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(detailOfMarket.this, tuomom.class);
+                    Intent intent = new Intent(detailOfMarket.this, lingko.class);
                     startActivity(intent);
                 }
 
