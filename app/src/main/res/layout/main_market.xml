@@ -21,10 +21,11 @@
             android:id="@+id/userNameM"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="UserName"
+            android:text="Market"
             android:textSize="40dp"
             android:textColor="@color/white"
             android:textStyle="bold"
+         android:layout_margin="20sp"
             />
 
 

@@ -86,7 +86,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="350 bath (2)"
+                        android:text="400 bath (2)"
                         android:textColor="@color/black" />
 
                 </LinearLayout>
@@ -101,7 +101,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="350 bath (3)"
+                        android:text="400 bath (3)"
                         android:textColor="@color/black" />
                 </LinearLayout>
 
@@ -115,7 +115,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="350 bath (4)"
+                        android:text="350 bath (16)"
                         android:textColor="@color/black" />
                 </LinearLayout>
 
@@ -173,22 +173,22 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:gravity="center"
+                                android:text="4"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="30dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="#F1E153"
+                            android:gravity="center">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
                                 android:text="5"
                                 android:textColor="@color/black" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="30dp"
-                            android:layout_height="20dp"
-                            android:layout_marginLeft="5dp"
-                            android:background="#F1E153"
-                            android:gravity="center">
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:text="7"
-                                android:textColor="@color/black" />
 
                         </LinearLayout>
 
@@ -202,7 +202,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:gravity="center"
-                                android:text="9"
+                                android:text="6"
                                 android:textColor="@color/black" />
 
                         </LinearLayout>
@@ -220,7 +220,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:gravity="center"
-                                android:text="11"
+                                android:text="7"
                                 android:textColor="@color/black" />
                         </LinearLayout>
 
@@ -236,7 +236,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:gravity="center"
-                                android:text="13"
+                                android:text="8"
                                 android:textColor="@color/black" />
                         </LinearLayout>
 
@@ -252,7 +252,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:gravity="center"
-                                android:text="6"
+                                android:text="9"
                                 android:textColor="@color/black" />
 
                         </LinearLayout>
@@ -265,27 +265,27 @@
                             android:background="#F1E153"
                             android:gravity="center">
 
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:text="8"
-                                android:textColor="@color/black" />
-                        </LinearLayout>
-
-
-                        <LinearLayout
-                            android:layout_width="30dp"
-                            android:layout_height="20dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginTop="5dp"
-                            android:background="#F1E153"
-                            android:gravity="center">
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:gravity="center"
                                 android:text="10"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="30dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="#F1E153"
+                            android:gravity="center">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="11"
                                 android:textColor="@color/black" />
                         </LinearLayout>
 
@@ -319,7 +319,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:gravity="center"
-                                android:text="14"
+                                android:text="13"
                                 android:textColor="@color/black" />
                         </LinearLayout>
 
@@ -339,7 +339,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="15"
+                        android:text="14"
                         android:textColor="@color/black" />
                 </LinearLayout>
 
@@ -353,7 +353,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="16"
+                        android:text="15"
                         android:textColor="@color/black" />
                 </LinearLayout>
 
@@ -421,6 +421,7 @@
 
 
         <EditText
+            android:id="@+id/log_lingko"
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_marginLeft="20dp"
@@ -430,7 +431,7 @@
             />
 
         <Button
-            android:id="@+id/Success"
+            android:id="@+id/Success4"
             android:layout_width="110dp"
             android:layout_height="60dp"
             android:text="Success"

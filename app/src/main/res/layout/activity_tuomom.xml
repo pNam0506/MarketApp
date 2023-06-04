@@ -30,7 +30,7 @@
 
 
                 android:gravity="center"
-                android:text="Narathiwat Ratchanakarin Rd. (1)"/>
+                android:text="Narathiwat Ratchanakarin Rd."/>
         </LinearLayout>
 
         <LinearLayout
@@ -59,7 +59,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="450 bath (2)">
+                            android:text="450 bath (1)">
 
                         </TextView>
 
@@ -89,7 +89,7 @@
                                 android:layout_row="0"
                                 android:layout_column="0"
                                 android:gravity="center"
-                                android:text="4"/>
+                                android:text="3"/>
 
                             <LinearLayout
                                 android:layout_width="42dp"
@@ -102,7 +102,7 @@
                                     android:layout_row="0"
                                     android:layout_column="0"
                                     android:gravity="center"
-                                    android:text="8"/>
+                                    android:text="7"/>
                             </LinearLayout>
 
                             <LinearLayout
@@ -116,7 +116,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:text="5"
+                                    android:text="4"
                                     android:gravity="center"
                                     />
                             </LinearLayout>
@@ -133,7 +133,7 @@
                                     android:layout_row="0"
                                     android:layout_column="0"
                                     android:gravity="center"
-                                    android:text="9"/>
+                                    android:text="8"/>
                             </LinearLayout>
 
 
@@ -151,7 +151,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:text="6"
+                                    android:text="5"
                                     android:gravity="center"
                                     />
                             </LinearLayout>
@@ -168,7 +168,7 @@
                                     android:layout_row="0"
                                     android:layout_column="0"
                                     android:gravity="center"
-                                    android:text="10"/>
+                                    android:text="9"/>
                             </LinearLayout>
 
                             <LinearLayout
@@ -184,7 +184,8 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:text="    7"    />
+                                    android:gravity="center"
+                                    android:text="6"    />
                             </LinearLayout>
 
                             <LinearLayout
@@ -199,7 +200,7 @@
                                     android:layout_row="0"
                                     android:layout_column="0"
                                     android:gravity="center"
-                                    android:text="11"/>
+                                    android:text="10"/>
                             </LinearLayout>
 
                             <TextView
@@ -239,7 +240,21 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="450 bath(3)"/>
+                            android:text="450 bath(2)"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#FDF078">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="400 bath(11)"/>
 
                     </LinearLayout>
 
@@ -258,20 +273,6 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="70dp"
-                        android:layout_height="100dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:background="#FDF078">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:text="400 bath(14)"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         android:layout_marginTop="10dp"
@@ -281,7 +282,7 @@
                             android:layout_width="75dp"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="450 bath  (15)"/>
+                            android:text="450 bath  (14)"/>
 
                     </LinearLayout>
 
@@ -292,24 +293,24 @@
                         android:layout_marginTop="10dp"
                         android:background="#ff00a0">
 
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="400 bath (15)"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#ff00a0">
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
                             android:text="400 bath (16)"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="70dp"
-                        android:layout_height="100dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:background="#ff00a0">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:text="400 bath (17)"/>
 
                     </LinearLayout>
 
@@ -332,7 +333,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="seat (18)"
+                            android:text="seat "
 
 
                             />
@@ -350,7 +351,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="Parking(19)"/>
+                            android:text="Parking"/>
                     </LinearLayout>
 
 
@@ -374,7 +375,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="PARKING(19)"/>
+                    android:text="PARKING"/>
 
             </LinearLayout>
 
@@ -394,7 +395,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="City tower (20)">
+                android:text="City tower">
 
 
             </TextView>
@@ -461,6 +462,7 @@
 
 
         <EditText
+            android:id="@+id/log_tuomom"
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_marginLeft="20dp"
@@ -470,7 +472,7 @@
             />
 
         <Button
-            android:id="@+id/Success"
+            android:id="@+id/Success5"
             android:layout_width="110dp"
             android:layout_height="60dp"
             android:text="Success"
