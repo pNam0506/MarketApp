@@ -19,7 +19,6 @@
         >
 
 
-
         <TextView
             android:id="@+id/log_rec"
             android:layout_width="match_parent"
@@ -33,6 +32,23 @@
             android:layout_height="wrap_content"
             android:text="ราคา"
             android:textSize="20sp"
+            />
+        <TextView
+            android:id="@+id/Date_slip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="วันที่"
+            android:textSize="15sp"
+            android:gravity="end"
+            />
+
+        <TextView
+            android:id="@+id/Time_slip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="เวลา"
+            android:textSize="15sp"
+            android:gravity="end"
             />
 
 

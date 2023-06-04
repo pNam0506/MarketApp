@@ -36,6 +36,8 @@ public class AdapterBill extends RecyclerView.Adapter<MyViewHolderBill> {
     public void onBindViewHolder(@NonNull MyViewHolderBill holder, int position) {
         holder.Log_price.setText(dataList_slip.get(position).getDatalog());
         holder.Log_rec.setText(dataList_slip.get(position).getDataSlip());
+        holder.time_slip.setText(dataList_slip.get(position).getDataTime());
+        holder.date_slip.setText(dataList_slip.get(position).getDataDate());
 
         holder.recCard_B.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +63,7 @@ public class AdapterBill extends RecyclerView.Adapter<MyViewHolderBill> {
 
 class MyViewHolderBill extends RecyclerView.ViewHolder{
 
-    TextView Log_price,Log_rec;
+    TextView Log_price,Log_rec,time_slip,date_slip;
     CardView recCard_B;
 
     public MyViewHolderBill(@NonNull View itemView) {
@@ -69,6 +71,9 @@ class MyViewHolderBill extends RecyclerView.ViewHolder{
         Log_price = itemView.findViewById(R.id.log_price);
         recCard_B = itemView.findViewById(R.id.recCard_bill);
         Log_rec = itemView.findViewById(R.id.log_rec);
+        time_slip = itemView.findViewById(R.id.Time_slip);
+        date_slip = itemView.findViewById(R.id.Date_slip);
+
 
     }
 }

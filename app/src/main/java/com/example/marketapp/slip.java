@@ -32,6 +32,9 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
@@ -42,7 +45,7 @@ public class slip extends AppCompatActivity {
     Uri uri;
     Button booking;
 
-    private TextView log_selected,price_Log,time_Booking;
+    private TextView log_selected,price_Log,time_Booking,time_slip,date_slip;
 
     public static final String LOG = "LOG";
     public static final String PRICE = "PRICE";
@@ -59,6 +62,9 @@ public class slip extends AppCompatActivity {
         log_selected = findViewById(R.id.log_B);
         price_Log = findViewById((int)R.id.price_log);
         time_Booking = findViewById((int)R.id.time_booking);
+        time_slip = findViewById((int)R.id.Time_slip_booking);
+        date_slip = findViewById((int)R.id.Date_slip_booking);
+
 
         slipClass slipClass_s = new slipClass();
 
@@ -176,10 +182,26 @@ public class slip extends AppCompatActivity {
     }
     public void uploadData(){
 
+        Date time = Calendar.getInstance().getTime();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy",Locale.getDefault());
+        SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm:ss",Locale.getDefault());
+
+        String date_finish = dateFormat.format(time);
+        String time_finish = timeFormat.format(time);
+        date_slip.setText(date_finish);
+        time_slip.setText(time_finish);
+
+        String time_D = time_slip.getText().toString();
+        String date_D = date_slip.getText().toString();
+
+
 
         slipClass slipClass;
 
-        slipClass = new slipClass(log_s,price,imageURL);
+
+
+
+        slipClass = new slipClass(log_s,price,time_D,date_D,imageURL);
 
 
         FirebaseDatabase.getInstance().getReference("slip").child(log_s)

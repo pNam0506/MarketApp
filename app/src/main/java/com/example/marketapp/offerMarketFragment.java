@@ -105,6 +105,7 @@ public class offerMarketFragment extends AppCompatActivity {
                     nameUser.setText(nameUser_s);
                     name_boot.setText(nameBoot_s);
 
+
                 }
 
             }
