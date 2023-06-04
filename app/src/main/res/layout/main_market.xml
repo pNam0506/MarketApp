@@ -142,8 +142,9 @@
         <Button
             android:id="@+id/AddMarket"
             android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_height="60dp"
             android:backgroundTint="@color/orange"
+            android:layout_marginBottom="-20dp"
             android:text="เพิ่มตลาด"
 
             />
