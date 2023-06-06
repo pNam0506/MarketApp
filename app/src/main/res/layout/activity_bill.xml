@@ -1,71 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginStart="12dp"
-    android:layout_marginEnd="12dp"
-    android:layout_marginHorizontal="10dp"
-    android:layout_marginVertical="10dp"
-    app:cardCornerRadius="20dp"
-    app:cardElevation="8dp"
-    tools:context=".Bill">
+    android:animateLayoutChanges="true"
+    android:background="@color/gray"
+    tools:context="com.marketapp.Bill">
 
-    <LinearLayout
+    <ImageView
+        android:id="@+id/imageshop"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/clipboard_list_svgrepo_com" />
+
+    <TextView
+        android:id="@+id/TextChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:text="รายการ"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/imageshop"
+        app:layout_constraintStart_toEndOf="@id/imageshop"/>
+
+    <TextView
+        android:id="@+id/TextDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ดูประวัติการจองของคุณ"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/TextChat"
+        app:layout_constraintStart_toStartOf="@id/TextChat"/>
+
+
+    <ScrollView
+        android:id="@+id/viewBackground"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_gravity="center"
-        android:padding="16sp"
-        >
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="หลักฐานการโอนเงิน"
-            android:gravity="center"
-            android:textSize="20sp"
-            />
-
-        <ImageView
-            android:id="@+id/slip_bill"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:src="@drawable/pay_in_cash_money_dollar_bill_svgrepo_com"
-            />
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/background_content_bottom"
+        app:layout_constraintTop_toBottomOf="@id/imageshop"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16sp"
+            android:layout_height="match_parent"
             android:orientation="vertical"
-            >
-
-
+            android:layout_gravity="top"
+            android:padding="16sp">
 
             <TextView
-                android:id="@+id/bill_log_rec"
+                android:id="@+id/head"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ล็อคที่"
-                android:textSize="20sp"
-                />
-            <TextView
-                android:id="@+id/bill_log_price"
+                android:text="หลักฐานการโอนเงิน"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/slip_bill"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ราคา"
-                android:textSize="20sp"
-                />
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/money_transfer_svgrepo_com__1_" />
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp">
 
+            <ImageView
+                android:id="@+id/imageshopsmall"
+                android:layout_width="@dimen/_55sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/food_stall_stall_svgrepo_com"
+                android:layout_marginStart="@dimen/_10sdp"/>
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/bill_log_rec"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="@dimen/_67sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:text="ล็อคที่"
+                    android:background="@drawable/background_text"
+                    android:textSize="20sp" />
 
+            </RelativeLayout>
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp">
 
-    </LinearLayout>
+            <ImageView
+                android:id="@+id/imagemoney"
+                android:layout_width="@dimen/_55sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/money_transfer_svgrepo_com__1_"
+                android:layout_marginStart="@dimen/_10sdp"/>
 
+                <TextView
+                    android:id="@+id/bill_log_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="@dimen/_67sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:text="ราคา"
+                    android:background="@drawable/background_text1"
+                    android:textSize="20sp" />
 
-</androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+            </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

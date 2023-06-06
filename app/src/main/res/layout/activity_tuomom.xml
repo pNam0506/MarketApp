@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".tuomom">
+    tools:context="com.marketapp.tuomom">
 
     <LinearLayout
         android:id="@+id/tuomom_Layout"

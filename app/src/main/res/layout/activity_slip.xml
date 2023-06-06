@@ -1,95 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".slip"
-    android:background="#D6D6D6"
-    >
+    tools:context="com.marketapp.slip"
+    android:background="@color/gray">
 
-    <LinearLayout
-        android:id="@+id/topic"
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:background="#424242"
-        android:gravity="center|start"
-        >
-
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/shop_groceries_svgrepo_com"
-             android:layout_margin="20sp"
-            />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="จองที่"
-                android:textColor="@color/white"
-                android:textSize="50sp"
-                />
-            <TextView
-                android:id="@+id/Time_slip_booking"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="เวลา"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:layout_gravity="end"
-                android:layout_margin="20sp"
-                android:maxLines="0"
-                />
-            <TextView
-                android:id="@+id/Date_slip_booking"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="เวลา"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:layout_gravity="end"
-                android:layout_margin="20sp"
-                android:maxLines="0"
-                />
+    <ImageView
+        android:id="@+id/imageshop"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/money_transfer_svgrepo_com__1_" />
 
 
-        </LinearLayout>
+    <TextView
+        android:id="@+id/TextChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:text="รายการ"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/imageshop"
+        app:layout_constraintStart_toEndOf="@id/imageshop"/>
 
+    <TextView
+        android:id="@+id/TextDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ดูประวัติการจองของคุณ"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/TextChat"
+        app:layout_constraintStart_toStartOf="@id/TextChat"/>
 
+    <TextView
+        android:id="@+id/Time_slip_booking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="เวลา"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="@id/TextDetail"
+        app:layout_constraintTop_toBottomOf="@id/TextDetail"
+        android:visibility="gone"/>
 
-
-
-    </LinearLayout>
-
-
+    <TextView
+        android:id="@+id/Date_slip_booking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="เวลา"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/TextDetail"
+        app:layout_constraintTop_toBottomOf="@id/Time_slip_booking"/>
 
 
     <ScrollView
+        android:id="@+id/viewBackground"
         android:layout_width="match_parent"
-        android:layout_height="558dp"
-        android:layout_below="@+id/topic"
-        android:layout_marginTop="-7dp"
-        android:background="#FFFFFF">
-
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/background_content_bottom"
+        app:layout_constraintTop_toBottomOf="@id/imageshop"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_gravity="center"
-            >
+            android:layout_gravity="top">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="125dp"
+                android:layout_height="135dp"
                 android:layout_marginStart="20dp"
-
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="10dp"
@@ -97,73 +93,75 @@
                 android:orientation="vertical"
                 android:padding="16dp">
 
-
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/testLog"
+                    android:id="@+id/bank"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
-                    android:layout_marginStart="130dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_100sdp"
                     android:text="ธนาคารกสิกรไทย"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
-
                 <TextView
+                    android:id="@+id/bankacount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="130dp"
-                    android:layout_marginEnd="5dp"
-                    android:text="เลขบัญชี 065*******"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_100sdp"
+                    android:text="999-9-99999-9"
                     android:textColor="@color/black"
-                    android:textSize="20sp" />
-
+                    android:textSize="15sp" />
                 <TextView
-                    android:layout_width="211dp"
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="130dp"
-                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_100sdp"
                     android:text="นางสาวรวงข้าว โพธิ์ทอง"
                     android:textColor="@color/black"
-                    android:textSize="20sp" />
+                    android:textSize="15sp" />
 
-                <TextView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="-77dp"
-                    android:background="@drawable/bank_svgrepo_com" />
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/bank_svgrepo_com__2_" />
 
-            </LinearLayout>
+            </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                >
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="20sp"
-                    android:gravity="center"
-                    >
+                    android:gravity="center">
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/food_stall_stall_svgrepo_com"
-
-                        />
+                        android:src="@drawable/food_stall_stall_svgrepo_com" />
 
                     <TextView
                         android:id="@+id/log_B"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:gravity="center"
                         android:text="ล็อกที่จอง 1"
-                        android:textSize="20dp" />
-
+                        android:textSize="20dp"
+                        android:background="@drawable/background_text1"/>
 
                 </LinearLayout>
 
@@ -171,23 +169,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="20sp"
-                    android:gravity="center"
-                    >
+                    android:gravity="center">
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/pay_in_cash_money_dollar_bill_svgrepo_original_com"
-
-                        />
+                        android:src="@drawable/money_with_wings_svgrepo_com" />
 
                     <TextView
                         android:id="@+id/price_log"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:gravity="center"
                         android:text="ราคา"
-                        android:textSize="20dp" />
+                        android:textSize="20dp"
+                        android:background="@drawable/background_text1"/>
 
 
                 </LinearLayout>
@@ -196,23 +193,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="20sp"
-                    android:gravity="center"
-                    >
+                    android:gravity="center">
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/clock_svgrepo_com"
-
-                        />
+                        android:src="@drawable/time_caspule_start_svgrepo_com" />
 
                     <TextView
                         android:id="@+id/time_booking"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:gravity="center"
                         android:text="เวลา"
-                        android:textSize="20dp" />
+                        android:textSize="20dp"
+                        android:background="@drawable/background_text1"/>
 
 
                 </LinearLayout>
@@ -224,37 +220,25 @@
                     android:gravity="center"
                     android:text="เเนบรูปสลิป"
                     android:textSize="20dp"
-                    android:layout_marginTop="30dp"
-                    />
+                    android:layout_marginTop="30dp" />
 
                 <ImageView
                     android:id="@+id/UploadSlip"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:src="@drawable/pay_in_cash_money_dollar_bill_svgrepo_com"
-
-                    />
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:src="@drawable/money_transfer_svgrepo_com__1_" />
 
                 <Button
                     android:id="@+id/booking"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="@dimen/_30sdp"
                     android:text="ทำการจอง" />
 
-
-
-
-
-
             </LinearLayout>
-
-
-
-
-
 
         </LinearLayout>
 
@@ -265,7 +249,12 @@
 
 
 
-</RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
 
 
 

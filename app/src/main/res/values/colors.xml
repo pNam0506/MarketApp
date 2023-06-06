@@ -10,11 +10,21 @@
     <color name="message">#4CAF50</color>
     <color name="profile">#8BC34A</color>
 
-    <color name="gray">#535557</color>
+    <color name="gray">#434343</color>
     <color name="gray_soft">#838688</color>
     <color name="gray_softy">#CCD0D3</color>
 
     <color name="orange">#FF9800</color>
     <color name="green">#6DAAA4</color>
     <color name="green_soft">#3C93E4DC</color>
+
+    <color name="primary">#434343</color>
+    <color name="background1">#929292</color>
+    <color name="primary_dark">#333333</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="input_background">#ECECEC</color>
+    <color name="icon_background">#20FFFFFF</color>
+    <color name="error">#B00020</color>
+    <color name="received_message_background">#090D16</color>
 </resources>

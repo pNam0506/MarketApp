@@ -1,60 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/gray"
-    tools:context=".selectStatusFragment">
+    tools:context="com.marketapp.selectStatusFragment">
 
     <LinearLayout
-        android:id="@+id/space_Selected"
+        android:id="@+id/linearstatushead"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
-
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_below="@+id/space_Selected"
-        android:id="@+id/titleSelected"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-
-        >
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal">
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:id="@+id/statushead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_65sdp"
             android:text="สถานะของคุณ"
-            android:textSize="20dp"
-            android:textColor="@color/white"
-            android:gravity="center"/>
-
-
+            android:textSize="@dimen/_30sdp"
+            android:textColor="@color/white" />
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/viewBackground"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:background="@drawable/background_content_bottom"
+        app:layout_constraintTop_toBottomOf="@id/linearstatushead"
+        app:layout_constraintBottom_toBottomOf="parent">
 
     <LinearLayout
         android:id="@+id/selected"
         android:layout_width="match_parent"
-        android:layout_height="186dp"
-        android:layout_below="@+id/titleSelected"
-        android:layout_alignParentEnd="true"
-        android:layout_gravity="center"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="-1dp">
-
-        <LinearLayout
-            android:layout_width="47dp"
-            android:layout_height="match_parent"
-
-            >
-
-        </LinearLayout>
-
-
+        android:layout_height="@dimen/_400sdp"
+        android:orientation="vertical">
         <LinearLayout
             android:id="@+id/sellerLayout"
-            android:layout_width="130dp"
-            android:layout_height="150dp"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_135sdp"
+            android:layout_marginTop="@dimen/_30sdp"
             android:layout_gravity="center"
             android:background="@drawable/border_corner"
             android:orientation="vertical">
@@ -63,9 +51,9 @@
                 android:id="@+id/sellerImage"
                 android:layout_width="match_parent"
                 android:layout_height="114dp"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:layout_gravity="center"
-                android:src="@drawable/financial_consultant_svgrepo_com" />
-
+                android:src="@drawable/account_avatar_profile_user_10_svgrepo_com" />
             <TextView
                 android:id="@+id/sellerText"
                 android:layout_width="match_parent"
@@ -74,43 +62,26 @@
                 android:gravity="center"
                 android:text="ผู้ขาย"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-
-            >
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="หรือ"
-                android:textColor="@color/white"
-                android:textSize="20dp" />
-
+                android:textSize="@dimen/_20ssp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/managerLayout"
-            android:layout_width="130dp"
-            android:layout_height="150dp"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_135sdp"
+            android:layout_marginTop="@dimen/_20sdp"
             android:layout_gravity="center"
-            android:background="@drawable/border_corner"
+            android:background="@drawable/border_corner2"
             android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/managerImage"
                 android:layout_width="match_parent"
                 android:layout_height="114dp"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:layout_gravity="center"
-                android:src="@drawable/group_svgrepo_com" />
+                android:src="@drawable/shop_online_shop_svgrepo_com" />
 
             <TextView
                 android:id="@+id/managerText"
@@ -120,45 +91,29 @@
                 android:gravity="center"
                 android:text="ตลาด"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
-
+                android:textSize="@dimen/_20ssp" />
 
         </LinearLayout>
 
+
         <LinearLayout
-            android:layout_width="56dp"
-            android:layout_height="match_parent"></LinearLayout>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:gravity="center">
 
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/selected"
-        android:gravity="center"
-        >
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/nextLayout"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/border_corner"
-            android:backgroundTint="@color/gray_softy"
-            android:text="ถัดไป"
-            android:textSize="20dp"
-
-            />
-
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/nextLayout"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_corner"
+                android:backgroundTint="#72B5EA"
+                android:text="ถัดไป"
+                android:textSize="20dp" />
+        </LinearLayout>
 
     </LinearLayout>
 
+    </LinearLayout>
 
-
-
-
-
-
-
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

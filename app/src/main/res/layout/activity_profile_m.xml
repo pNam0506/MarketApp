@@ -4,17 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    tools:context=".profileM">
-
-
+    android:background="@color/primary"
+    tools:context="com.marketapp.profileM">
 
     <LinearLayout
         android:id="@+id/profileTopic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/gray"
-        >
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/gray">
 
         <TextView
             android:id="@+id/textView8"
@@ -30,14 +28,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center"
-            android:layout_marginLeft="10dp"
-            >
+            android:gravity="center">
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="106dp"
                 android:layout_height="68dp"
-                android:layout_marginStart="73dp"
+                android:layout_marginStart="50dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="80dp"
                 android:text="บัญชี"
@@ -50,14 +46,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="39dp"
-               android:gravity="center"
                 android:text="จัดการบัญชี"
                 android:textColor="#ffffff"
-                android:textSize="30sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5"
-
-                />
+                android:textSize="20sp"
+                android:layout_marginStart="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
         </LinearLayout>
 
@@ -71,11 +64,11 @@
 <LinearLayout
     android:layout_below="@+id/profileTopic"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_marginTop="50dp"
-    android:gravity="center"
-    >
+    android:background="@drawable/background_content_bottom"
+    android:gravity="center">
 
     <Button
         android:id="@+id/profile"
@@ -83,15 +76,10 @@
         android:layout_height="50dp"
         android:layout_row="0"
         android:layout_column="0"
-        android:layout_marginTop="20dp"
         android:background="@drawable/usernamewriteround"
         android:onClick="Bprofile"
         android:text="แก้ไขโปรไฟล์                                        "
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/white" />
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/safty"
@@ -103,11 +91,7 @@
         android:background="@drawable/usernamewriteround"
         android:onClick="Bsafty"
         android:text="ตั้งค่าความปลอดภัย                               "
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile" />
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/delete"
@@ -153,9 +137,5 @@
         >
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-
-
-
 
 </RelativeLayout>
