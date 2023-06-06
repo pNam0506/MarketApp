@@ -20,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.chat_app.activities.MainActivity;
 import com.example.marketapp.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DataSnapshot;
@@ -175,6 +176,11 @@ public class offerMarketFragment extends AppCompatActivity {
                 return true;
             } else if (item.getItemId() == R.id.profileBottom) {
                 startActivity(new Intent(getApplicationContext(), profile.class));
+                overridePendingTransition(0, 0);
+                return true;
+            }
+            else if (item.getItemId() == R.id.messageBottom) {
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 overridePendingTransition(0, 0);
                 return true;
             }

@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.chat_app.activities.MainActivity;
+import com.example.chat_app.activities.SignInActivity;
 import com.example.marketapp.R;
 
 public class beginFragment extends AppCompatActivity {
@@ -29,7 +31,7 @@ public class beginFragment extends AppCompatActivity {
 
                 }
                finally {
-                   Intent intent = new Intent(beginFragment.this, infoseller.class);
+                   Intent intent = new Intent(beginFragment.this, SignInActivity.class);
                    startActivity(intent);
                }
             }

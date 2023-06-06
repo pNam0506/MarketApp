@@ -34,7 +34,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
-public class MainActivity extends BaseActivity implements ConversionListener {
+public class MainActivityM extends BaseActivity implements ConversionListener {
 
     private ActivityMainBinding binding;
     private PreferenceManager preferenceManager;
@@ -54,7 +54,7 @@ public class MainActivity extends BaseActivity implements ConversionListener {
         setListeners();
         listenConversations();
 
-        BottomNavigationView bottom = findViewById(R.id.bottomNavigationView);
+        BottomNavigationView bottom = findViewById(R.id.bottomNavigationViewM);
         bottom.setSelectedItemId(R.id.messageBottom);
 
         bottom.setOnItemSelectedListener(item -> {
@@ -72,7 +72,7 @@ public class MainActivity extends BaseActivity implements ConversionListener {
                 return true;
             }
             else if (item.getItemId() == R.id.messageBottom) {
-                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), MainActivityM.class));
                 overridePendingTransition(0, 0);
                 return true;
             }
