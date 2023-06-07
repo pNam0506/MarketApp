@@ -97,14 +97,15 @@
         <activity android:name="com.example.chat_app.activities.SignInActivity"
             android:exported="false"/>
 
-        <activity android:name="com.example.chat_app.activities.MainActivity"
-            android:exported="false"/>
-
         <activity android:name="com.example.chat_app.activities.SignUpActivity"
             android:exported="false"/>
 
         <activity android:name="com.example.chat_app.activities.UsersActivity"
             android:exported="false"/>
+
+        <activity android:name="com.example.chat_app.activities.MainActivity"
+            android:exported="false"
+            />
 
         <service
             android:name="com.example.chat_app.firebase.MessagingService"

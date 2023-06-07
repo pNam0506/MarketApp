@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.chat_app.activities.MainActivity;
 import com.example.marketapp.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -94,6 +95,11 @@ public class profile extends AppCompatActivity {
             }
             else if (item.getItemId() == R.id.profileBottom) {
                 startActivity(new Intent(getApplicationContext(), profile.class));
+                overridePendingTransition(0, 0);
+                return true;
+            }
+            else if (item.getItemId() == R.id.messageBottom) {
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 overridePendingTransition(0, 0);
                 return true;
             }
