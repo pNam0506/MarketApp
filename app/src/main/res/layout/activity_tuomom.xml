@@ -7,30 +7,39 @@
     tools:context="com.marketapp.tuomom">
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:background="@drawable/background_content_bottom3">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="ทำการเลือกล็อก"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20ssp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
         android:id="@+id/tuomom_Layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-
-
-        >
+        android:layout_marginTop="@dimen/_90sdp"
+        android:gravity="center">
 
         <LinearLayout
             android:layout_width="36dp"
             android:layout_height="match_parent"
-            android:background="@color/gray_soft"
+            android:background="@drawable/road"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-
-
                 android:gravity="center"
-                android:text="Narathiwat Ratchanakarin Rd."/>
+                android:text="ถนนนาราธิวาส"/>
         </LinearLayout>
 
         <LinearLayout
@@ -51,16 +60,15 @@
                     android:rowCount="3">
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="75dp"
                         android:layout_height="100dp"
-                        android:background="#FDF078">
+                        android:background="@drawable/background_text">
 
                         <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="80dp"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="450 bath (1)">
-
+                            android:text="450บ. (1)">
                         </TextView>
 
 
@@ -78,13 +86,13 @@
                             android:rowCount="4">
 
                             <LinearLayout
-                                android:layout_width="35dp"
+                                android:layout_width="30dp"
                                 android:layout_height="20dp"
                                 android:layout_marginRight="5dp"
-                                android:background="#FDF078" />
+                                android:background="@drawable/background_text" />
 
                             <TextView
-                                android:layout_width="35dp"
+                                android:layout_width="30dp"
                                 android:layout_height="wrap_content"
                                 android:layout_row="0"
                                 android:layout_column="0"
@@ -92,12 +100,12 @@
                                 android:text="3"/>
 
                             <LinearLayout
-                                android:layout_width="42dp"
+                                android:layout_width="30dp"
                                 android:layout_height="20dp"
-                                android:background="#FDF078" >
+                                android:background="@drawable/background_text" >
 
                                 <TextView
-                                    android:layout_width="35dp"
+                                    android:layout_width="30dp"
                                     android:layout_height="wrap_content"
                                     android:layout_row="0"
                                     android:layout_column="0"
@@ -106,10 +114,10 @@
                             </LinearLayout>
 
                             <LinearLayout
-                                android:layout_width="35dp"
+                                android:layout_width="30dp"
                                 android:layout_height="20dp"
                                 android:layout_marginTop="5dp"
-                                android:background="#FDF078" >
+                                android:background="@drawable/background_text" >
 
                                 <TextView
                                     android:id="@+id/textView"
@@ -122,10 +130,10 @@
                             </LinearLayout>
 
                             <LinearLayout
-                                android:layout_width="35dp"
+                                android:layout_width="30dp"
                                 android:layout_height="20dp"
                                 android:layout_marginTop="5dp"
-                                android:background="#FDF078">
+                                android:background="@drawable/background_text">
 
                                 <TextView
                                     android:layout_width="35dp"
@@ -139,12 +147,10 @@
 
 
                             <LinearLayout
-                                android:layout_width="35dp"
+                                android:layout_width="30dp"
                                 android:layout_height="20dp"
                                 android:layout_marginTop="5dp"
-                                android:background="#FDF078"
-
-                                >
+                                android:background="@drawable/background_text">
 
                                 <TextView
                                     android:id="@+id/textView2"
@@ -157,10 +163,10 @@
                             </LinearLayout>
 
                             <LinearLayout
-                                android:layout_width="35dp"
+                                android:layout_width="30dp"
                                 android:layout_height="20dp"
                                 android:layout_marginTop="5dp"
-                                android:background="#FDF078"
+                                android:background="@drawable/background_text"
                                 >
                                 <TextView
                                     android:layout_width="35dp"
@@ -172,12 +178,10 @@
                             </LinearLayout>
 
                             <LinearLayout
-                                android:layout_width="35dp"
+                                android:layout_width="30dp"
                                 android:layout_height="20dp"
                                 android:layout_marginTop="5dp"
-                                android:background="#FDF078"
-
-                                >
+                                android:background="@drawable/background_text">
 
                                 <TextView
                                     android:id="@+id/textView3"
@@ -189,10 +193,10 @@
                             </LinearLayout>
 
                             <LinearLayout
-                                android:layout_width="35dp"
+                                android:layout_width="30dp"
                                 android:layout_height="20dp"
                                 android:layout_marginTop="5dp"
-                                android:background="#FDF078"
+                                android:background="@drawable/background_text"
                                 >
                                 <TextView
                                     android:layout_width="35dp"
@@ -218,72 +222,86 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="70dp"
+                        android:layout_width="75dp"
                         android:layout_height="100dp"
                         android:layout_marginLeft="10dp"
-                        android:background="#FDF078">
+                        android:background="@drawable/background_text">
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="400 bath(12)"/>
+                            android:text="400บ. (12)"/>
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="75dp"
                         android:layout_height="100dp"
                         android:layout_marginTop="10dp"
-                        android:background="#FDF078">
+                        android:background="@drawable/background_text">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="450 bath(2)"/>
+                            android:text="450บ. (2)"/>
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="70dp"
-                        android:layout_height="100dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:background="#FDF078">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:text="400 bath(11)"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="70dp"
+                        android:layout_width="75dp"
                         android:layout_height="100dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
-                        android:background="#FDF078">
+                        android:background="@drawable/background_text">
                         <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="80dp"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="400 bath(13)"/>
+                            android:text="400บ. (11)"/>
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="75dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_text">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="400บ. (13)"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="75dp"
                         android:layout_height="100dp"
                         android:layout_marginTop="10dp"
-                        android:background="#80ff00">
+                        android:background="@drawable/background_text2">
 
                         <TextView
                             android:layout_width="75dp"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="450 bath  (14)"/>
+                            android:text="450บ. (14)"/>
 
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="75dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_text1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="400บ. (15)"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -291,26 +309,12 @@
                         android:layout_height="100dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
-                        android:background="#ff00a0">
-
+                        android:background="@drawable/background_text1">
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="400 bath (15)"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="70dp"
-                        android:layout_height="100dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:background="#ff00a0">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:text="400 bath (16)"/>
+                            android:text="400บ. (16)"/>
 
                     </LinearLayout>
 
@@ -321,130 +325,89 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_marginLeft="10dp"
-                    >
+                    android:layout_marginLeft="10dp">
+
                     <LinearLayout
                         android:layout_width="50dp"
-                        android:layout_height="210dp"
-                        android:background="#ff8020"
-                        >
+                        android:layout_height="320dp"
+                        android:background="@drawable/background_text3">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="seat "
-
-
-                            />
-
+                            android:text="ที่นั่ง" />
 
                     </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="50dp"
-                        android:layout_height="99dp"
-                        android:layout_marginTop="10dp"
-                        android:background="#40c0ff">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:text="Parking"/>
-                    </LinearLayout>
-
 
                 </LinearLayout>
 
-
             </LinearLayout>
-
-
-
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
-                android:background="#40c0ff"
+                android:background="@drawable/background_text3"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                >
+                android:layout_marginRight="10dp">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="PARKING"/>
+                    android:text="ที่จอดรถ"/>
 
             </LinearLayout>
-
-
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:background="#E496F1"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="City tower">
-
-
-            </TextView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-
-            </TextView>
 
         </LinearLayout>
 
 
     </LinearLayout>
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="@dimen/_430sdp"
+        android:orientation="vertical"
+        android:background="@drawable/background_content_bottom2">
+
     <LinearLayout
         android:id="@+id/Order_det"
         android:layout_below="@+id/tuomom_Layout"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TextView
-
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="1.อาหาร"
-            android:textColor="#FFC107"
-
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="2.ของใช้"
-            android:textColor="#F436AE"
-            android:layout_marginLeft="10dp"
-            />
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:background="@drawable/background_text"
+            android:text="อาหาร"
+            android:textColor="@color/white" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="3.ต้นไม้"
-            android:textColor="#4CAF50"
-            android:layout_marginLeft="10dp"
-            />
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/background_text1"
+            android:text="ของใช้"
+            android:textColor="@color/white" />
 
-
-
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/background_text2"
+            android:text="ต้นไม้"
+            android:textColor="@color/white" />
 
     </LinearLayout>
 
@@ -453,35 +416,27 @@
         android:layout_below="@+id/tuomom_Layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        >
-
-
-
-
+        android:gravity="center"
+        android:layout_marginTop="20dp">
 
         <EditText
             android:id="@+id/log_tuomom"
             android:layout_width="200dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/white_corner"
+            android:background="@drawable/background_input"
             android:hint="จองพื้นที่หมายเลข"
-            android:padding="5dp"
-            />
+            android:padding="5dp" />
 
         <Button
             android:id="@+id/Success5"
             android:layout_width="110dp"
             android:layout_height="60dp"
-            android:text="Success"
-            android:layout_marginLeft="20dp"
-            />
-
-
+            android:text="จอง"
+            android:backgroundTint="@color/pay"
+            android:layout_marginStart="10dp"/>
 
     </LinearLayout>
 
+    </LinearLayout>
 
 </RelativeLayout>

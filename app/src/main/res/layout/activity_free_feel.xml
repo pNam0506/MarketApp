@@ -329,7 +329,7 @@
                 android:layout_width="177dp"
                 android:layout_height="65dp"
                 android:gravity="center"
-                android:text="Charoenkrung Road"
+                android:text="ถนนเจริญกรุง"
                 android:textColor="@color/black" />
         </LinearLayout>
 
@@ -478,7 +478,7 @@
             android:id="@+id/log_free_feel"
             android:layout_width="200dp"
             android:layout_height="50dp"
-            android:background="@drawable/white_corner"
+            android:background="@drawable/background_input"
             android:hint="จองพื้นที่หมายเลข"
             android:padding="5dp" />
 
@@ -487,6 +487,7 @@
             android:layout_width="110dp"
             android:layout_height="60dp"
             android:text="จอง"
+            android:backgroundTint="@color/pay"
             android:layout_marginStart="10dp"/>
 
     </LinearLayout>
