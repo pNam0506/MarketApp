@@ -44,10 +44,10 @@ public class slip extends AppCompatActivity {
 
     private TextView log_selected,price_Log,time_Booking,time_slip,date_slip,name_Market_slip;
 
-    public static final String LOG = "LOG";
+    public static final String LOG_S = "LOG_S";
     public static final String PRICE = "PRICE";
     public static final String NAME_MARKET = "NAME_MARKET";
-    private int log_int;
+    private String log_set;
 
     private String log_s,price,price_set,nameMarket,nameMarket_s;
 
@@ -68,11 +68,11 @@ public class slip extends AppCompatActivity {
         slipClass slipClass_s = new slipClass();
 
         Intent intent = getIntent();
-        log_int = intent.getIntExtra(LOG,0);
+        log_set = intent.getStringExtra(LOG_S);
         price_set = intent.getStringExtra(PRICE);
         nameMarket = intent.getStringExtra(NAME_MARKET);
 
-        log_selected.setText("จองล็อคที่ "+log_int);
+        log_selected.setText(log_set);
         price_Log.setText(price_set);
         name_Market_slip.setText(nameMarket);
 

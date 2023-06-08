@@ -31,10 +31,15 @@ public class OrderSeller extends AppCompatActivity {
     AdapterBill adapterBill;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_seller);
+
+
+
 
         recyclerView_b = findViewById(R.id.order_bill);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(OrderSeller.this,1);
@@ -52,7 +57,8 @@ public class OrderSeller extends AppCompatActivity {
         adapterBill = new AdapterBill(OrderSeller.this,dataList_slip);
         recyclerView_b.setAdapter(adapterBill);
 
-        reference = FirebaseDatabase.getInstance().getReference("slip");
+
+        reference = FirebaseDatabase.getInstance().getReference("slip").child("Free Feel");
 
         dialog.show();
 
