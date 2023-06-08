@@ -8,6 +8,7 @@ import android.os.Bundle;
 import com.example.chat_app.activities.MainActivity;
 
 import com.example.chat_app.activities.SignInActivity;
+import com.example.chat_app.activities.SignUpActivity;
 import com.example.marketapp.R;
 
 public class beginFragment extends AppCompatActivity {
@@ -33,7 +34,7 @@ public class beginFragment extends AppCompatActivity {
                 }
                finally {
 
-                   Intent intent = new Intent(beginFragment.this, offerMarketFragment.class);
+                   Intent intent = new Intent(beginFragment.this, SignUpActivity.class);
                    startActivity(intent);
                }
             }
