@@ -25,7 +25,7 @@ public class tuomom extends AppCompatActivity {
 
     private int log;
 
-    private String price;
+    private String price,nameMarket;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +60,7 @@ public class tuomom extends AppCompatActivity {
 
         log = Integer.parseInt(log_selected.getText().toString().trim());
         String log_j = "จองล็อคที่ "+log+" Tuo Mom";
+        nameMarket = " Tuo Mom";
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("slip");
         Query checkData = reference.orderByChild("dataSlip").equalTo(log_j);
@@ -82,6 +83,7 @@ public class tuomom extends AppCompatActivity {
 
                         intent.putExtra(slip.LOG_S,log_j);
                         intent.putExtra(slip.PRICE,price);
+                        intent.putExtra(slip.NAME_MARKET,nameMarket);
 
                         startActivity(intent);
 
@@ -94,6 +96,7 @@ public class tuomom extends AppCompatActivity {
 
                         intent.putExtra(slip.LOG_S,log_j);
                         intent.putExtra(slip.PRICE,price);
+                        intent.putExtra(slip.NAME_MARKET,nameMarket);
 
                         startActivity(intent);
 
@@ -107,6 +110,7 @@ public class tuomom extends AppCompatActivity {
 
                         intent.putExtra(slip.LOG_S,log_j);
                         intent.putExtra(slip.PRICE,price);
+                        intent.putExtra(slip.NAME_MARKET,nameMarket);
 
                         startActivity(intent);
 

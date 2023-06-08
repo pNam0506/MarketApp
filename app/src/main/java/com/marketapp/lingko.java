@@ -25,7 +25,7 @@ public class lingko extends AppCompatActivity {
 
     private int log;
 
-    private String price;
+     String price,nameMarket;
 
 
     @Override
@@ -60,6 +60,7 @@ public class lingko extends AppCompatActivity {
 
         log = Integer.parseInt(log_selected.getText().toString().trim());
         String log_j = "จองล็อคที่ "+ log + " Ling Ko";
+        nameMarket = " Ling Ko";
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("slip");
         Query checkData = reference.orderByChild("dataSlip").equalTo(log_j);
@@ -81,6 +82,7 @@ public class lingko extends AppCompatActivity {
 
                         intent.putExtra(slip.LOG_S,log_j);
                         intent.putExtra(slip.PRICE,price);
+                        intent.putExtra(slip.NAME_MARKET,nameMarket);
 
                         startActivity(intent);
 
@@ -93,6 +95,7 @@ public class lingko extends AppCompatActivity {
 
                         intent.putExtra(slip.LOG_S,log_j);
                         intent.putExtra(slip.PRICE,price);
+                        intent.putExtra(slip.NAME_MARKET,nameMarket);
 
                         startActivity(intent);
 
