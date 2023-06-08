@@ -1,5 +1,6 @@
 package com.marketapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,6 +10,12 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.marketapp.R;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 public class tuomom extends AppCompatActivity {
 
@@ -52,46 +59,73 @@ public class tuomom extends AppCompatActivity {
 
 
         log = Integer.parseInt(log_selected.getText().toString().trim());
-        String log_j = "จองล็อคที่"+log;
+        String log_j = "จองล็อคที่ "+log+" Tuo Mom";
+
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("slip");
+        Query checkData = reference.orderByChild("dataSlip").equalTo(log_j);
+
+        checkData.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()){
+
+                    log_selected.setError("มีการจองเเล้ว");
+                    log_selected.requestFocus();
+
+                }
+                else{
+
+                    if(log <= 10){
+                        price = "ราคา 450 บาท";
+
+                        Intent intent = new Intent(tuomom.this,slip.class);
+
+                        intent.putExtra(slip.LOG_S,log_j);
+                        intent.putExtra(slip.PRICE,price);
+
+                        startActivity(intent);
 
 
-        if(log <= 10){
-            price = "ราคา 450 บาท";
+                    }
+                    else if(log == 11 && log <= 13 || log == 15 || log == 16){
+                        price = "ราคา 400 บาท";
 
-            Intent intent = new Intent(tuomom.this,slip.class);
+                        Intent intent = new Intent(tuomom.this,slip.class);
 
-            intent.putExtra(slip.LOG_S,log_j);
-            intent.putExtra(slip.PRICE,price);
+                        intent.putExtra(slip.LOG_S,log_j);
+                        intent.putExtra(slip.PRICE,price);
 
-            startActivity(intent);
-
-
-        }
-        else if(log == 11 && log <= 13 || log == 15 || log == 16){
-            price = "ราคา 400 บาท";
-
-            Intent intent = new Intent(tuomom.this,slip.class);
-
-            intent.putExtra(slip.LOG_S,log_j);
-            intent.putExtra(slip.PRICE,price);
-
-            startActivity(intent);
+                        startActivity(intent);
 
 
-        }
+                    }
 
-        else if(log == 14){
-            price = "ราคา 450 บาท";
+                    else if(log == 14){
+                        price = "ราคา 450 บาท";
 
-            Intent intent = new Intent(tuomom.this,slip.class);
+                        Intent intent = new Intent(tuomom.this,slip.class);
 
-            intent.putExtra(slip.LOG_S,log_j);
-            intent.putExtra(slip.PRICE,price);
+                        intent.putExtra(slip.LOG_S,log_j);
+                        intent.putExtra(slip.PRICE,price);
 
-            startActivity(intent);
+                        startActivity(intent);
 
 
-        }
+                    }
+
+
+
+
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
 
 
 
