@@ -95,9 +95,11 @@
             android:exported="false"/>
 
         <activity android:name="com.example.chat_app.activities.SignInActivity"
+            android:windowSoftInputMode="adjustResize"
             android:exported="false"/>
 
         <activity android:name="com.example.chat_app.activities.SignUpActivity"
+            android:windowSoftInputMode="adjustResize"
             android:exported="false"/>
 
         <activity android:name="com.example.chat_app.activities.UsersActivity"
