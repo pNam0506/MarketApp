@@ -10,6 +10,15 @@ public class slipClass {
 
     private String dataDate;
 
+    private String dataNameMarket;
+
+    public String getDataNameMarket() {
+        return dataNameMarket;
+    }
+
+    public void setDataNameMarket(String dataNameMarket) {
+        this.dataNameMarket = dataNameMarket;
+    }
 
     public String getDataDate() {
         return dataDate;
@@ -27,12 +36,13 @@ public class slipClass {
         this.dataTime = dataTime;
     }
 
-    public slipClass(String dataSlip, String datalog,String datatime,String datadate, String dataprice) {
+    public slipClass(String dataSlip, String datalog,String datatime,String datadate,String dataNameMarket, String dataprice) {
         this.dataSlip = dataSlip;
         this.datalog = datalog;
         this.dataprice = dataprice;
         this.dataTime = datatime;
         this.dataDate = datadate;
+        this.dataNameMarket = dataNameMarket;
 
     }
 

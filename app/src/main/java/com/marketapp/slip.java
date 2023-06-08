@@ -42,13 +42,14 @@ public class slip extends AppCompatActivity {
     Uri uri;
     Button booking;
 
-    private TextView log_selected,price_Log,time_Booking,time_slip,date_slip;
+    private TextView log_selected,price_Log,time_Booking,time_slip,date_slip,name_Market_slip;
 
     public static final String LOG = "LOG";
     public static final String PRICE = "PRICE";
+    public static final String NAME_MARKET = "NAME_MARKET";
     private int log_int;
 
-    private String log_s,price,price_set;
+    private String log_s,price,price_set,nameMarket,nameMarket_s;
 
 
     @Override
@@ -61,6 +62,7 @@ public class slip extends AppCompatActivity {
         time_Booking = findViewById((int)R.id.time_booking);
         time_slip = findViewById((int)R.id.Time_slip_booking);
         date_slip = findViewById((int)R.id.Date_slip_booking);
+        name_Market_slip = findViewById((int)R.id.name_market_slip);
 
 
         slipClass slipClass_s = new slipClass();
@@ -68,14 +70,18 @@ public class slip extends AppCompatActivity {
         Intent intent = getIntent();
         log_int = intent.getIntExtra(LOG,0);
         price_set = intent.getStringExtra(PRICE);
+        nameMarket = intent.getStringExtra(NAME_MARKET);
 
         log_selected.setText("จองล็อคที่ "+log_int);
         price_Log.setText(price_set);
+        name_Market_slip.setText(nameMarket);
 
         log_s = log_selected.getText().toString();
              price = price_Log.getText().toString();
+             nameMarket_s = name_Market_slip.getText().toString();
             slipClass_s.setDatalog(log_s);
             slipClass_s.setDataprice(price);
+            slipClass_s.setDataNameMarket(nameMarket_s);
 
             long duration = TimeUnit.MINUTES.toMillis(15);
 
@@ -198,10 +204,10 @@ public class slip extends AppCompatActivity {
 
 
 
-        slipClass = new slipClass(log_s,price,time_D,date_D,imageURL);
+        slipClass = new slipClass(log_s,price,time_D,date_D,nameMarket_s,imageURL);
 
 
-        FirebaseDatabase.getInstance().getReference("slip").child(log_s)
+        FirebaseDatabase.getInstance().getReference("slip").child(nameMarket_s).child(log_s)
                 .setValue(slipClass).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {

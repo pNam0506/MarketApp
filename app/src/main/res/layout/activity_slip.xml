@@ -210,6 +210,16 @@
                         android:textSize="20dp"
                         android:background="@drawable/background_text1"/>
 
+                    <TextView
+                        android:id="@+id/name_market_slip"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:text="เวลา"
+                        android:textSize="20dp"
+                        android:background="@drawable/background_text1"/>
+
 
                 </LinearLayout>
 

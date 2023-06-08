@@ -18,7 +18,7 @@ public class freeFeel extends AppCompatActivity {
 
     private int log;
 
-    private String price;
+    private String price,nameMarket;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,11 +47,13 @@ public class freeFeel extends AppCompatActivity {
 
         if(log == 15 || log == 16){
             price = "ราคา 500 บาท";
+            nameMarket = "Free Feel";
 
             Intent intent = new Intent(freeFeel.this,slip.class);
 
             intent.putExtra(slip.LOG,log);
             intent.putExtra(slip.PRICE,price);
+            intent.putExtra(slip.NAME_MARKET,nameMarket);
 
             startActivity(intent);
 
@@ -59,11 +61,13 @@ public class freeFeel extends AppCompatActivity {
         }
         else{
             price = "ราคา 300 บาท";
+            nameMarket = "Free Feel";
 
             Intent intent = new Intent(freeFeel.this,slip.class);
 
             intent.putExtra(slip.LOG,log);
             intent.putExtra(slip.PRICE,price);
+            intent.putExtra(slip.NAME_MARKET,nameMarket);
 
             startActivity(intent);
 
