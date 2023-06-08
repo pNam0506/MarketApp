@@ -106,13 +106,12 @@ public class orderManager extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), orderManager.class));
                 overridePendingTransition(0, 0);
                 return true;
-            }
-
-            else if (item.getItemId() == R.id.profileBottom) {
+            } else if (item.getItemId() == R.id.profileBottom) {
                 startActivity(new Intent(getApplicationContext(), profileM.class));
                 overridePendingTransition(0, 0);
                 return true;
             }
+
             return false;
         });
     }
