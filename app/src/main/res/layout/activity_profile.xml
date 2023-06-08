@@ -11,7 +11,8 @@
         android:id="@+id/profileTopic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
         android:background="@color/gray">
 
         <TextView
@@ -54,9 +55,6 @@
 
         </LinearLayout>
 
-
-
-
     </LinearLayout>
 
 
@@ -67,16 +65,16 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_marginTop="50dp"
-        android:background="@drawable/background_content_bottom"
-        android:gravity="center">
+        android:background="@drawable/background_content_bottom">
 
     <Button
         android:id="@+id/profile"
         android:layout_width="350dp"
         android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
         android:background="@drawable/usernamewriteround"
-        android:onClick="Bprofile"
-        android:text="แก้ไขโปรไฟล์                                        "
+        android:text="แก้ไขโปรไฟล์"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,9 +87,9 @@
         android:layout_row="0"
         android:layout_column="0"
         android:layout_marginTop="20dp"
+        android:layout_gravity="center"
         android:background="@drawable/usernamewriteround"
-        android:onClick="Bsafty"
-        android:text="ตั้งค่าความปลอดภัย                               "
+        android:text="ตั้งค่าความปลอดภัย"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
@@ -105,9 +103,9 @@
         android:layout_row="0"
         android:layout_column="0"
         android:layout_marginTop="20dp"
+        android:layout_gravity="center"
         android:background="@drawable/usernamewriteround"
-        android:onClick="Bdelete"
-        android:text="ลบบัญชี                                                  "
+        android:text="ออกจากระบบ"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
@@ -121,9 +119,9 @@
         android:layout_row="0"
         android:layout_column="0"
         android:layout_marginTop="20dp"
+        android:layout_gravity="center"
         android:background="@drawable/usernamewriteround"
-        android:onClick="Bprobpo"
-        android:text="เกี่ยวกับแอปพลิเคชัน                              "
+        android:text="เกี่ยวกับแอปพลิเคชัน"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
