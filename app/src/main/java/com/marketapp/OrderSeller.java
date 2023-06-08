@@ -58,7 +58,7 @@ public class OrderSeller extends AppCompatActivity {
         recyclerView_b.setAdapter(adapterBill);
 
 
-        reference = FirebaseDatabase.getInstance().getReference("slip").child("Free Feel");
+        reference = FirebaseDatabase.getInstance().getReference("slip");
 
         dialog.show();
 

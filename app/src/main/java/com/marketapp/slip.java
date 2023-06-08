@@ -207,7 +207,7 @@ public class slip extends AppCompatActivity {
         slipClass = new slipClass(log_s,price,time_D,date_D,nameMarket_s,imageURL);
 
 
-        FirebaseDatabase.getInstance().getReference("slip").child(nameMarket_s).child(log_s)
+        FirebaseDatabase.getInstance().getReference("slip").child(log_s)
                 .setValue(slipClass).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {

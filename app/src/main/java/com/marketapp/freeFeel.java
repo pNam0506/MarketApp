@@ -55,8 +55,8 @@ public class freeFeel extends AppCompatActivity {
 
 
         log = Integer.parseInt(log_selected.getText().toString().trim());
-        String log_j = "จองล็อคที่"+log;
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("slip").child("Free Feel");
+        String log_j = "จองล็อคที่ "+log+" Free Feel";
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("slip");
         Query checkData = reference.orderByChild("dataSlip").equalTo(log_j);
 
         checkData.addListenerForSingleValueEvent(new ValueEventListener() {

@@ -63,9 +63,9 @@ public class night_fairs extends AppCompatActivity {
 
 
         log = Integer.parseInt(log_selected.getText().toString().trim());
-        String log_j = "จองล็อคที่"+log;
+        String log_j = "จองล็อคที่ "+log+" Night Fair";
 
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("slip").child("Night Fair");
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("slip");
         Query checkData = reference.orderByChild("dataSlip").equalTo(log_j);
 
         checkData.addListenerForSingleValueEvent(new ValueEventListener() {
