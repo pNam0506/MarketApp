@@ -56,6 +56,8 @@ public class nama extends AppCompatActivity {
         String log_j = "จองล็อคที่"+log;
 
 
+
+
         if(log <= 4){
             price = "ราคา 600 บาท";
 
