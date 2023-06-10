@@ -6,10 +6,17 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.marketapp.databinding.ActivitySignInBinding;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.utilities.Constants;
@@ -25,6 +32,55 @@ public class SignInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         preferenceManager = new PreferenceManager(getApplicationContext());
         if(preferenceManager.getBoolean(Constants.KEY_IS_SIGNED_IN)){
+
+            String email = preferenceManager.getString(Constants.KEY_EMAIL);
+
+            DatabaseReference reference = FirebaseDatabase.getInstance().getReference("User");
+            Query checkData = reference.orderByChild("dataEmailUser").equalTo(email);
+
+            checkData.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if(snapshot.exists()){
+                        Intent intent = new Intent(getApplicationContext(),offerMarketFragment.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                    else{
+                        String email = preferenceManager.getString(Constants.KEY_EMAIL);
+                        String email_d = "อีเมล:"+email;
+
+                        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Manager");
+                        Query checkData = reference.orderByChild("dataEmail").equalTo(email_d);
+
+                        checkData.addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                if(snapshot.exists()){
+                                    Intent intent = new Intent(getApplicationContext(), mainMarketFragment.class);
+                                    startActivity(intent);
+                                    finish();
+                                }
+
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+
+                            }
+                        });
+
+
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+
+
             Intent intent = new Intent(getApplicationContext(), offerMarketFragment.class);
             startActivity(intent);
             finish();
@@ -59,14 +115,62 @@ public class SignInActivity extends AppCompatActivity {
                         preferenceManager.putString(Constants.KEY_USER_ID, documentSnapshot.getId());
                         preferenceManager.putString(Constants.KEY_NAME, documentSnapshot.getString(Constants.KEY_NAME));
                         preferenceManager.putString(Constants.KEY_IMAGE, documentSnapshot.getString(Constants.KEY_IMAGE));
-                        Intent intent = new Intent(getApplicationContext(),offerMarketFragment.class);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                        startActivity(intent);
+
                     }else{
                         loading(false);
                         showToast("Unable to sign in");
                     }
                 });
+
+        String email = binding.inputEmail.getText().toString();
+
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("User");
+        Query checkData = reference.orderByChild("dataEmailUser").equalTo(email);
+
+        checkData.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()){
+                    Intent intent = new Intent(getApplicationContext(),offerMarketFragment.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
+                }
+                else{
+                    String email = binding.inputEmail.getText().toString();
+                    String email_d = "อีเมล:"+email;
+
+                    DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Manager");
+                    Query checkData = reference.orderByChild("dataEmail").equalTo(email_d);
+
+                    checkData.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            if(snapshot.exists()){
+                                Intent intent = new Intent(getApplicationContext(), mainMarketFragment.class);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                startActivity(intent);
+                            }
+                            else{
+                                Toast.makeText(SignInActivity.this,"ไม่พบข้อมูล",Toast.LENGTH_SHORT).show();
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
+
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
     }
 
     private void loading(Boolean isLoading){

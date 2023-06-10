@@ -30,6 +30,8 @@ import com.google.firebase.database.ValueEventListener;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
+import com.utilities.Constants;
+import com.utilities.PreferenceManager;
 
 import org.json.JSONObject;
 
@@ -67,6 +69,8 @@ public class offerMarketFragment extends AppCompatActivity {
     FirebaseDatabase mDatabase;
     DatabaseReference mRef;
 
+    PreferenceManager preferenceManager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +78,7 @@ public class offerMarketFragment extends AppCompatActivity {
 
 
         setContentView(R.layout.fragment_offer_market);
+        preferenceManager = new PreferenceManager(getApplicationContext());
 
         nameUser = findViewById((int) R.id.userName_Seller);
         name_boot = findViewById((int) R.id.Name_boot);

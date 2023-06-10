@@ -9,34 +9,43 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.marketapp.R;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.utilities.Constants;
+import com.utilities.PreferenceManager;
 
 public class infoseller extends AppCompatActivity {
 
     private Button saveS;
-    private EditText nameS,bootS,emailS,phoneS,productS;
+    private EditText nameS,bootS,phoneS,productS;
 
+    TextView emailS;
     private String Sname,Sboot,Semail,Sphone,Sproduct;
 
     FirebaseDatabase mDatabase;
     DatabaseReference mRef;
+
+    private PreferenceManager preferenceManager;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_infoseller);
-        nameS = (EditText) findViewById((int)R.id.nameinfoSeller);
-        bootS = (EditText) findViewById(R.id.boot);
-        emailS = (EditText) findViewById(R.id.email);
-        phoneS = (EditText) findViewById(R.id.phone);
-        productS = (EditText) findViewById(R.id.product);
-        saveS = (Button) findViewById(R.id.save);
+        nameS =  findViewById((int)R.id.nameinfoSeller);
+        bootS =  findViewById(R.id.boot);
+        emailS = findViewById(R.id.email);
+        phoneS =  findViewById(R.id.phone);
+        productS =  findViewById(R.id.product);
+        saveS =  findViewById(R.id.save);
+
+        preferenceManager = new PreferenceManager(getApplicationContext());
+        emailS.setText(preferenceManager.getString(Constants.KEY_EMAIL));
 
         mDatabase = FirebaseDatabase.getInstance();
         mRef = mDatabase.getReference("User");
