@@ -5,8 +5,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:orientation="vertical"
+    android:background="#E3D980"
     tools:context="com.marketapp.detailOfMarket">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:background="@drawable/background_content_bottom3">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NameOfMarket"
+            android:textSize="20dp"
+            android:id="@+id/detailNameMk"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,13 +43,11 @@
                 android:padding="8dp"
                 android:layout_marginLeft="20dp"
                 android:src="@drawable/shop_groceries_svgrepo_com"
-                android:scaleType="fitXY"
-                android:background="@drawable/white_corner"
-                android:layout_marginTop="50dp"/>
+                android:scaleType="fitXY" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="280dp"
+                android:layout_height="200dp"
                 android:orientation="vertical"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
@@ -40,31 +56,21 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="NameOfMarket"
-                    android:textSize="20dp"
-                    android:id="@+id/detailNameMk"
-                    android:textColor="@color/gray"
-                    android:layout_gravity="center" />
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="Location"
-                    android:textSize="15dp"
+                    android:textSize="@dimen/_15ssp"
                     android:id="@+id/detailInform"
                     android:textColor="@color/gray"
-                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
                     android:layout_marginTop="20dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Rules"
-                    android:textSize="15dp"
+                    android:textSize="@dimen/_15ssp"
                     android:id="@+id/rules"
                     android:textColor="@color/gray"
-                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
                     android:layout_marginTop="20dp" />
 
 
@@ -73,59 +79,127 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:background="@drawable/time_caspule_start_svgrepo_com"/>
+
         <TextView
             android:id="@+id/timeB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_20sdp"
             android:text="TimeB"
             android:textColor="@color/gray"
-            android:textSize="15dp" />
+            android:textSize="@dimen/_15ssp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:background="@drawable/time_watch_svgrepo_com"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TimeM"
-            android:textSize="15dp"
+            android:textSize="@dimen/_15ssp"
             android:id="@+id/timeM"
             android:textColor="@color/gray"
-            android:layout_margin="20dp" />
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_20sdp"/>
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:background="@drawable/food_stall_stall_svgrepo_com"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="order"
-            android:textSize="15dp"
+            android:textSize="@dimen/_15ssp"
             android:id="@+id/order"
             android:textColor="@color/gray"
-            android:layout_margin="20dp" />
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_20sdp" />
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
 
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:background="@drawable/phone_call_telephone_svgrepo_com"/>
 
         <TextView
             android:id="@+id/phone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_20sdp"
             android:text="phone"
             android:textColor="@color/gray"
-            android:textSize="15dp" />
+            android:textSize="@dimen/_15ssp" />
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:background="@drawable/email_svgrepo_com__1_"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Email"
-            android:textSize="15dp"
+            android:textSize="@dimen/_15ssp"
             android:id="@+id/EmailM"
             android:textColor="@color/gray"
-            android:layout_margin="20dp" />
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_20sdp" />
+            </LinearLayout>
 
-
+        </LinearLayout>
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/background_content_bottom2"
             android:gravity="center">
 
             <Button
@@ -134,7 +208,7 @@
                 android:layout_margin="20dp"
                 android:layout_width="120dp"
                 android:layout_height="50dp"
-                android:text="Map"
+                android:text="ทำการจอง"
                 android:backgroundTint="@color/orange" />
 
             <Button
@@ -143,7 +217,7 @@
                 android:layout_margin="20dp"
                 android:layout_width="120dp"
                 android:layout_height="50dp"
-                android:text="Direction"
+                android:text="แผนที่"
                 android:backgroundTint="@color/green" />
 
         </LinearLayout>

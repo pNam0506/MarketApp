@@ -220,7 +220,7 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/email_svgrepo_com" />
+                        android:src="@drawable/email_svgrepo_com__1_" />
 
                     <TextView
                         android:id="@+id/E_name"

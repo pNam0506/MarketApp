@@ -4,28 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EFDAC7"
+    android:background="@color/primary"
     tools:context="com.marketapp.OrderSeller">
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/background_market_Layout"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
+    <LinearLayout
+        android:id="@+id/profileTopic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
         android:background="@color/gray">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/img"
-            android:background="@color/gray" />
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/clipboard_list_svgrepo_com"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    </com.google.android.material.card.MaterialCardView>
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="รายการ"
+                android:textColor="#ffffff"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView8" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:text="ดูประวัติการจองของคุณ"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@+id/textView8"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
     <ScrollView
-        android:layout_below="@+id/background_market_Layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/background_content_bottom2">
+        android:layout_marginTop="@dimen/_170sdp"
+        android:background="@drawable/background_content_bottom">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/order_bill"
