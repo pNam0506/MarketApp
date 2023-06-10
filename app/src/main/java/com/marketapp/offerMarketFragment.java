@@ -76,6 +76,9 @@ public class offerMarketFragment extends AppCompatActivity {
 
         setContentView(R.layout.fragment_offer_market);
 
+        nameUser = findViewById((int) R.id.userName_Seller);
+        name_boot = findViewById((int) R.id.Name_boot);
+
         mDatabase = FirebaseDatabase.getInstance();
         mRef = mDatabase.getReference("User");
 

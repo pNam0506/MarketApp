@@ -4,37 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EFDAC7"
     tools:context="com.marketapp.OrderSeller">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/background_market_Layout"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:background="@color/gray"
-        >
+        android:layout_height="200dp"
+        android:background="@color/gray">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/market_background"
-            android:background="@color/gray"
-            />
+            android:src="@drawable/img"
+            android:background="@color/gray" />
 
     </com.google.android.material.card.MaterialCardView>
 
-    <LinearLayout
+    <ScrollView
         android:layout_below="@+id/background_market_Layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="match_parent"
+        android:background="@drawable/background_content_bottom2">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/order_bill"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_20sdp"/>
 
 
-    </LinearLayout>
+    </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
@@ -42,8 +42,7 @@
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
         app:menu="@menu/bottom_bar"
-        android:layout_alignParentBottom="true"
-        >
+        android:layout_alignParentBottom="true">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
