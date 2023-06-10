@@ -49,21 +49,21 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="55dp"
                 android:layout_marginRight="20dp"
                 android:text="ลงทะเบียน"
                 android:textColor="@color/white"
-                android:textSize="40dp" />
+                android:textSize="@dimen/_28ssp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="15dp"
                 android:layout_marginRight="20dp"
                 android:text="เจ้าของตลาด"
                 android:textColor="@color/white"
-                android:textSize="26dp" />
+                android:textSize="@dimen/_15ssp" />
 
 
         </LinearLayout>
