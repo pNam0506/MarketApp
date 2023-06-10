@@ -19,6 +19,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.utilities.Constants;
 import com.utilities.PreferenceManager;
 
+import java.util.HashMap;
+
 public class infoseller extends AppCompatActivity {
 
     private Button saveS;
@@ -31,6 +33,9 @@ public class infoseller extends AppCompatActivity {
     DatabaseReference mRef;
 
     private PreferenceManager preferenceManager;
+
+    public static final String NAME_USER = "NAME_USER";
+    public static final String NAME_BOOT = "NAME_BOOT";
 
 
     @Override
@@ -47,6 +52,8 @@ public class infoseller extends AppCompatActivity {
         preferenceManager = new PreferenceManager(getApplicationContext());
         emailS.setText(preferenceManager.getString(Constants.KEY_EMAIL));
 
+
+
         mDatabase = FirebaseDatabase.getInstance();
         mRef = mDatabase.getReference("User");
 
@@ -59,6 +66,10 @@ public class infoseller extends AppCompatActivity {
                 Semail = emailS.getText().toString();
                 Sphone = phoneS.getText().toString();
                 Sproduct = productS.getText().toString();
+
+
+
+
 
                 if(Sname.isEmpty()||Sboot.isEmpty()||Semail.isEmpty()||Sphone.isEmpty()||Sproduct.isEmpty()){
 
@@ -75,6 +86,10 @@ public class infoseller extends AppCompatActivity {
                     userClass_s.setDataEmailUser(Semail);
                     userClass_s.setDataPhoneUser(Sphone);
                     userClass_s.setDataProduct(Sproduct);
+
+                    preferenceManager.putString(NAME_BOOT,Sboot);
+                    preferenceManager.putString(NAME_USER,Sname);
+                    
                     mRef.child(Sboot).setValue(userClass_s, new DatabaseReference.CompletionListener() {
                         @Override
                         public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
@@ -93,10 +108,6 @@ public class infoseller extends AppCompatActivity {
 
                         }
                     });
-
-
-
-
 
                 }
 

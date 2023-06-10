@@ -90,17 +90,11 @@ public class offerMarketFragment extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                for(DataSnapshot ds:snapshot.getChildren()) {
-
-                    userClass userClass_s = ds.getValue(userClass.class);
-                    nameUser_s = userClass_s.getDataNameUser();
-                    nameBoot_s = userClass_s.getDataNameBoot();
-
-                    nameUser.setText(nameUser_s);
-                    name_boot.setText(nameBoot_s);
+                    nameUser.setText(preferenceManager.getString(infoseller.NAME_USER));
+                    name_boot.setText(preferenceManager.getString(infoseller.NAME_BOOT));
 
 
-                }
+
 
             }
 

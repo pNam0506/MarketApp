@@ -60,6 +60,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     private void signUp() {
         loading(true);
+
         FirebaseFirestore database = FirebaseFirestore.getInstance();
         HashMap<String,Object>user = new HashMap<>();
         user.put(Constants.KEY_NAME,binding.inputName.getText().toString());

@@ -30,7 +30,7 @@ public class beginFragment extends AppCompatActivity {
                 }
                finally {
 
-                   Intent intent = new Intent(beginFragment.this, SignUpActivity.class);
+                   Intent intent = new Intent(beginFragment.this, SignInActivity.class);
                    startActivity(intent);
                }
             }
