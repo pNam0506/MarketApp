@@ -1,4 +1,4 @@
-package com.example.chat_app.activities;
+package com.marketapp;
 
 
 import android.graphics.Bitmap;

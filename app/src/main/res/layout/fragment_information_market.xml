@@ -426,12 +426,12 @@
             android:layout_marginRight="20dp"
             >
 
-            <EditText
+            <TextView
                 android:id="@+id/UploadEmail"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/white_corner"
-                android:hint="Email"
+                android:text="Email"
                 android:padding="16dp"
 
 

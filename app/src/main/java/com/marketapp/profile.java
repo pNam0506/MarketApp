@@ -11,11 +11,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.adapters.RecentConversationsAdapter;
-import com.example.chat_app.activities.BaseActivity;
-import com.example.chat_app.activities.ChatActivity;
-import com.example.chat_app.activities.MainActivity;
-import com.example.chat_app.activities.SignInActivity;
-import com.example.chat_app.activities.UsersActivity;
+
 import com.example.marketapp.R;
 import com.example.marketapp.databinding.ActivityMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;

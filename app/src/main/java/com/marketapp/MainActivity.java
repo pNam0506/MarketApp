@@ -1,4 +1,4 @@
-package com.example.chat_app.activities;
+package com.marketapp;
 
 
 import android.content.Intent;
@@ -21,9 +21,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.listeners.ConversionListener;
-import com.marketapp.OrderSeller;
-import com.marketapp.offerMarketFragment;
-import com.marketapp.profile;
 import com.models.ChatMessage;
 import com.models.User;
 import com.utilities.Constants;
@@ -186,7 +183,7 @@ public class MainActivity extends BaseActivity implements ConversionListener {
         documentReference.update(updates)
                 .addOnSuccessListener(unused -> {
                     preferenceManager.clear();
-                    startActivity(new Intent(getApplicationContext(),SignInActivity.class));
+                    startActivity(new Intent(getApplicationContext(), SignInActivity.class));
                     finish();
                 })
                 .addOnFailureListener(e -> showToast("Unable to sign out"));

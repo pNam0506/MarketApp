@@ -11,10 +11,10 @@ import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
-import com.example.chat_app.activities.ChatActivity;
 import com.example.marketapp.R;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
+import com.marketapp.ChatActivity;
 import com.models.User;
 import com.utilities.Constants;
 

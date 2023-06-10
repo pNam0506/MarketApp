@@ -1,4 +1,4 @@
-package com.example.chat_app.activities;
+package com.marketapp;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -17,7 +17,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.marketapp.databinding.ActivitySignUpBinding;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.marketapp.selectStatusFragment;
 import com.utilities.Constants;
 import com.utilities.PreferenceManager;
 
@@ -74,6 +73,7 @@ public class SignUpActivity extends AppCompatActivity {
                     preferenceManager.putBoolean(Constants.KEY_IS_SIGNED_IN,true);
                     preferenceManager.putString(Constants.KEY_USER_ID,documentReference.getId());
                     preferenceManager.putString(Constants.KEY_NAME,binding.inputName.getText().toString());
+                    preferenceManager.putString(Constants.KEY_EMAIL,binding.inputEmail.getText().toString());
                     preferenceManager.putString(Constants.KEY_IMAGE,encodedImage);
                     Intent intent = new Intent(getApplicationContext(), selectStatusFragment.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);

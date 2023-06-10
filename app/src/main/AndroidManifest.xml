@@ -88,24 +88,24 @@
             android:name="com.marketapp.slip"
             android:exported="false" />
 
-        <activity android:name="com.example.chat_app.activities.ChatActivity"
+        <activity android:name="com.marketapp.ChatActivity"
             android:exported="false"/>
 
-        <activity android:name="com.example.chat_app.activities.BaseActivity"
+        <activity android:name="com.marketapp.BaseActivity"
             android:exported="false"/>
 
-        <activity android:name="com.example.chat_app.activities.SignInActivity"
+        <activity android:name="com.marketapp.SignInActivity"
             android:windowSoftInputMode="adjustResize"
             android:exported="false"/>
 
-        <activity android:name="com.example.chat_app.activities.SignUpActivity"
+        <activity android:name="com.marketapp.SignUpActivity"
             android:windowSoftInputMode="adjustResize"
             android:exported="false"/>
 
-        <activity android:name="com.example.chat_app.activities.UsersActivity"
+        <activity android:name="com.marketapp.UsersActivity"
             android:exported="false"/>
 
-        <activity android:name="com.example.chat_app.activities.MainActivity"
+        <activity android:name="com.marketapp.MainActivity"
             android:exported="false"
             />
 

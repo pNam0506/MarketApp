@@ -1,4 +1,4 @@
-package com.example.chat_app.activities;
+package com.marketapp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.marketapp.databinding.ActivitySignInBinding;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.marketapp.offerMarketFragment;
 import com.utilities.Constants;
 import com.utilities.PreferenceManager;
 
@@ -37,7 +36,7 @@ public class SignInActivity extends AppCompatActivity {
 
     private void setListeners(){
         binding.textCreateNewAccount.setOnClickListener(v ->
-                startActivity(new Intent(getApplicationContext(),SignUpActivity.class)));
+                startActivity(new Intent(getApplicationContext(), SignUpActivity.class)));
         binding.buttonSignIn.setOnClickListener(v->{
             if(isValidSignInDetails()){
                 signIn();
