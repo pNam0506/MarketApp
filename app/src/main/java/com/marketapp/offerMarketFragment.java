@@ -150,7 +150,7 @@ public class offerMarketFragment extends AppCompatActivity {
 
         bottom.setOnItemSelectedListener(item -> {
             if (item.getItemId() == R.id.homeBottom) {
-                startActivity(new Intent(getApplicationContext(), offerMarketFragment.class));
+                startActivity(new Intent(getApplicationContext(), SignInActivity.class));
                 overridePendingTransition(0, 0);
                 return true;
             } else if (item.getItemId() == R.id.orderBottom) {

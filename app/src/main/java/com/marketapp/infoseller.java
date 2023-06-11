@@ -95,7 +95,7 @@ public class infoseller extends AppCompatActivity {
                             if(error == null){
 
                                 Toast.makeText(infoseller.this,"บันทึกข้อมูลเรียบร้อย",Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(infoseller.this,offerMarketFragment.class);
+                                Intent intent = new Intent(infoseller.this,SignInActivity.class);
                                 startActivity(intent);
 
                             }else {

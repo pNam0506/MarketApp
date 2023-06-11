@@ -42,7 +42,11 @@ public class SignInActivity extends AppCompatActivity {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     if(snapshot.exists()){
-                        Intent intent = new Intent(getApplicationContext(),offerMarketFragment.class);
+                        String nameOfUser = snapshot.child(name).child("dataNameUser").getValue(String.class);
+                        String nameOfBoot = snapshot.child(name).child("dataNameBoot").getValue(String.class);
+                        Intent intent = new Intent(SignInActivity.this,offerMarketFragment.class);
+                        intent.putExtra("name_user",nameOfUser);
+                        intent.putExtra("name_boot",nameOfBoot);
                         startActivity(intent);
                         finish();
                     }
