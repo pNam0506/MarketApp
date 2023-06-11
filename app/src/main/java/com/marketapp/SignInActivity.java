@@ -51,18 +51,17 @@ public class SignInActivity extends AppCompatActivity {
                         finish();
                     }
                     else{
-                        String name_m = preferenceManager.getString(Constants.KEY_NAME);
 
 
                         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Manager");
-                        Query checkData = reference.orderByChild("dataNameManager").equalTo(name_m);
+                        Query checkData = reference.orderByChild("dataNameManager").equalTo(name);
 
                         checkData.addListenerForSingleValueEvent(new ValueEventListener() {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot snapshot) {
                                 if(snapshot.exists()){
-                                    String nameOfManager = snapshot.child(name_m).child("dataNameManager").getValue(String.class);
-                                    String nameOfEmail = snapshot.child(name_m).child("dataEmail").getValue(String.class);
+                                    String nameOfManager = snapshot.child(name).child("dataNameManager").getValue(String.class);
+                                    String nameOfEmail = snapshot.child(name).child("dataEmail").getValue(String.class);
                                     Intent intent = new Intent(SignInActivity.this,mainMarketFragment.class);
                                     intent.putExtra("name_manager",nameOfManager);
                                     intent.putExtra("name_email",nameOfEmail);
@@ -146,20 +145,19 @@ public class SignInActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
                 else{
-                    String name_m = binding.inputName.getText().toString();
 
 
                     DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Manager");
-                    Query checkData = reference.orderByChild("dataNameManager").equalTo(name_m);
+                    Query checkData = reference.orderByChild("dataNameManager").equalTo(name_user);
 
                     checkData.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             if(snapshot.exists()){
-                                String nameOfManager = snapshot.child(name_m).child("dataNameManager").getValue(String.class);
-                                String nameOfEmail = snapshot.child(name_m).child("dataEmail").getValue(String.class);
+                                String nameOfManager = snapshot.child(name_user).child("dataNameManager").getValue(String.class);
+                                String nameOfEmail = snapshot.child(name_user).child("dataEmail").getValue(String.class);
 
-                                Intent intent = new Intent(getApplicationContext(),offerMarketFragment.class);
+                                Intent intent = new Intent(getApplicationContext(),mainMarketFragment.class);
                                 intent.putExtra("name_manager",nameOfManager);
                                 intent.putExtra("name_email",nameOfEmail);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
