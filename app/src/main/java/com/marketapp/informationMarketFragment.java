@@ -66,6 +66,7 @@ public class informationMarketFragment extends AppCompatActivity {
         uploadOrder = findViewById((int)R.id.UploadOrder);
 
         uploadEmail.setText(preferenceManager.getString(Constants.KEY_EMAIL));
+        uploadNameM.setText(preferenceManager.getString(Constants.KEY_NAME));
 
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
@@ -161,14 +162,14 @@ public class informationMarketFragment extends AppCompatActivity {
         dataClass = new DataClass(sir,nameM,nameMk,LMK,rules,tb,tm,ph,Em,Or,imageURL);
 
 
-        FirebaseDatabase.getInstance().getReference("Manager").child(nameMk)
+        FirebaseDatabase.getInstance().getReference("Manager").child(nameM)
                 .setValue(dataClass).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(informationMarketFragment.this,"Saved",Toast.LENGTH_SHORT)
                                     .show();
-                            Intent intent = new Intent(informationMarketFragment.this,mainMarketFragment.class);
+                            Intent intent = new Intent(informationMarketFragment.this,SignInActivity.class);
                             startActivity(intent);
 
 

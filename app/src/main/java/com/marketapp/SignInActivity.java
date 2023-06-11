@@ -51,17 +51,21 @@ public class SignInActivity extends AppCompatActivity {
                         finish();
                     }
                     else{
-                        String name = preferenceManager.getString(Constants.KEY_NAME);
+                        String name_m = preferenceManager.getString(Constants.KEY_NAME);
 
 
                         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Manager");
-                        Query checkData = reference.orderByChild("dataEmail").equalTo(name);
+                        Query checkData = reference.orderByChild("dataNameManager").equalTo(name_m);
 
                         checkData.addListenerForSingleValueEvent(new ValueEventListener() {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot snapshot) {
                                 if(snapshot.exists()){
-                                    Intent intent = new Intent(getApplicationContext(), mainMarketFragment.class);
+                                    String nameOfManager = snapshot.child(name_m).child("dataNameManager").getValue(String.class);
+                                    String nameOfEmail = snapshot.child(name_m).child("dataEmail").getValue(String.class);
+                                    Intent intent = new Intent(SignInActivity.this,mainMarketFragment.class);
+                                    intent.putExtra("name_manager",nameOfManager);
+                                    intent.putExtra("name_email",nameOfEmail);
                                     startActivity(intent);
                                     finish();
                                 }
@@ -84,10 +88,6 @@ public class SignInActivity extends AppCompatActivity {
                 }
             });
 
-
-            Intent intent = new Intent(getApplicationContext(), offerMarketFragment.class);
-            startActivity(intent);
-            finish();
         }
         binding = ActivitySignInBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -156,7 +156,12 @@ public class SignInActivity extends AppCompatActivity {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             if(snapshot.exists()){
-                                Intent intent = new Intent(getApplicationContext(), mainMarketFragment.class);
+                                String nameOfManager = snapshot.child(name_m).child("dataNameManager").getValue(String.class);
+                                String nameOfEmail = snapshot.child(name_m).child("dataEmail").getValue(String.class);
+
+                                Intent intent = new Intent(getApplicationContext(),offerMarketFragment.class);
+                                intent.putExtra("name_manager",nameOfManager);
+                                intent.putExtra("name_email",nameOfEmail);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(intent);
                             }
@@ -199,7 +204,7 @@ public class SignInActivity extends AppCompatActivity {
 
     private Boolean isValidSignInDetails(){
         if(binding.inputName.getText().toString().trim().isEmpty()){
-            showToast("Enter email.com");
+            showToast("Enter your name");
             return false;
         }else if(binding.inputPassword.getText().toString().trim().isEmpty()){
             showToast("Enter password");

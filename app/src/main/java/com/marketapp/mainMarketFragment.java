@@ -142,7 +142,7 @@ public class mainMarketFragment extends AppCompatActivity {
 
         bottom.setOnItemSelectedListener(item -> {
             if (item.getItemId() == R.id.homeBottom) {
-                startActivity(new Intent(getApplicationContext(), mainMarketFragment.class));
+                startActivity(new Intent(getApplicationContext(), SignInActivity.class));
                 overridePendingTransition(0, 0);
                 return true;
             } else if (item.getItemId() == R.id.orderBottom) {
@@ -154,7 +154,11 @@ public class mainMarketFragment extends AppCompatActivity {
                 overridePendingTransition(0, 0);
                 return true;
             }
-
+            else if (item.getItemId() == R.id.messageBottom) {
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                overridePendingTransition(0, 0);
+                return true;
+            }
             return false;
         });
 
