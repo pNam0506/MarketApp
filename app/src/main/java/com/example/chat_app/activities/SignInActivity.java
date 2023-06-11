@@ -49,7 +49,7 @@ public class SignInActivity extends AppCompatActivity {
         loading(true);
         FirebaseFirestore database = FirebaseFirestore.getInstance();
         database.collection(Constants.KEY_COLLECTION_USERS)
-                .whereEqualTo(Constants.KEY_EMAIL,binding.inputEmail.getText().toString())
+                .whereEqualTo(Constants.KEY_NAME,binding.inputEmail.getText().toString())
                 .whereEqualTo(Constants.KEY_PASSWORD,binding.inputPassword.getText().toString())
                 .get()
                 .addOnCompleteListener(task -> {
@@ -87,9 +87,6 @@ public class SignInActivity extends AppCompatActivity {
     private Boolean isValidSignInDetails(){
         if(binding.inputEmail.getText().toString().trim().isEmpty()){
             showToast("Enter email.com");
-            return false;
-        }else if(!Patterns.EMAIL_ADDRESS.matcher(binding.inputEmail.getText().toString()).matches()){
-            showToast("Enter valid email");
             return false;
         }else if(binding.inputPassword.getText().toString().trim().isEmpty()){
             showToast("Enter password");
