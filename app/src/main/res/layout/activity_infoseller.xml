@@ -10,16 +10,17 @@
    <LinearLayout
        android:id="@+id/topic_seller"
        android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:background="@color/gray"
+       android:layout_height="@dimen/_170sdp"
+       android:background="@color/primary"
 
        >
 
        <ImageView
-           android:layout_height="150dp"
-           android:layout_width="150dp"
+           android:layout_height="130dp"
+           android:layout_width="130dp"
            android:src="@drawable/shop_svgrepo_com_1"
-           android:layout_margin="20dp"
+           android:layout_gravity="center"
+           android:layout_marginStart="@dimen/_30sdp"
            />
 
        <LinearLayout
@@ -35,7 +36,8 @@
                android:layout_height="57dp"
                android:text="ลงทะเบียน"
                android:textColor="#ffffff"
-               android:textSize="45sp"
+               android:textSize="@dimen/_28ssp"
+               android:layout_marginStart="@dimen/_15sdp"
 
                />
            <TextView
@@ -43,8 +45,8 @@
                android:layout_height="39dp"
                android:text="เจ้าของธุรกิจ"
                android:textColor="#ffffff"
-               android:textSize="30sp"
-
+               android:textSize="@dimen/_15ssp"
+               android:layout_marginStart="@dimen/_15sdp"
                />
 
        </LinearLayout>
@@ -56,7 +58,8 @@
     <ScrollView
         android:layout_below="@+id/topic_seller"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
 
         <LinearLayout
 
@@ -220,7 +223,7 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/email_svgrepo_com" />
+                        android:src="@drawable/email_svgrepo_com__1_" />
 
                     <TextView
                         android:id="@+id/E_name"

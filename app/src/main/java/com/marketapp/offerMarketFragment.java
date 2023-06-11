@@ -83,28 +83,13 @@ public class offerMarketFragment extends AppCompatActivity {
         nameUser = findViewById((int) R.id.userName_Seller);
         name_boot = findViewById((int) R.id.Name_boot);
 
-        mDatabase = FirebaseDatabase.getInstance();
-        mRef = mDatabase.getReference("User");
+       Intent intent = getIntent();
 
-        mRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
+       String nameUser_int = intent.getStringExtra("name_user");
+       String nameBoot = intent.getStringExtra("name_boot");
 
-                    nameUser.setText(preferenceManager.getString(infoseller.NAME_USER));
-                    name_boot.setText(preferenceManager.getString(infoseller.NAME_BOOT));
-
-
-
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-
-
+       nameUser.setText(nameUser_int);
+       name_boot.setText(nameBoot);
 
         recyclerView = findViewById((int) R.id.recycleView);
         searchView = findViewById(R.id.searchBar);

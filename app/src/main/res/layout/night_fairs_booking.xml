@@ -3,65 +3,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.marketapp.night_fairs"
+    tools:context="com.marketapp.night_fairs">
 
-    >
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="@dimen/_45sdp"
+     android:background="@drawable/background_content_bottom3">
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:text="ทำการเลือกล็อก"
+      android:textColor="@color/white"
+      android:textSize="@dimen/_20ssp"
+      android:gravity="center"/>
+
+ </LinearLayout>
 
  <LinearLayout
      android:layout_width="match_parent"
      android:layout_height="wrap_content"
-     android:orientation="vertical">
+     android:orientation="vertical"
+     android:layout_marginTop="@dimen/_50sdp">
 
   <LinearLayout
       android:id="@+id/mall"
       android:layout_width="match_parent"
-      android:layout_height="100dp"
+      android:layout_height="80dp"
       android:layout_margin="10dp"
-      android:background="@color/home"
-      android:gravity="center"
-
-      >
+      android:background="@drawable/background_text3"
+      android:gravity="center">
 
    <TextView
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:layout_gravity="center"
-       android:text="@string/centrial"
+       android:text="เซ็นทรัลพระราม9"
        android:textColor="@color/white"
-       android:textSize="25sp"
-
-       />
+       android:textSize="25sp" />
 
 
   </LinearLayout>
 
-  <LinearLayout
-      android:id="@+id/Way"
-      android:layout_width="match_parent"
-      android:layout_height="50dp"
-      android:layout_margin="10dp"
-      android:background="@color/gray_soft"
-      android:gravity="center"
 
-      >
-
-   <TextView
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_gravity="center"
-       android:text="@string/road"
-       android:textColor="@color/white"
-       android:textSize="25sp"
-
-       />
-
-
-  </LinearLayout>
 
   <LinearLayout
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_margin="10dp">
+      android:layout_gravity="center">
 
    <LinearLayout
        android:layout_width="wrap_content"
@@ -79,19 +68,15 @@
          android:layout_width="75dp"
          android:layout_height="50dp"
          android:layout_margin="10dp"
-         android:background="#E496F1"
-
+         android:background="@drawable/background_text4"
          android:enabled="true"
-         android:gravity="center"
-         >
-
-
+         android:gravity="center">
 
       <TextView
           android:layout_width="match_parent"
           android:layout_height="match_parent"
           android:gravity="center"
-          android:text="600$ (1)"
+          android:text="600บ. (1)"
           android:textColor="@color/black" />
 
 
@@ -101,14 +86,14 @@
          android:layout_width="75dp"
          android:layout_height="50dp"
          android:layout_margin="10dp"
-         android:background="#E496F1"
+         android:background="@drawable/background_text4"
          android:gravity="center">
 
       <TextView
           android:layout_width="match_parent"
           android:layout_height="match_parent"
           android:gravity="center"
-          android:text="600$ (2)"
+          android:text="600บ. (2)"
           android:textColor="@color/black" />
 
 
@@ -132,7 +117,7 @@
           android:layout_width="30dp"
           android:layout_height="20dp"
           android:layout_marginLeft="5dp"
-          android:background="#FF5CE4"
+          android:background="@drawable/background_text1"
           android:gravity="center">
 
        <TextView
@@ -147,7 +132,7 @@
           android:layout_width="30dp"
           android:layout_height="20dp"
           android:layout_marginLeft="5dp"
-          android:background="#FF5CE4"
+          android:background="@drawable/background_text1"
           android:gravity="center">
 
        <TextView
@@ -164,7 +149,7 @@
           android:layout_width="30dp"
           android:layout_height="20dp"
           android:layout_marginLeft="5dp"
-          android:background="#FF5CE4"
+          android:background="@drawable/background_text1"
           android:gravity="center">
 
        <TextView
@@ -181,7 +166,7 @@
           android:layout_width="30dp"
           android:layout_height="20dp"
           android:layout_marginLeft="5dp"
-          android:background="#FF5CE4"
+          android:background="@drawable/background_text1"
           android:gravity="center">
 
        <TextView
@@ -199,7 +184,7 @@
           android:layout_height="20dp"
           android:layout_marginLeft="5dp"
           android:layout_marginRight="5dp"
-          android:background="#FF5CE4"
+          android:background="@drawable/background_text1"
           android:gravity="center">
 
        <TextView
@@ -216,7 +201,7 @@
           android:layout_height="20dp"
           android:layout_marginLeft="5dp"
           android:layout_marginTop="5dp"
-          android:background="#FF5CE4"
+          android:background="@drawable/background_text1"
           android:gravity="center">
 
        <TextView
@@ -234,7 +219,7 @@
           android:layout_height="20dp"
           android:layout_marginLeft="5dp"
           android:layout_marginTop="5dp"
-          android:background="#FF5CE4"
+          android:background="@drawable/background_text1"
           android:gravity="center">
 
        <TextView
@@ -251,7 +236,7 @@
           android:layout_height="20dp"
           android:layout_marginLeft="5dp"
           android:layout_marginTop="5dp"
-          android:background="#FF5CE4"
+          android:background="@drawable/background_text1"
           android:gravity="center">
 
        <TextView
@@ -268,7 +253,7 @@
           android:layout_marginLeft="5dp"
 
           android:layout_marginTop="5dp"
-          android:background="#FF5CE4"
+          android:background="@drawable/background_text1"
           android:gravity="center">
 
        <TextView
@@ -285,7 +270,7 @@
           android:layout_marginLeft="5dp"
           android:layout_marginTop="5dp"
           android:layout_marginRight="5dp"
-          android:background="#FF5CE4"
+          android:background="@drawable/background_text1"
           android:gravity="center">
 
        <TextView
@@ -307,13 +292,13 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="10dp"
-        android:background="#F1E153">
+        android:background="@drawable/background_text">
 
      <TextView
          android:layout_width="match_parent"
          android:layout_height="match_parent"
          android:gravity="center"
-         android:text="350 bath (18)"
+         android:text="350บ. (18)"
          android:textColor="@color/white" />
     </LinearLayout>
 
@@ -321,13 +306,13 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="10dp"
-        android:background="#F1E153">
+        android:background="@drawable/background_text">
 
      <TextView
          android:layout_width="match_parent"
          android:layout_height="match_parent"
          android:gravity="center"
-         android:text="350 bath (19)"
+         android:text="350บ. (19)"
          android:textColor="@color/white" />
     </LinearLayout>
 
@@ -335,13 +320,13 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="10dp"
-        android:background="#F1E153">
+        android:background="@drawable/background_text">
 
      <TextView
          android:layout_width="match_parent"
          android:layout_height="match_parent"
          android:gravity="center"
-         android:text="350 bath (20)"
+         android:text="350บ. (20)"
          android:textColor="@color/white" />
     </LinearLayout>
 
@@ -365,14 +350,14 @@
          android:layout_width="75dp"
          android:layout_height="50dp"
          android:layout_margin="10dp"
-         android:background="#E496F1"
+         android:background="@drawable/background_text4"
          android:gravity="center">
 
       <TextView
           android:layout_width="match_parent"
           android:layout_height="match_parent"
           android:gravity="center"
-          android:text="600$ (3)"
+          android:text="600บ. (3)"
           android:textColor="@color/black" />
 
 
@@ -382,14 +367,14 @@
          android:layout_width="75dp"
          android:layout_height="50dp"
          android:layout_margin="10dp"
-         android:background="#E496F1"
+         android:background="@drawable/background_text4"
          android:gravity="center">
 
       <TextView
           android:layout_width="match_parent"
           android:layout_height="match_parent"
           android:gravity="center"
-          android:text="600$ (4)"
+          android:text="600บ. (4)"
           android:textColor="@color/black" />
 
 
@@ -402,14 +387,14 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="10dp"
-        android:background="#FF5CE4"
+        android:background="@drawable/background_text1"
         android:gravity="center">
 
      <TextView
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:gravity="center"
-         android:text="350 bath (14)"
+         android:text="350บ. (14)"
          android:textColor="@color/white" />
 
 
@@ -419,14 +404,14 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="10dp"
-        android:background="#F1E153"
+        android:background="@drawable/background_text"
         android:gravity="center">
 
      <TextView
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:gravity="center"
-         android:text="350 bath (15)"
+         android:text="350บ. (15)"
          android:textColor="@color/white" />
 
     </LinearLayout>
@@ -435,14 +420,14 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="10dp"
-        android:background="#F1E153"
+        android:background="@drawable/background_text"
         android:gravity="center">
 
      <TextView
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:gravity="center"
-         android:text="350 bath (16)"
+         android:text="350บ. (16)"
          android:textColor="@color/white" />
 
     </LinearLayout>
@@ -451,14 +436,14 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="10dp"
-        android:background="#F1E153"
+        android:background="@drawable/background_text"
         android:gravity="center">
 
      <TextView
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:gravity="center"
-         android:text="400 bath (17)"
+         android:text="400บ. (17)"
          android:textColor="@color/white" />
 
     </LinearLayout>
@@ -473,107 +458,91 @@
       android:id="@+id/road2"
       android:layout_width="match_parent"
       android:layout_height="50dp"
-      android:layout_margin="10dp"
-      android:background="@color/gray_soft"
-      android:gravity="center"
-
-      >
+      android:layout_marginTop="@dimen/_5sdp"
+      android:background="@drawable/road"
+      android:gravity="center">
 
    <TextView
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:layout_gravity="center"
-       android:text="@string/road_RM"
+       android:text="ถนนพระราม 9"
        android:textColor="@color/white"
-       android:textSize="25dp"
-
-       />
+       android:textSize="25dp" />
 
 
   </LinearLayout>
-
-  <LinearLayout
-      android:id="@+id/Order_det"
-      android:layout_below="@+id/Market_nama"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content">
-
-   <TextView
-
-       android:layout_width="wrap_content"
-       android:layout_height="match_parent"
-       android:text="1.อาหาร"
-       android:textColor="#FFC107"
-
-       />
-
-   <TextView
-       android:layout_width="wrap_content"
-       android:layout_height="match_parent"
-       android:text="2.ของใช้"
-       android:textColor="#F436AE"
-       android:layout_marginLeft="10dp"
-       />
-
-   <TextView
-       android:layout_width="wrap_content"
-       android:layout_height="match_parent"
-       android:text="3.ร้านขนาดใหญ่"
-       android:textColor="#9C27B0"
-       android:layout_marginLeft="10dp"
-       />
-
-
-
-
-  </LinearLayout>
-
-
-  <LinearLayout
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:layout_gravity="center"
-         >
-
-
-
-
-
-
-
-
-         <EditText
-             android:id="@+id/log_night_fair"
-             android:layout_width="200dp"
-             android:layout_height="50dp"
-            android:layout_marginLeft="20dp"
-             android:background="@drawable/white_corner"
-             android:hint="จองพื้นที่หมายเลข"
-             android:padding="5dp"
-             />
-
-         <Button
-             android:id="@+id/Success2"
-             android:layout_width="120dp"
-             android:layout_height="60dp"
-             android:text="ทำการจอง"
-             android:layout_marginLeft="20dp"
-             />
-
-
-
-     </LinearLayout>
-
-
-
-
-
-
-
-
-
 
  </LinearLayout>
 
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="300dp"
+     android:layout_marginTop="@dimen/_450sdp"
+     android:orientation="vertical"
+     android:background="@drawable/background_content_bottom2">
+
+ <LinearLayout
+     android:id="@+id/Order_det"
+     android:layout_marginTop="@dimen/_15sdp"
+     android:orientation="horizontal"
+     android:gravity="center"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content">
+
+  <TextView
+      android:layout_width="70dp"
+      android:layout_height="30dp"
+      android:gravity="center"
+      android:background="@drawable/background_text"
+      android:text="อาหาร"
+      android:textColor="@color/white" />
+
+  <TextView
+      android:layout_width="70dp"
+      android:layout_height="30dp"
+      android:gravity="center"
+      android:layout_marginStart="15dp"
+      android:background="@drawable/background_text1"
+      android:text="ของใช้"
+      android:textColor="@color/white" />
+
+  <TextView
+      android:layout_width="70dp"
+      android:layout_height="30dp"
+      android:layout_marginStart="15dp"
+      android:gravity="center"
+      android:background="@drawable/background_text4"
+      android:text="ล็อกใหญ่"
+      android:textColor="@color/white" />
+
+ </LinearLayout>
+
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:gravity="center"
+     android:layout_marginTop="10dp">
+
+  <EditText
+      android:id="@+id/log_night_fair"
+      android:layout_width="200dp"
+      android:layout_height="50dp"
+      android:background="@drawable/background_input"
+      android:hint="จองพื้นที่หมายเลข"
+      android:padding="5dp" />
+
+  <Button
+      android:id="@+id/Success2"
+      android:layout_width="110dp"
+      android:layout_height="60dp"
+      android:text="จอง"
+      android:backgroundTint="@color/pay"
+      android:layout_marginStart="10dp"/>
+
+ </LinearLayout>
+
+ </LinearLayout>
 
 </RelativeLayout>

@@ -51,6 +51,7 @@ public class infoseller extends AppCompatActivity {
 
         preferenceManager = new PreferenceManager(getApplicationContext());
         emailS.setText(preferenceManager.getString(Constants.KEY_EMAIL));
+        nameS.setText(preferenceManager.getString(Constants.KEY_NAME));
 
 
 
@@ -86,11 +87,8 @@ public class infoseller extends AppCompatActivity {
                     userClass_s.setDataEmailUser(Semail);
                     userClass_s.setDataPhoneUser(Sphone);
                     userClass_s.setDataProduct(Sproduct);
-
-                    preferenceManager.putString(NAME_BOOT,Sboot);
-                    preferenceManager.putString(NAME_USER,Sname);
                     
-                    mRef.child(Sboot).setValue(userClass_s, new DatabaseReference.CompletionListener() {
+                    mRef.child(Sname).setValue(userClass_s, new DatabaseReference.CompletionListener() {
                         @Override
                         public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
 

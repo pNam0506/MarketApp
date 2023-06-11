@@ -70,8 +70,8 @@ public class profile extends AppCompatActivity implements ConversionListener{
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                delete.setTitle("คุณต้องการจะลบบัญชี?")
-                        .setMessage("บัญชีของคุณจะถูกลบอย่างถาวร")
+                delete.setTitle("คุณต้องการออกจากบัญชี?")
+                        .setMessage("คุณต้องการจะออกจากบัญชีนี้แล้วเข้าสู่ระบบใหม่")
                         .setCancelable(true)
                         .setPositiveButton("ใช่", new DialogInterface.OnClickListener() {
                             @Override

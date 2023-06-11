@@ -33,10 +33,10 @@ public class SignInActivity extends AppCompatActivity {
         preferenceManager = new PreferenceManager(getApplicationContext());
         if(preferenceManager.getBoolean(Constants.KEY_IS_SIGNED_IN)){
 
-            String email = preferenceManager.getString(Constants.KEY_EMAIL);
+            String name = preferenceManager.getString(Constants.KEY_NAME);
 
             DatabaseReference reference = FirebaseDatabase.getInstance().getReference("User");
-            Query checkData = reference.orderByChild("dataEmailUser").equalTo(email);
+            Query checkData = reference.orderByChild("dataNameUser").equalTo(name);
 
             checkData.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
@@ -47,11 +47,11 @@ public class SignInActivity extends AppCompatActivity {
                         finish();
                     }
                     else{
-                        String email = preferenceManager.getString(Constants.KEY_EMAIL);
-                        String email_d = "อีเมล:"+email;
+                        String name = preferenceManager.getString(Constants.KEY_NAME);
+
 
                         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Manager");
-                        Query checkData = reference.orderByChild("dataEmail").equalTo(email_d);
+                        Query checkData = reference.orderByChild("dataEmail").equalTo(name);
 
                         checkData.addListenerForSingleValueEvent(new ValueEventListener() {
                             @Override
@@ -104,7 +104,7 @@ public class SignInActivity extends AppCompatActivity {
         loading(true);
         FirebaseFirestore database = FirebaseFirestore.getInstance();
         database.collection(Constants.KEY_COLLECTION_USERS)
-                .whereEqualTo(Constants.KEY_EMAIL,binding.inputEmail.getText().toString())
+                .whereEqualTo(Constants.KEY_NAME,binding.inputName.getText().toString())
                 .whereEqualTo(Constants.KEY_PASSWORD,binding.inputPassword.getText().toString())
                 .get()
                 .addOnCompleteListener(task -> {
@@ -122,25 +122,31 @@ public class SignInActivity extends AppCompatActivity {
                     }
                 });
 
-        String email = binding.inputEmail.getText().toString();
+        String name_user = binding.inputName.getText().toString();
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("User");
-        Query checkData = reference.orderByChild("dataEmailUser").equalTo(email);
+        Query checkData = reference.orderByChild("dataNameUser").equalTo(name_user);
 
         checkData.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
+
+                    String nameOfUser = snapshot.child(name_user).child("dataNameUser").getValue(String.class);
+                    String nameOfBoot = snapshot.child(name_user).child("dataNameBoot").getValue(String.class);
+
                     Intent intent = new Intent(getApplicationContext(),offerMarketFragment.class);
+                    intent.putExtra("name_user",nameOfUser);
+                    intent.putExtra("name_boot",nameOfBoot);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                 }
                 else{
-                    String email = binding.inputEmail.getText().toString();
-                    String email_d = "อีเมล:"+email;
+                    String name_m = binding.inputName.getText().toString();
+
 
                     DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Manager");
-                    Query checkData = reference.orderByChild("dataEmail").equalTo(email_d);
+                    Query checkData = reference.orderByChild("dataNameManager").equalTo(name_m);
 
                     checkData.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
@@ -188,11 +194,8 @@ public class SignInActivity extends AppCompatActivity {
     }
 
     private Boolean isValidSignInDetails(){
-        if(binding.inputEmail.getText().toString().trim().isEmpty()){
+        if(binding.inputName.getText().toString().trim().isEmpty()){
             showToast("Enter email.com");
-            return false;
-        }else if(!Patterns.EMAIL_ADDRESS.matcher(binding.inputEmail.getText().toString()).matches()){
-            showToast("Enter valid email");
             return false;
         }else if(binding.inputPassword.getText().toString().trim().isEmpty()){
             showToast("Enter password");

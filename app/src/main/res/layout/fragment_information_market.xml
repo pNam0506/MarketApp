@@ -49,21 +49,21 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="55dp"
                 android:layout_marginRight="20dp"
                 android:text="ลงทะเบียน"
                 android:textColor="@color/white"
-                android:textSize="40dp" />
+                android:textSize="@dimen/_28ssp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="15dp"
                 android:layout_marginRight="20dp"
                 android:text="เจ้าของตลาด"
                 android:textColor="@color/white"
-                android:textSize="26dp" />
+                android:textSize="@dimen/_15ssp" />
 
 
         </LinearLayout>
@@ -250,7 +250,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
-                android:src="@drawable/rule_s_svgrepo_com"
+                android:src="@drawable/clipboard_list_svgrepo_com"
 
                 />
             <TextView
@@ -299,7 +299,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
-                android:src="@drawable/time_svgrepo_com"
+                android:src="@drawable/time_watch_svgrepo_com"
 
                 />
             <TextView
@@ -350,7 +350,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
-                android:src="@drawable/time_svgrepo_com"
+                android:src="@drawable/time_watch_svgrepo_com"
 
                 />
             <TextView
@@ -400,7 +400,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
-                android:src="@drawable/email_svgrepo_com"
+                android:src="@drawable/email_svgrepo_com__1_"
 
                 />
             <TextView
@@ -450,7 +450,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
-                android:src="@drawable/phone_svgrepo_com"
+                android:src="@drawable/phone_call_telephone_svgrepo_com"
 
                 />
             <TextView
@@ -502,7 +502,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
-                android:src="@drawable/icons8_document_original_64"
+                android:src="@drawable/food_stall_stall_svgrepo_com"
 
                 />
             <TextView
@@ -510,7 +510,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
-                android:text="รายการของขาย"
+                android:text="โซนของตลาด"
                 android:gravity="center_vertical"
                 android:textSize="20dp"
                 />
