@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.marketapp.R;
@@ -27,19 +28,28 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.utilities.Constants;
+import com.utilities.PreferenceManager;
 
 public class addMarket extends AppCompatActivity {
 
     ImageView uploadImage;
     Button saveButton;
     EditText uploadsir,uploadNameM,uploadNameMk,locationMk,uploadRules,uploadTimeM,uploadTimeB,uploadphoneNumber,uploadEmail,uploadOrder;
+
+
     String imageURL;
     Uri uri;
+
+    private PreferenceManager preferenceManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_market);
+
+        preferenceManager = new PreferenceManager(getApplicationContext());
+
 
         uploadImage = findViewById((int)R.id.marketImage);
         uploadsir = findViewById((int)R.id.UploadSir);
@@ -53,6 +63,8 @@ public class addMarket extends AppCompatActivity {
         uploadEmail = findViewById((int)R.id.UploadEmail);
         uploadphoneNumber = findViewById((int)R.id.UploadPhoneNumber);
         uploadOrder = findViewById((int)R.id.UploadOrder);
+
+        uploadNameM.setText(preferenceManager.getString(Constants.KEY_NAME));
 
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
@@ -142,6 +154,8 @@ public class addMarket extends AppCompatActivity {
         String ph = uploadphoneNumber.getText().toString();
         String Em = uploadEmail.getText().toString();
         String Or = uploadOrder.getText().toString();
+
+
 
         DataClass dataClass;
 
