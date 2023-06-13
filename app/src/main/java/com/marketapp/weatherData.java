@@ -33,27 +33,27 @@ public class weatherData {
 
         if (condition >= 0 && condition <= 300) {
 
-            return "rain_svgrepo_com_1";
+            return "rain";
 
         } else if (condition >= 300 && condition <= 500) {
 
-            return "rain_svgrepo_com_1";
+            return "rain";
 
         } else if (condition >= 500 && condition <= 600) {
 
-            return "shower_svgrepo_com";
+            return "rain";
 
         } else if (condition >= 600 && condition <= 700) {
 
-            return "cold_heart_cute_svgrepo_com";
+            return "snowmanwithoutsnow_svgrepo_com";
 
         } else if (condition >= 701 && condition <= 771) {
 
-            return "fog_svgrepo_com";
+            return "cloudy_cloud_svgrepo_com__3_";
 
         } else if (condition >= 772 && condition <= 800) {
 
-            return "cloudy_svgrepo_com";
+            return "cloudy_cloud_svgrepo_com__3_";
 
         } else if (condition == 800) {
 
@@ -61,15 +61,15 @@ public class weatherData {
 
         } else if (condition >= 801 && condition <= 804) {
 
-            return "cloudy_svgrepo_com";
+            return "cloudy_cloud_svgrepo_com__3_";
 
         } else if (condition >= 900 && condition <= 902) {
 
-            return "cloudy_svgrepo_com";
+            return "cloudy_cloud_svgrepo_com__3_";
 
         } else if (condition == 903) {
 
-            return "cold_heart_cute_svgrepo_com";
+            return "snowmanwithoutsnow_svgrepo_com";
 
         } else if (condition == 904) {
 
@@ -77,7 +77,7 @@ public class weatherData {
 
         } else if (condition >= 905 && condition <= 1000) {
 
-            return "rain_svgrepo_com_1";
+            return "rain";
 
         }
 

@@ -195,7 +195,7 @@ public class offerMarketFragment extends AppCompatActivity {
             } else {
                 current_season = "ฤดูหนาว";
                 season.setText(current_season);
-                sun.setImageResource(R.drawable.cold_heart_cute_svgrepo_com);
+                sun.setImageResource(R.drawable.snowmanwithoutsnow_svgrepo_com);
 
             }
         } else if (current_month > 2 && current_month < 6) {
@@ -229,7 +229,7 @@ public class offerMarketFragment extends AppCompatActivity {
                 } else {
                     current_season = "ฤดูหนาว";
                     season.setText(current_season);
-                    sun.setImageResource(R.drawable.cold_heart_cute_svgrepo_com);
+                    sun.setImageResource(R.drawable.snowmanwithoutsnow_svgrepo_com);
 
                 }
 
@@ -237,11 +237,11 @@ public class offerMarketFragment extends AppCompatActivity {
         } else if (current_month == 11 || current_month == 12) {
             current_season = "ฤดูหนาว";
             season.setText(current_season);
-            sun.setImageResource(R.drawable.cold_heart_cute_svgrepo_com);
+            sun.setImageResource(R.drawable.snowmanwithoutsnow_svgrepo_com);
         } else if (current_month == 1) {
             current_season = "ฤดูหนาว";
             season.setText(current_season);
-            sun.setImageResource(R.drawable.cold_heart_cute_svgrepo_com);
+            sun.setImageResource(R.drawable.snowmanwithoutsnow_svgrepo_com);
 
         }
 
