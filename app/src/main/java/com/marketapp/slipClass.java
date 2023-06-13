@@ -12,6 +12,26 @@ public class slipClass {
 
     private String dataNameMarket;
 
+    private String dataItem;
+
+    public String getDataItem() {
+        return dataItem;
+    }
+
+    public void setDataItem(String dataItem) {
+        this.dataItem = dataItem;
+    }
+
+    public String getDataCount() {
+        return dataCount;
+    }
+
+    public void setDataCount(String dataCount) {
+        this.dataCount = dataCount;
+    }
+
+    private String dataCount;
+
     public String getDataNameMarket() {
         return dataNameMarket;
     }
@@ -36,13 +56,15 @@ public class slipClass {
         this.dataTime = dataTime;
     }
 
-    public slipClass(String dataSlip, String datalog,String datatime,String datadate,String dataNameMarket, String dataprice) {
+    public slipClass(String dataSlip, String datalog,String datatime,String datadate,String dataNameMarket, String dataprice,String dataItem,String dataCount) {
         this.dataSlip = dataSlip;
         this.datalog = datalog;
         this.dataprice = dataprice;
         this.dataTime = datatime;
         this.dataDate = datadate;
         this.dataNameMarket = dataNameMarket;
+        this.dataItem= dataItem;
+        this.dataCount = dataCount;
 
     }
 

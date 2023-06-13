@@ -42,14 +42,18 @@ public class slip extends AppCompatActivity {
     Uri uri;
     Button booking;
 
-    private TextView log_selected,price_Log,time_Booking,time_slip,date_slip,name_Market_slip;
+    private TextView log_selected,price_Log,time_Booking,time_slip,date_slip,count,item,name_Market;
 
     public static final String LOG_S = "LOG_S";
     public static final String PRICE = "PRICE";
     public static final String NAME_MARKET = "NAME_MARKET";
-    private String log_set;
 
-    private String log_s,price,price_set,nameMarket,nameMarket_s;
+    public static final String ITEM = "ITEM";
+
+    public static final String COUNT = "COUNT";
+    private String log_set,item_s,count_s,item_ss;
+
+    private String log_s,price,price_set,count_ss,nameMarket_s,nameMarket_ss;
 
 
     @Override
@@ -62,7 +66,9 @@ public class slip extends AppCompatActivity {
         time_Booking = findViewById((int)R.id.time_booking);
         time_slip = findViewById((int)R.id.Time_slip_booking);
         date_slip = findViewById((int)R.id.Date_slip_booking);
-        name_Market_slip = findViewById((int)R.id.name_market_slip);
+        count = findViewById((int)R.id.count);
+        item = findViewById((int)R.id.Item_selected);
+        name_Market = findViewById((int)R.id.name_market);
 
 
         slipClass slipClass_s = new slipClass();
@@ -70,18 +76,30 @@ public class slip extends AppCompatActivity {
         Intent intent = getIntent();
         log_set = intent.getStringExtra(LOG_S);
         price_set = intent.getStringExtra(PRICE);
-        nameMarket = intent.getStringExtra(NAME_MARKET);
+        item_s = intent.getStringExtra(ITEM);
+        count_s = intent.getStringExtra(COUNT);
+        nameMarket_s = intent.getStringExtra(NAME_MARKET);
+
+
 
         log_selected.setText(log_set);
         price_Log.setText(price_set);
-        name_Market_slip.setText(nameMarket);
+        count.setText(count_s);
+        item.setText(item_s);
+        name_Market.setText(nameMarket_s);
 
         log_s = log_selected.getText().toString();
              price = price_Log.getText().toString();
-             nameMarket_s = name_Market_slip.getText().toString();
+             count_ss= count.getText().toString();
+             item_ss = item.getText().toString();
+             nameMarket_ss = name_Market.getText().toString();
+
+
             slipClass_s.setDatalog(log_s);
             slipClass_s.setDataprice(price);
-            slipClass_s.setDataNameMarket(nameMarket_s);
+            slipClass_s.setDataItem(item_ss);
+            slipClass_s.setDataCount(count_ss);
+            slipClass_s.setDataNameMarket(nameMarket_ss);
 
             long duration = TimeUnit.MINUTES.toMillis(15);
 
@@ -204,7 +222,7 @@ public class slip extends AppCompatActivity {
 
 
 
-        slipClass = new slipClass(log_s,price,time_D,date_D,nameMarket_s,imageURL);
+        slipClass = new slipClass(log_s,price,time_D,date_D,nameMarket_ss,imageURL,item_ss,count_s);
 
 
         FirebaseDatabase.getInstance().getReference("slip").child(log_s)
