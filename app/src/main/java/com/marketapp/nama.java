@@ -84,6 +84,7 @@ public class nama extends AppCompatActivity {
 
                     if(log <= 4){
                         price = "ราคา 600 บาท";
+                        nameMarket = "Nama";
 
                         Intent intent = new Intent(nama.this,slip.class);
 
@@ -97,6 +98,7 @@ public class nama extends AppCompatActivity {
                     }
                     else if(log > 4 && log <= 13){
                         price = "ราคา 450 บาท";
+                        nameMarket = "Nama";
 
                         Intent intent = new Intent(nama.this,slip.class);
 
@@ -110,6 +112,7 @@ public class nama extends AppCompatActivity {
                     }
                     else if(log == 14){
                         price = "ราคา 400 บาท";
+                        nameMarket = "Nama";
 
                         Intent intent = new Intent(nama.this,slip.class);
 
@@ -138,6 +141,7 @@ public class nama extends AppCompatActivity {
                                     intent.putExtra(slip.PRICE,price);
                                     intent.putExtra(slip.ITEM,item_ch);
                                     intent.putExtra(slip.COUNT,count_s);
+                                intent.putExtra(slip.NAME_MARKET,nameMarket);
                                     startActivity(intent);
 
                             }
@@ -150,6 +154,7 @@ public class nama extends AppCompatActivity {
                                     intent.putExtra(slip.PRICE,price);
                                     intent.putExtra(slip.ITEM,item_ch);
                                     intent.putExtra(slip.COUNT,count_s);
+                                intent.putExtra(slip.NAME_MARKET,nameMarket);
                                     startActivity(intent);
 
                             }
