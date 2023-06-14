@@ -21,11 +21,11 @@ public class lingko extends AppCompatActivity {
 
     Button success;
 
-    EditText log_selected;
+    EditText log_selected,item;
 
-    private int log;
+    private int log,count = 1;
 
-     String price,nameMarket;
+     String price,nameMarket,count_s,item_s;
 
 
     @Override
@@ -35,6 +35,8 @@ public class lingko extends AppCompatActivity {
 
         success = findViewById((int)R.id.Success4);
         log_selected = findViewById((int)R.id.log_lingko);
+        item = findViewById((int) R.id.item_lingko);
+        count_s = "จำนวน "+count+" ร้าน";
 
 
 
@@ -59,6 +61,9 @@ public class lingko extends AppCompatActivity {
 
 
         log = Integer.parseInt(log_selected.getText().toString().trim());
+        item_s = item.getText().toString().trim();
+
+        String item_ch = "ขาย "+item_s;
         String log_j = "จองล็อคที่ "+ log + " Ling Ko";
         nameMarket = " Ling Ko";
 
@@ -77,6 +82,7 @@ public class lingko extends AppCompatActivity {
                 else{
                     if(log <= 15){
                         price = "ราคา 400 บาท";
+                        nameMarket = " Ling Ko";
 
                         Intent intent = new Intent(lingko.this,slip.class);
 
@@ -90,6 +96,7 @@ public class lingko extends AppCompatActivity {
                     }
                     else if(log == 16 ||log == 17){
                         price = "ราคา 350 บาท";
+                        nameMarket = " Ling Ko";
 
                         Intent intent = new Intent(lingko.this,slip.class);
 
@@ -101,6 +108,46 @@ public class lingko extends AppCompatActivity {
 
 
                     }
+                    DatabaseReference reference = FirebaseDatabase.getInstance().getReference("slip");
+                    Query checkData = reference.orderByChild("dataItem").equalTo(item_ch);
+
+                    checkData.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            if(snapshot.exists()){
+                                count = (int) snapshot.getChildrenCount()+1;
+                                count_s = "จำนวน "+count+" ร้าน";
+                                Intent intent = new Intent(lingko.this,slip.class);
+
+                                intent.putExtra(slip.LOG_S,log_j);
+                                intent.putExtra(slip.PRICE,price);
+                                intent.putExtra(slip.ITEM,item_ch);
+                                intent.putExtra(slip.COUNT,count_s);
+                                intent.putExtra(slip.NAME_MARKET,nameMarket);
+                                startActivity(intent);
+
+                            }
+                            else{
+
+                                count_s = "จำนวน "+count+" ร้าน";
+                                Intent intent = new Intent(lingko.this,slip.class);
+
+                                intent.putExtra(slip.LOG_S,log_j);
+                                intent.putExtra(slip.PRICE,price);
+                                intent.putExtra(slip.ITEM,item_ch);
+                                intent.putExtra(slip.COUNT,count_s);
+                                intent.putExtra(slip.NAME_MARKET,nameMarket);
+                                startActivity(intent);
+
+                            }
+
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
 
 
 

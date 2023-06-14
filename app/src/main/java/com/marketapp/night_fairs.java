@@ -21,11 +21,11 @@ public class night_fairs extends AppCompatActivity {
 
     Button success;
 
-    EditText log_selected;
+    EditText log_selected,item;
 
-    private int log;
+    private int log,count = 1;
 
-    private String price,nameMarket;
+    private String price,nameMarket,count_s,item_s;
 
 
 
@@ -39,6 +39,9 @@ public class night_fairs extends AppCompatActivity {
 
         success = findViewById((int)R.id.Success2);
         log_selected = findViewById((int)R.id.log_night_fair);
+        item = findViewById((int) R.id.item_night_fair);
+        count_s = "จำนวน "+count+" ร้าน";
+
 
 
 
@@ -63,7 +66,11 @@ public class night_fairs extends AppCompatActivity {
 
 
         log = Integer.parseInt(log_selected.getText().toString().trim());
+        item_s = item.getText().toString().trim();
+
+        String item_ch = "ขาย "+item_s;
         String log_j = "จองล็อคที่ "+log+" Night Fair";
+        nameMarket = " Night Fair";
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("slip");
         Query checkData = reference.orderByChild("dataSlip").equalTo(log_j);
@@ -108,6 +115,46 @@ public class night_fairs extends AppCompatActivity {
 
 
                     }
+                    DatabaseReference reference = FirebaseDatabase.getInstance().getReference("slip");
+                    Query checkData = reference.orderByChild("dataItem").equalTo(item_ch);
+
+                    checkData.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            if(snapshot.exists()){
+                                count = (int) snapshot.getChildrenCount()+1;
+                                count_s = "จำนวน "+count+" ร้าน";
+                                Intent intent = new Intent(night_fairs.this,slip.class);
+
+                                intent.putExtra(slip.LOG_S,log_j);
+                                intent.putExtra(slip.PRICE,price);
+                                intent.putExtra(slip.ITEM,item_ch);
+                                intent.putExtra(slip.COUNT,count_s);
+                                intent.putExtra(slip.NAME_MARKET,nameMarket);
+                                startActivity(intent);
+
+                            }
+                            else{
+
+                                count_s = "จำนวน "+count+" ร้าน";
+                                Intent intent = new Intent(night_fairs.this,slip.class);
+
+                                intent.putExtra(slip.LOG_S,log_j);
+                                intent.putExtra(slip.PRICE,price);
+                                intent.putExtra(slip.ITEM,item_ch);
+                                intent.putExtra(slip.COUNT,count_s);
+                                intent.putExtra(slip.NAME_MARKET,nameMarket);
+                                startActivity(intent);
+
+                            }
+
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
 
                 }
             }

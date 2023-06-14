@@ -32,7 +32,6 @@ public class freeFeel extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_free_feel);
-        int[] selected = new int[1];
 
         success = findViewById(R.id.Success);
         log_selected = findViewById((int)R.id.log_free_feel);
