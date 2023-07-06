@@ -145,10 +145,6 @@ public class freeFeel extends AppCompatActivity {
                         }
                     });
 
-
-
-
-
                 }
             }
 
@@ -158,11 +154,6 @@ public class freeFeel extends AppCompatActivity {
             }
         });
 
-
-
-
     }
-
-
 
 }
