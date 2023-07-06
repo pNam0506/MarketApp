@@ -46,7 +46,7 @@ public class StorelistFreeFeel extends AppCompatActivity {
                     list.add(store);
 
                 }
-                StoreAdapter.notifyDataSetChanged();
+                storeAdapter.notifyDataSetChanged();
             }
 
             @Override
