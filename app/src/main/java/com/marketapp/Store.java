@@ -1,8 +1,8 @@
 package com.marketapp;
 
-public class Store {
 
-    String dataNameBoot, dataProduct ;
+public class Store {
+    String dataNameBoot, dataProduct;
 
     public String getStore() {
         return dataNameBoot;

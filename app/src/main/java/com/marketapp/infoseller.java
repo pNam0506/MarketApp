@@ -24,18 +24,16 @@ import java.util.HashMap;
 public class infoseller extends AppCompatActivity {
 
     private Button saveS;
-    private EditText nameS,bootS,phoneS,productS;
+    private EditText nameS,phoneS,productS;
 
     TextView emailS;
-    private String Sname,Sboot,Semail,Sphone,Sproduct;
+    private String Sname,Semail,Sphone,Sproduct;
 
     FirebaseDatabase mDatabase;
     DatabaseReference mRef;
 
     private PreferenceManager preferenceManager;
 
-    public static final String NAME_USER = "NAME_USER";
-    public static final String NAME_BOOT = "NAME_BOOT";
 
 
     @Override
@@ -43,7 +41,6 @@ public class infoseller extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_infoseller);
         nameS =  findViewById((int)R.id.nameinfoSeller);
-        bootS =  findViewById(R.id.boot);
         emailS = findViewById(R.id.email);
         phoneS =  findViewById(R.id.phone);
         productS =  findViewById(R.id.product);
@@ -63,7 +60,6 @@ public class infoseller extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Sname = nameS.getText().toString();
-                Sboot = bootS.getText().toString();
                 Semail = emailS.getText().toString();
                 Sphone = phoneS.getText().toString();
                 Sproduct = productS.getText().toString();
@@ -72,7 +68,7 @@ public class infoseller extends AppCompatActivity {
 
 
 
-                if(Sname.isEmpty()||Sboot.isEmpty()||Semail.isEmpty()||Sphone.isEmpty()||Sproduct.isEmpty()){
+                if(Sname.isEmpty()||Semail.isEmpty()||Sphone.isEmpty()||Sproduct.isEmpty()){
 
                     Toast.makeText(infoseller.this,"กรุณากรอกข้อมูลให้ครบถ้วน",Toast.LENGTH_SHORT).show();
 
@@ -83,7 +79,6 @@ public class infoseller extends AppCompatActivity {
 
                     userClass userClass_s = new userClass();
                     userClass_s.setDataNameUser(Sname);
-                    userClass_s.setDataNameBoot(Sboot);
                     userClass_s.setDataEmailUser(Semail);
                     userClass_s.setDataPhoneUser(Sphone);
                     userClass_s.setDataProduct(Sproduct);

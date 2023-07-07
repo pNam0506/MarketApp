@@ -503,6 +503,22 @@
 
 
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="20dp">
+
+                <EditText
+                    android:id="@+id/name_boot_free_feel"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/background_input"
+                    android:hint="ชื่อร้านค้า"
+                    android:padding="5dp" />
+
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"

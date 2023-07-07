@@ -1,8 +1,9 @@
 package com.marketapp;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -19,9 +20,11 @@ import java.util.ArrayList;
 public class StorelistFreeFeel extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    DatabaseReference database;
     StoreAdapter storeAdapter;
-    ArrayList<Store> list;
+    ArrayList<slipClass> list;
+
+    DatabaseReference reference;
+    ValueEventListener eventListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,30 +32,52 @@ public class StorelistFreeFeel extends AppCompatActivity {
         setContentView(R.layout.activity_storelist_free_feel);
 
         recyclerView = findViewById(R.id.StorelistFreeFeel);
-        database = FirebaseDatabase.getInstance().getReference("User");
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(StorelistFreeFeel.this,1);
+        recyclerView.setLayoutManager(gridLayoutManager);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(StorelistFreeFeel.this);
+        builder.setCancelable(false);
+        builder.setView(R.layout.progress_layout);
+        AlertDialog dialog = builder.create();
+        dialog.show();
 
         list = new ArrayList<>();
         storeAdapter = new StoreAdapter(this,list);
         recyclerView.setAdapter(storeAdapter);
 
-        database.addValueEventListener(new ValueEventListener() {
+        reference = FirebaseDatabase.getInstance().getReference("slip");
+
+        dialog.show();
+
+        eventListener = reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot dataSnapshot : snapshot.getChildren()){
 
-                    Store store = dataSnapshot.getValue(Store.class);
-                    list.add(store);
+                list.clear();
+
+                for(DataSnapshot itemSnapshot: snapshot.getChildren()){
+
+                    slipClass slipClass_s = itemSnapshot.getValue(slipClass.class);
+                    list.add(slipClass_s);
 
                 }
                 storeAdapter.notifyDataSetChanged();
+                dialog.dismiss();
+
+
+
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
+                dialog.dismiss();
 
             }
         });
+
+
+
+
+
     }
 }

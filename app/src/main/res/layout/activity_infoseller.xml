@@ -114,50 +114,6 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center|start"
-                android:layout_marginTop="-10dp"
-                android:layout_marginRight="20sp"
-                android:layout_marginLeft="20sp"
-
-                >
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/shop_svgrepo_com_1" />
-
-                    <TextView
-                        android:id="@+id/Bname"
-                        android:layout_width="200dp"
-                        android:layout_height="22dp"
-                        android:layout_margin="10dp"
-                        android:text="ชื่อร้านค้า"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
-
-
-                </LinearLayout>
-                <EditText
-                    android:id="@+id/boot"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/usernamewriteround"
-                    android:hint="ชื่อร้านค้า"
-                    android:padding="10dp"
-                    android:textSize="18sp"/>
-
-
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"

@@ -43,10 +43,10 @@ public class SignInActivity extends AppCompatActivity {
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     if(snapshot.exists()){
                         String nameOfUser = snapshot.child(name).child("dataNameUser").getValue(String.class);
-                        String nameOfBoot = snapshot.child(name).child("dataNameBoot").getValue(String.class);
+
                         Intent intent = new Intent(SignInActivity.this,offerMarketFragment.class);
                         intent.putExtra("name_user",nameOfUser);
-                        intent.putExtra("name_boot",nameOfBoot);
+
                         startActivity(intent);
                         finish();
                     }
@@ -136,11 +136,11 @@ public class SignInActivity extends AppCompatActivity {
                 if(snapshot.exists()){
 
                     String nameOfUser = snapshot.child(name_user).child("dataNameUser").getValue(String.class);
-                    String nameOfBoot = snapshot.child(name_user).child("dataNameBoot").getValue(String.class);
+
 
                     Intent intent = new Intent(getApplicationContext(),offerMarketFragment.class);
                     intent.putExtra("name_user",nameOfUser);
-                    intent.putExtra("name_boot",nameOfBoot);
+
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                 }

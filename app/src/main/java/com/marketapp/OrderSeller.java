@@ -53,7 +53,6 @@ public class OrderSeller extends AppCompatActivity {
 
         dataList_slip = new ArrayList<>();
 
-
         adapterBill = new AdapterBill(OrderSeller.this,dataList_slip);
         recyclerView_b.setAdapter(adapterBill);
 

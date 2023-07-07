@@ -20,14 +20,22 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.marketapp.R;
+import com.example.marketapp.databinding.ActivitySignInBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.utilities.Constants;
+import com.utilities.PreferenceManager;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -42,7 +50,7 @@ public class slip extends AppCompatActivity {
     Uri uri;
     Button booking;
 
-    private TextView log_selected,price_Log,time_Booking,time_slip,date_slip,count,item,name_Market;
+    private TextView log_selected,price_Log,time_Booking,time_slip,date_slip,count,item,name_Market,name_boot;
 
     public static final String LOG_S = "LOG_S";
     public static final String PRICE = "PRICE";
@@ -51,15 +59,21 @@ public class slip extends AppCompatActivity {
     public static final String ITEM = "ITEM";
 
     public static final String COUNT = "COUNT";
+
     private String log_set,item_s,count_s,item_ss;
 
-    private String log_s,price,price_set,count_ss,nameMarket_s,nameMarket_ss;
+    private String log_s,price,price_set,count_ss,nameMarket_s,nameMarket_ss,nameBoot_s,nameBoot_ss;
+
+    public static final String NAME_BOOT = "NAME_BOOT";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_slip);
+
+
+
 
         log_selected = findViewById(R.id.log_B);
         price_Log = findViewById((int)R.id.price_log);
@@ -69,6 +83,8 @@ public class slip extends AppCompatActivity {
         count = findViewById((int)R.id.count);
         item = findViewById((int)R.id.Item_selected);
         name_Market = findViewById((int)R.id.name_market);
+        name_boot = findViewById(R.id.name_Boot);
+
 
 
         slipClass slipClass_s = new slipClass();
@@ -79,7 +95,7 @@ public class slip extends AppCompatActivity {
         item_s = intent.getStringExtra(ITEM);
         count_s = intent.getStringExtra(COUNT);
         nameMarket_s = intent.getStringExtra(NAME_MARKET);
-
+        nameBoot_s = intent.getStringExtra(NAME_BOOT);
 
 
         log_selected.setText(log_set);
@@ -87,12 +103,14 @@ public class slip extends AppCompatActivity {
         count.setText(count_s);
         item.setText(item_s);
         name_Market.setText(nameMarket_s);
+        name_boot.setText(nameBoot_s);
 
         log_s = log_selected.getText().toString();
              price = price_Log.getText().toString();
              count_ss= count.getText().toString();
              item_ss = item.getText().toString();
              nameMarket_ss = name_Market.getText().toString();
+             nameBoot_ss = name_boot.getText().toString();
 
 
             slipClass_s.setDatalog(log_s);
@@ -100,6 +118,7 @@ public class slip extends AppCompatActivity {
             slipClass_s.setDataItem(item_ss);
             slipClass_s.setDataCount(count_ss);
             slipClass_s.setDataNameMarket(nameMarket_ss);
+            slipClass_s.setDataNameBoot(nameBoot_ss);
 
             long duration = TimeUnit.MINUTES.toMillis(15);
 
@@ -222,7 +241,7 @@ public class slip extends AppCompatActivity {
 
 
 
-        slipClass = new slipClass(log_s,price,time_D,date_D,nameMarket_ss,imageURL,item_ss,count_s);
+        slipClass = new slipClass(log_s,price,time_D,date_D,nameMarket_ss,imageURL,item_ss,count_s,nameBoot_ss);
 
 
         FirebaseDatabase.getInstance().getReference("slip").child(log_s)
@@ -232,7 +251,7 @@ public class slip extends AppCompatActivity {
                         if(task.isSuccessful()){
                             Toast.makeText(slip.this,"ได้ทำการจองเเล้ว",Toast.LENGTH_SHORT)
                                     .show();
-                            Intent intent = new Intent(slip.this,offerMarketFragment.class);
+                            Intent intent = new Intent(slip.this,SignInActivity.class);
 
                             startActivity(intent);
 

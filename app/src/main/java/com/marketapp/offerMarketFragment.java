@@ -72,6 +72,7 @@ public class offerMarketFragment extends AppCompatActivity {
     PreferenceManager preferenceManager;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,15 +82,19 @@ public class offerMarketFragment extends AppCompatActivity {
         preferenceManager = new PreferenceManager(getApplicationContext());
 
         nameUser = findViewById((int) R.id.userName_Seller);
-        name_boot = findViewById((int) R.id.Name_boot);
+
 
        Intent intent = getIntent();
 
        String nameUser_int = intent.getStringExtra("name_user");
-       String nameBoot = intent.getStringExtra("name_boot");
+
 
        nameUser.setText(nameUser_int);
-       name_boot.setText(nameBoot);
+
+
+
+
+
 
         recyclerView = findViewById((int) R.id.recycleView);
         searchView = findViewById(R.id.searchBar);

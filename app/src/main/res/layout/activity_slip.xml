@@ -252,7 +252,10 @@
                         android:gravity="center"
                         android:text="เวลา"
                         android:textSize="20dp"
-                        android:background="@drawable/background_text1"/>
+                        android:background="@drawable/background_text1"
+                        android:maxLines="0"
+                        />
+
 
 
                 </LinearLayout>
@@ -281,6 +284,20 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="@dimen/_30sdp"
                     android:text="ทำการจอง" />
+
+                <TextView
+                    android:id="@+id/name_Boot"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:text="ชื่อบูท"
+                    android:textSize="20dp"
+
+                    />
+
+
+
 
             </LinearLayout>
 
