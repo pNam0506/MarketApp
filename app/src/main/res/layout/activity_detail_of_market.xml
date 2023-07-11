@@ -204,27 +204,37 @@
 
             <Button
                 android:id="@+id/map"
-                android:layout_marginTop="20dp"
-                android:layout_margin="20dp"
-                android:layout_width="120dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:text="ทำการจอง"
+                android:text="จอง"
                 android:backgroundTint="@color/orange" />
 
             <Button
                 android:id="@+id/direction"
-                android:layout_marginTop="20dp"
-                android:layout_margin="20dp"
-                android:layout_width="120dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:text="แผนที่"
                 android:backgroundTint="@color/green" />
 
+            <Button
+                android:id="@+id/storelist"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="ร้านค้า"
+                android:backgroundTint="#E3A1B7" />
+
         </LinearLayout>
 
     </LinearLayout>
-
-
 
 
 </LinearLayout>
