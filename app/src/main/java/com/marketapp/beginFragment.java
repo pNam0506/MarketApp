@@ -31,7 +31,7 @@ public class beginFragment extends AppCompatActivity {
                finally {
 
 
-                   Intent intent = new Intent(beginFragment.this,StorelistFreeFeel.class);
+                   Intent intent = new Intent(beginFragment.this,SignInActivity.class);
 
                    startActivity(intent);
                }
