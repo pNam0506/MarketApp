@@ -158,10 +158,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_40sdp"
                         android:layout_marginStart="@dimen/_10sdp"
+                        android:background="@drawable/background_text1"
                         android:gravity="center"
                         android:text="ล็อกที่จอง 1"
-                        android:textSize="20dp"
-                        android:background="@drawable/background_text1"/>
+                        android:textSize="20dp" />
 
                 </LinearLayout>
 
@@ -181,10 +181,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_40sdp"
                         android:layout_marginStart="@dimen/_10sdp"
+                        android:background="@drawable/background_text1"
                         android:gravity="center"
                         android:text="สินค้าที่ขาย"
-                        android:textSize="20dp"
-                        android:background="@drawable/background_text1"/>
+                        android:textSize="20dp" />
 
                 </LinearLayout>
 
@@ -205,10 +205,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_40sdp"
                         android:layout_marginStart="@dimen/_10sdp"
+                        android:background="@drawable/background_text1"
                         android:gravity="center"
                         android:text="ราคา"
-                        android:textSize="20dp"
-                        android:background="@drawable/background_text1"/>
+                        android:textSize="20dp" />
 
 
                 </LinearLayout>
@@ -229,10 +229,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_40sdp"
                         android:layout_marginStart="@dimen/_10sdp"
+                        android:background="@drawable/background_text1"
                         android:gravity="center"
                         android:text="เวลา"
-                        android:textSize="20dp"
-                        android:background="@drawable/background_text1"/>
+                        android:textSize="20dp" />
 
 
                 </LinearLayout>
@@ -247,29 +247,28 @@
                         android:layout_height="50dp"
                         android:src="@drawable/shop_svgrepo_com_1" />
 
-                <EditText
-                    android:id="@+id/store"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_marginStart="@dimen/_10sdp"
-                    android:background="@drawable/usernamewriteround"
-                    android:hint="กรุณากรอกชื่อร้านค้า"
-                    android:padding="10dp"
-                    android:textSize="18sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.606"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/Ttype" />
+                    <TextView
+                        android:id="@+id/name_Boot"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:text="ชื่อบูท"
+                        android:textSize="20dp"
+                        android:background="@drawable/background_text1"
+
+
+                        />
 
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
                     android:gravity="center"
                     android:text="เเนบรูปสลิป"
-                    android:textSize="20dp"
-                    android:layout_marginTop="30dp" />
+                    android:textSize="20dp" />
 
                 <ImageView
                     android:id="@+id/UploadSlip"
@@ -287,18 +286,27 @@
                     android:layout_marginTop="@dimen/_30sdp"
                     android:text="ทำการจอง" />
 
+
+
                 <TextView
-                    android:id="@+id/name_Boot"
+                    android:id="@+id/count"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_40sdp"
                     android:layout_marginStart="@dimen/_10sdp"
                     android:gravity="center"
-                    android:text="ชื่อบูท"
-                    android:textSize="20dp"
+                    android:maxLines="0"
 
                     />
 
+                <TextView
+                    android:id="@+id/name_market"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:maxLines="0"
 
+                    />
 
 
             </LinearLayout>
