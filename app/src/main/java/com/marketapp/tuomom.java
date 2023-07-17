@@ -36,7 +36,7 @@ public class tuomom extends AppCompatActivity {
         success = findViewById((int)R.id.Success5);
         log_selected = findViewById((int)R.id.log_tuomom);
         item = findViewById((int) R.id.item_tuomom);
-        nameBoot = findViewById((int)R.id.name_boot_tuomom);
+        nameBoot = findViewById((int)R.id.name_boot_tuomom); // ตรงที่เพิ่มมา
         count_s = "จำนวน "+count+" ร้าน";
 
 
@@ -63,7 +63,7 @@ public class tuomom extends AppCompatActivity {
 
         log = Integer.parseInt(log_selected.getText().toString().trim());
         item_s = item.getText().toString().trim();
-        nameBoot_ss = nameBoot.getText().toString().trim();
+        nameBoot_ss = nameBoot.getText().toString().trim(); // ตรงที่เพิ่มมา
 
         String item_ch = "ขาย "+item_s;
         String log_j = "จองล็อคที่ "+log+" Tuo Mom";
@@ -92,7 +92,7 @@ public class tuomom extends AppCompatActivity {
                         intent.putExtra(slip.LOG_S,log_j);
                         intent.putExtra(slip.PRICE,price);
                         intent.putExtra(slip.NAME_MARKET,nameMarket);
-                        intent.putExtra(slip.NAME_BOOT,nameBoot_ss);
+                        intent.putExtra(slip.NAME_BOOT,nameBoot_ss); // ตรงที่เพิ่มมา
 
                         startActivity(intent);
 
@@ -107,7 +107,7 @@ public class tuomom extends AppCompatActivity {
                         intent.putExtra(slip.LOG_S,log_j);
                         intent.putExtra(slip.PRICE,price);
                         intent.putExtra(slip.NAME_MARKET,nameMarket);
-                        intent.putExtra(slip.NAME_BOOT,nameBoot_ss);
+                        intent.putExtra(slip.NAME_BOOT,nameBoot_ss); // ตรงที่เพิ่มมา
 
                         startActivity(intent);
 
@@ -123,7 +123,7 @@ public class tuomom extends AppCompatActivity {
                         intent.putExtra(slip.LOG_S,log_j);
                         intent.putExtra(slip.PRICE,price);
                         intent.putExtra(slip.NAME_MARKET,nameMarket);
-                        intent.putExtra(slip.NAME_BOOT,nameBoot_ss);
+                        intent.putExtra(slip.NAME_BOOT,nameBoot_ss); // ตรงที่เพิ่มมา
 
                         startActivity(intent);
 
@@ -145,7 +145,7 @@ public class tuomom extends AppCompatActivity {
                                 intent.putExtra(slip.ITEM,item_ch);
                                 intent.putExtra(slip.COUNT,count_s);
                                 intent.putExtra(slip.NAME_MARKET,nameMarket);
-                                intent.putExtra(slip.NAME_BOOT,nameBoot_ss);
+                                intent.putExtra(slip.NAME_BOOT,nameBoot_ss); // ตรงที่เพิ่มมา
                                 startActivity(intent);
 
                             }
@@ -159,7 +159,7 @@ public class tuomom extends AppCompatActivity {
                                 intent.putExtra(slip.ITEM,item_ch);
                                 intent.putExtra(slip.COUNT,count_s);
                                 intent.putExtra(slip.NAME_MARKET,nameMarket);
-                                intent.putExtra(slip.NAME_BOOT,nameBoot_ss);
+                                intent.putExtra(slip.NAME_BOOT,nameBoot_ss); // ตรงที่เพิ่มมา
                                 startActivity(intent);
 
                             }
