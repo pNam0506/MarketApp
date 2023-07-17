@@ -98,7 +98,7 @@ public class tuomom extends AppCompatActivity {
 
 
                     }
-                    else if(log == 11 && log <= 13 || log == 15 || log == 16){
+                    else if(log <= 13 || log == 15 || log == 16){
                         price = "ราคา 400 บาท";
                         nameMarket = "Tuo Mom";
 

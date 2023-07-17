@@ -43,14 +43,15 @@ public class StorelistFreeFeel extends AppCompatActivity {
         builder.setCancelable(false);
         builder.setView(R.layout.progress_layout);
         AlertDialog dialog = builder.create();
-        dialog.show();*/
+        dialog.show();*/ // พี่น้ำเอาตรงนี้ออกเพราะ มันเป็นอะไรก็ไม่รู้5555
 
         list = new ArrayList<>();
         storeAdapter = new StoreAdapter(this,list);
         recyclerView.setAdapter(storeAdapter);
 
-        nameMarket = "Free Feel";
-        //reference = FirebaseDatabase.getInstance().getReference("slip");
+        nameMarket = "Free Feel"; // ตรงที่พี่น้ำเพิ่มมา
+
+        // พี่น้ำเพิ่มตัวเช็ค
 
         reference = FirebaseDatabase.getInstance().getReference(nameMarket);
         Query checkData = reference.orderByChild("dataNameMarket").equalTo(nameMarket);
@@ -109,3 +110,5 @@ public class StorelistFreeFeel extends AppCompatActivity {
 
     }
 }
+// พี่ข้าวสามารถคัดลอกโค้ด เเล้วเเก้โค้ดนิดๆหน่อยๆได้เลย พี่น้ำเเก้โค้ดหลักๆให้เเล้วคับ
+// พี่น้ำเเก้ของ tuo mom เเล้วเด้อ
