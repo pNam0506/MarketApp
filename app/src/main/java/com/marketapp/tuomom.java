@@ -21,11 +21,11 @@ public class tuomom extends AppCompatActivity {
 
     Button success;
 
-    EditText log_selected,item;
+    EditText log_selected,item,nameBoot;
 
     private int log,count = 1;
 
-    private String price,nameMarket,count_s,item_s;
+    String price,nameMarket,count_s,item_s,nameBoot_ss;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +34,9 @@ public class tuomom extends AppCompatActivity {
 
 
         success = findViewById((int)R.id.Success5);
-        log_selected = findViewById((int)R.id.log_nama);
+        log_selected = findViewById((int)R.id.log_tuomom);
         item = findViewById((int) R.id.item_tuomom);
+        nameBoot = findViewById((int)R.id.name_boot_tuomom);
         count_s = "จำนวน "+count+" ร้าน";
 
 
@@ -62,12 +63,13 @@ public class tuomom extends AppCompatActivity {
 
         log = Integer.parseInt(log_selected.getText().toString().trim());
         item_s = item.getText().toString().trim();
+        nameBoot_ss = nameBoot.getText().toString().trim();
 
         String item_ch = "ขาย "+item_s;
         String log_j = "จองล็อคที่ "+log+" Tuo Mom";
-        nameMarket = " Tuo Mom";
+        nameMarket = "Tuo Mom";
 
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("slip");
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("slip").child(nameMarket);
         Query checkData = reference.orderByChild("dataSlip").equalTo(log_j);
 
         checkData.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -83,13 +85,14 @@ public class tuomom extends AppCompatActivity {
 
                     if(log <= 10){
                         price = "ราคา 450 บาท";
-                        nameMarket = " Tuo Mom";
+                        nameMarket = "Tuo Mom";
 
                         Intent intent = new Intent(tuomom.this,slip.class);
 
                         intent.putExtra(slip.LOG_S,log_j);
                         intent.putExtra(slip.PRICE,price);
                         intent.putExtra(slip.NAME_MARKET,nameMarket);
+                        intent.putExtra(slip.NAME_BOOT,nameBoot_ss);
 
                         startActivity(intent);
 
@@ -97,13 +100,14 @@ public class tuomom extends AppCompatActivity {
                     }
                     else if(log == 11 && log <= 13 || log == 15 || log == 16){
                         price = "ราคา 400 บาท";
-                        nameMarket = " Tuo Mom";
+                        nameMarket = "Tuo Mom";
 
                         Intent intent = new Intent(tuomom.this,slip.class);
 
                         intent.putExtra(slip.LOG_S,log_j);
                         intent.putExtra(slip.PRICE,price);
                         intent.putExtra(slip.NAME_MARKET,nameMarket);
+                        intent.putExtra(slip.NAME_BOOT,nameBoot_ss);
 
                         startActivity(intent);
 
@@ -112,19 +116,20 @@ public class tuomom extends AppCompatActivity {
 
                     else if(log == 14){
                         price = "ราคา 450 บาท";
-                        nameMarket = " Tuo Mom";
+                        nameMarket = "Tuo Mom";
 
                         Intent intent = new Intent(tuomom.this,slip.class);
 
                         intent.putExtra(slip.LOG_S,log_j);
                         intent.putExtra(slip.PRICE,price);
                         intent.putExtra(slip.NAME_MARKET,nameMarket);
+                        intent.putExtra(slip.NAME_BOOT,nameBoot_ss);
 
                         startActivity(intent);
 
 
                     }
-                    DatabaseReference reference = FirebaseDatabase.getInstance().getReference("slip");
+                    DatabaseReference reference = FirebaseDatabase.getInstance().getReference("slip").child(nameMarket);
                     Query checkData = reference.orderByChild("dataItem").equalTo(item_ch);
 
                     checkData.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -140,6 +145,7 @@ public class tuomom extends AppCompatActivity {
                                 intent.putExtra(slip.ITEM,item_ch);
                                 intent.putExtra(slip.COUNT,count_s);
                                 intent.putExtra(slip.NAME_MARKET,nameMarket);
+                                intent.putExtra(slip.NAME_BOOT,nameBoot_ss);
                                 startActivity(intent);
 
                             }
@@ -153,6 +159,7 @@ public class tuomom extends AppCompatActivity {
                                 intent.putExtra(slip.ITEM,item_ch);
                                 intent.putExtra(slip.COUNT,count_s);
                                 intent.putExtra(slip.NAME_MARKET,nameMarket);
+                                intent.putExtra(slip.NAME_BOOT,nameBoot_ss);
                                 startActivity(intent);
 
                             }

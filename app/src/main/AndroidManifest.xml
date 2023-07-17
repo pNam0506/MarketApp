@@ -24,6 +24,9 @@
             android:name="com.marketapp.StorelistFreeFeel"
             android:exported="false" />
         <activity
+            android:name="com.marketapp.StorelistToumom"
+            android:exported="false" />
+        <activity
             android:name="com.marketapp.Bill"
             android:exported="false" />
         <activity

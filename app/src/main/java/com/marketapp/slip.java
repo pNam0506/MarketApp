@@ -50,7 +50,7 @@ public class slip extends AppCompatActivity {
     Uri uri;
     Button booking;
 
-    private TextView log_selected,price_Log,time_Booking,time_slip,date_slip,count,item,name_Market,name_boot;
+     TextView log_selected,price_Log,time_Booking,time_slip,date_slip,count,item,name_Market,name_boot;
 
     public static final String LOG_S = "LOG_S";
     public static final String PRICE = "PRICE";
@@ -60,9 +60,9 @@ public class slip extends AppCompatActivity {
 
     public static final String COUNT = "COUNT";
 
-    private String log_set,item_s,count_s,item_ss;
+     String log_set,item_s,count_s,item_ss;
 
-    private String log_s,price,price_set,count_ss,nameMarket_s,nameMarket_ss,nameBoot_s,nameBoot_ss;
+     String log_s,price,price_set,count_ss,nameMarket_s,nameMarket_ss,nameBoot_s,nameBoot_ss;
 
     public static final String NAME_BOOT = "NAME_BOOT";
 
@@ -249,6 +249,34 @@ public class slip extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()){
+
+                            FirebaseDatabase.getInstance().getReference(nameMarket_ss).child(log_s)
+                                    .setValue(slipClass).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            if(task.isSuccessful()){
+                                                Toast.makeText(slip.this,"ได้ทำการจองเเล้ว",Toast.LENGTH_SHORT)
+                                                        .show();
+
+                                            }
+                                        }
+                                    }).addOnFailureListener(new OnFailureListener() {
+                                        @Override
+                                        public void onFailure(@NonNull Exception e) {
+                                            Toast.makeText(slip.this,e.getMessage().toString(), Toast.LENGTH_SHORT)
+                                                    .show();
+                                        }
+                                    });
+
+
+
+
+
+
+
+
+
+
                             Toast.makeText(slip.this,"ได้ทำการจองเเล้ว",Toast.LENGTH_SHORT)
                                     .show();
                             Intent intent = new Intent(slip.this,SignInActivity.class);
@@ -266,9 +294,6 @@ public class slip extends AppCompatActivity {
                                 .show();
                     }
                 });
-
-
-
 
 
 

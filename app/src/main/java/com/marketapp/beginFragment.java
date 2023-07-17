@@ -31,7 +31,7 @@ public class beginFragment extends AppCompatActivity {
                finally {
 
 
-                   Intent intent = new Intent(beginFragment.this,SignInActivity.class);
+                   Intent intent = new Intent(beginFragment.this,StorelistToumom.class);
 
                    startActivity(intent);
                }
@@ -39,4 +39,4 @@ public class beginFragment extends AppCompatActivity {
 
         };thread.start();
     }
-}//จบๆๆๆ +งมอีกสามชม หฟมกแยงนฟำพ่รเพกะนย
+}

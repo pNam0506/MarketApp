@@ -1,13 +1,13 @@
 package com.marketapp;
 
+import android.os.Bundle;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
-import android.widget.Toast;
 
 import com.example.marketapp.R;
 import com.google.firebase.database.DataSnapshot;
@@ -19,13 +19,13 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class StorelistFreeFeel extends AppCompatActivity {
+public class StorelistToumom extends AppCompatActivity {
 
     RecyclerView recyclerView;
     StoreAdapter storeAdapter;
     ArrayList<slipClass> list;
 
-    DatabaseReference reference;
+    DatabaseReference reference, getReference;
     ValueEventListener eventListener;
 
     String nameMarket;
@@ -33,13 +33,13 @@ public class StorelistFreeFeel extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_storelist_free_feel);
+        setContentView(R.layout.activity_storelist_toumom);
 
-        recyclerView = findViewById(R.id.StorelistFreeFeel);
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(StorelistFreeFeel.this,1);
+        recyclerView = findViewById((int)R.id.StorelistToumom);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(StorelistToumom.this,1);
         recyclerView.setLayoutManager(gridLayoutManager);
 
-        /*AlertDialog.Builder builder = new AlertDialog.Builder(StorelistFreeFeel.this);
+        /*AlertDialog.Builder builder = new AlertDialog.Builder(StorelistToumom.this);
         builder.setCancelable(false);
         builder.setView(R.layout.progress_layout);
         AlertDialog dialog = builder.create();
@@ -49,10 +49,10 @@ public class StorelistFreeFeel extends AppCompatActivity {
         storeAdapter = new StoreAdapter(this,list);
         recyclerView.setAdapter(storeAdapter);
 
-        nameMarket = "Free Feel";
-        //reference = FirebaseDatabase.getInstance().getReference("slip");
+        nameMarket = "Tuo Mom";
 
         reference = FirebaseDatabase.getInstance().getReference(nameMarket);
+
         Query checkData = reference.orderByChild("dataNameMarket").equalTo(nameMarket);
 
         checkData.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -76,7 +76,6 @@ public class StorelistFreeFeel extends AppCompatActivity {
 
 
 
-
                         }
 
                         @Override
@@ -93,7 +92,7 @@ public class StorelistFreeFeel extends AppCompatActivity {
 
                 }
                 else{
-                    Toast.makeText(StorelistFreeFeel.this, "ไม่พบข้อมูล", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(StorelistToumom.this, "ไม่พบข้อมูล", Toast.LENGTH_SHORT).show();
 
                 }
             }

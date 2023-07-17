@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.marketapp.StorelistFreeFeel">
+    tools:context="com.marketapp.StorelistToumom">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -53,7 +53,7 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/StorelistFreeFeel"
+        android:id="@+id/StorelistToumom"
         android:layout_marginTop="@dimen/_20sdp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
