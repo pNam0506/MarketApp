@@ -142,7 +142,7 @@ public class detailOfMarket extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
 
-                    Uri uri = Uri.parse("https://www.google.co.th/maps/dir/13.9084609,100.5059913/%E0%B9%81%E0%B8%82%E0%B8%A7%E0%B8%87%E0%B8%97%E0%B8%B8%E0%B9%88%E0%B8%87%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B9%80%E0%B8%A1%E0%B8%86+%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%AA%E0%B8%B2%E0%B8%97%E0%B8%A3+%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3+10120/@13.8139044,100.4642671,12z/data=!3m1!4b1!4m10!4m9!1m1!4e1!1m5!1m1!1s0x30e29f39c444f213:0x40100b25de28e10!2m2!1d100.543675!2d13.7198011!3e0?entry=ttu");
+                    Uri uri = Uri.parse("https://www.google.co.th/maps/dir/13.9077343,100.4958685/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%AA%E0%B8%B2%E0%B8%97%E0%B8%A3+%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3+10120/@13.8034193,100.358,11z/data=!3m1!4b1!4m10!4m9!1m1!4e1!1m5!1m1!1s0x30e29f353eff01d1:0x30100b25de24f40!2m2!1d100.5335358!2d13.7150398!3e0?hl=th&entry=ttu");
                     Intent intent = new Intent(Intent.ACTION_VIEW,uri);
                     intent.setPackage("com.google.android.apps.maps");
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -182,7 +182,7 @@ public class detailOfMarket extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
 
-                    Uri uri = Uri.parse("https://www.google.co.th/maps/dir/13.9084609,100.5059913/Ratchada+Tha+Phra+Condominium,+2+Ratchadaphisek+Rd,+Talat+Phlu,+Thon+Buri,+Bangkok+10600/@13.8196875,100.4142343,12z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x30e2985b8883659f:0xe37c1f0d525724aa!2m2!1d100.4770302!2d13.7199479?entry=ttu");
+                    Uri uri = Uri.parse("https://www.google.co.th/maps/dir/13.9077343,100.4958685/%E0%B9%81%E0%B8%82%E0%B8%A7%E0%B8%87%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%9E%E0%B8%A5%E0%B8%B9+%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%98%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5+%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3+10600/@13.8212847,100.2996624,11z/data=!3m1!4b1!4m10!4m9!1m1!4e1!1m5!1m1!1s0x30e2985d2e50261d:0x40100b25de28b50!2m2!1d100.4747843!2d13.7184591!3e0?hl=th&entry=ttu");
                     Intent intent = new Intent(Intent.ACTION_VIEW,uri);
                     intent.setPackage("com.google.android.apps.maps");
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -222,7 +222,7 @@ public class detailOfMarket extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
 
-                    Uri uri = Uri.parse("https://www.google.co.th/maps/dir/13.9084609,100.5059913/39+Petchkasem+Rd,+Khwaeng+Bang+Khae,+Khet+Bang+Khae,+Krung+Thep+Maha+Nakhon+10160/@13.8200876,100.3814165,12z/data=!3m1!4b1!4m10!4m9!1m1!4e1!1m5!1m1!1s0x30e297c3dfe53025:0xcc720e9747a14fbf!2m2!1d100.413088!2d13.7110888!3e0?entry=ttu");
+                    Uri uri = Uri.parse("https://www.google.co.th/maps/dir/13.9077343,100.4958685/17+%E0%B8%8B%E0%B8%AD%E0%B8%A2+%E0%B9%80%E0%B8%9E%E0%B8%8A%E0%B8%A3%E0%B9%80%E0%B8%81%E0%B8%A9%E0%B8%A1+39%2F1+%E0%B9%81%E0%B8%82%E0%B8%A7%E0%B8%87%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%84+%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%84+%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3+10160/@13.8203797,100.2990005,11z/data=!3m1!4b1!4m10!4m9!1m1!4e1!1m5!1m1!1s0x30e297ec158c04c5:0xca94c272b26fe939!2m2!1d100.4241695!2d13.7117866!3e0?hl=th&entry=ttu");
                     Intent intent = new Intent(Intent.ACTION_VIEW,uri);
                     intent.setPackage("com.google.android.apps.maps");
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
