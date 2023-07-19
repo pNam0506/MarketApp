@@ -14,7 +14,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/background_text1"
+        android:background="@drawable/background_text5"
         >
         <com.google.android.material.imageview.ShapeableImageView
             android:layout_width="60dp"

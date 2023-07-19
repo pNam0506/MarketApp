@@ -9,7 +9,7 @@
     android:layout_marginStart="@dimen/_20sdp"
     android:layout_marginEnd="@dimen/_20sdp"
     android:id="@+id/itemStore"
-    android:background="@drawable/background_text1"
+    android:background="@drawable/background_text5"
     android:backgroundTint="#E3A1B7"
     >
 

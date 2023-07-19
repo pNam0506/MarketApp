@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:padding="16sp"
         android:orientation="vertical"
-        android:background="@drawable/background_text1"
+        android:background="@drawable/background_text5"
         >
 
 

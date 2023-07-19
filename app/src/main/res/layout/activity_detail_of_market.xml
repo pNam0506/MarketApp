@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#E3D980"
+    android:background="#989898"
     tools:context="com.marketapp.detailOfMarket">
 
     <LinearLayout
@@ -197,16 +197,15 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/background_content_bottom2"
             android:gravity="center">
 
             <Button
                 android:id="@+id/map"
-                android:layout_marginTop="25dp"
-                android:layout_marginStart="@dimen/_10sdp"
-                android:layout_marginBottom="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:text="จอง"
@@ -214,9 +213,9 @@
 
             <Button
                 android:id="@+id/direction"
-                android:layout_marginTop="25dp"
+               android:layout_gravity="center"
+                android:gravity="center"
                 android:layout_marginStart="@dimen/_10sdp"
-                android:layout_marginBottom="@dimen/_20sdp"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:text="แผนที่"
@@ -224,9 +223,9 @@
 
             <Button
                 android:id="@+id/storelist"
-                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:layout_gravity="center"
                 android:layout_marginStart="@dimen/_10sdp"
-                android:layout_marginBottom="@dimen/_20sdp"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:text="ร้านค้า"

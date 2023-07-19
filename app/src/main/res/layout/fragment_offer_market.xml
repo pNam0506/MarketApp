@@ -11,12 +11,12 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/background_market_Layout"
         android:layout_width="match_parent"
-        android:layout_height="280dp"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
-            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_15sdp"
             android:layout_width="match_parent"
             android:layout_height="230dp"
             android:src="@drawable/img2"/>
@@ -47,10 +47,10 @@
             android:background="@drawable/white_corner"
             app:searchHintIcon="@null"
             app:iconifiedByDefault="false"
-            app:searchIcon="@drawable/search_circle_svgrepo_com"
+            app:searchIcon="@drawable/search_svgrepo_com__2_"
             android:focusable="false"
-            app:queryHint="search..."
-            android:layout_marginTop="230dp">
+            app:queryHint="ค้นหาตลาด"
+            android:layout_marginTop="205dp">
         </androidx.appcompat.widget.SearchView>
 
     </com.google.android.material.card.MaterialCardView>
@@ -122,17 +122,18 @@
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/_300sdp"
         app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="@dimen/_46sdp"
         android:background="@drawable/background_content_bottom2"
         app:layout_constraintTop_toBottomOf="@id/option_4">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_20sdp">
             <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/_20sdp">
+        android:layout_height="match_parent">
 
     </androidx.recyclerview.widget.RecyclerView>
         </LinearLayout>

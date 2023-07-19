@@ -8,12 +8,13 @@
     android:background="@color/gray"
     tools:context="com.marketapp.Bill">
 
+
     <ImageView
         android:id="@+id/imageshop"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:layout_marginTop="@dimen/_30sdp"
-        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/clipboard_list_svgrepo_com" />
@@ -26,7 +27,7 @@
         android:layout_marginStart="@dimen/_15sdp"
         android:text="รายการ"
         android:textColor="@color/white"
-        android:textSize="40sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="@id/imageshop"
         app:layout_constraintStart_toEndOf="@id/imageshop"/>
@@ -39,7 +40,6 @@
         android:layout_marginTop="@dimen/_10sdp"
         android:textColor="@color/white"
         android:textSize="15sp"
-        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/TextChat"
         app:layout_constraintStart_toStartOf="@id/TextChat"/>
 
