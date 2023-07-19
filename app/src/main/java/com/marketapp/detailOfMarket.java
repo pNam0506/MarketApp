@@ -19,7 +19,7 @@ public class detailOfMarket extends AppCompatActivity {
     TextView detailRules,detailLocation,detailTimeM,detailTimeB,detailphon,detailemail,detailOrder;
     ImageView detailImage;
 
-    Button Map,direc;
+    Button Map,direc,list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +37,7 @@ public class detailOfMarket extends AppCompatActivity {
         detailphon = findViewById((int)R.id.phone);
         detailemail = findViewById((int)R.id.EmailM);
         detailOrder = findViewById((int)R.id.order);
+        list = findViewById(R.id.storelist);
 
         Bundle bundle = getIntent().getExtras();
         if(bundle != null){
@@ -76,6 +77,14 @@ public class detailOfMarket extends AppCompatActivity {
                 }
             });
 
+            list.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(detailOfMarket.this,StorelistNightFairs.class);
+                    startActivity(intent);
+                }
+            });
+
 
 
 
@@ -104,6 +113,16 @@ public class detailOfMarket extends AppCompatActivity {
                 }
             });
 
+            list.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(detailOfMarket.this,StorelistFreeFeel.class);
+                    startActivity(intent);
+                }
+            });
+
+
+
 
         }
 
@@ -131,6 +150,16 @@ public class detailOfMarket extends AppCompatActivity {
 
                 }
             });
+
+            list.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(detailOfMarket.this,StorelistToumom.class);
+                    startActivity(intent);
+                }
+            });
+
+
 
 
 
@@ -162,6 +191,16 @@ public class detailOfMarket extends AppCompatActivity {
                 }
             });
 
+            list.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(detailOfMarket.this,Storelistnama.class);
+                    startActivity(intent);
+                }
+            });
+
+
+
 
 
 
@@ -191,6 +230,16 @@ public class detailOfMarket extends AppCompatActivity {
 
                 }
             });
+
+            list.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(detailOfMarket.this,Storelistlingko.class);
+                    startActivity(intent);
+                }
+            });
+
+
 
 
 
