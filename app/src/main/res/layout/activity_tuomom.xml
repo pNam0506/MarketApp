@@ -31,6 +31,7 @@
 
             <LinearLayout
                 android:id="@+id/tuomom_Layout"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center">
@@ -468,8 +469,6 @@
                         android:background="@drawable/background_input"
                         android:hint="ชื่อร้านค้า"
                         android:padding="5dp" />
-
-
                 </LinearLayout>
 
                 <LinearLayout

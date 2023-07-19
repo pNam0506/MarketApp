@@ -21,11 +21,11 @@ public class lingko extends AppCompatActivity {
 
     Button success;
 
-    EditText log_selected,item;
+    EditText log_selected,item,nameBoot;
 
     private int log,count = 1;
 
-     String price,nameMarket,count_s,item_s;
+     String price,nameMarket,count_s,item_s,nameBoot_ss;
 
 
     @Override
@@ -36,6 +36,7 @@ public class lingko extends AppCompatActivity {
         success = findViewById((int)R.id.Success4);
         log_selected = findViewById((int)R.id.log_lingko);
         item = findViewById((int) R.id.item_lingko);
+        nameBoot = findViewById((int)R.id.name_boot_lingko);
         count_s = "จำนวน "+count+" ร้าน";
 
 
@@ -62,6 +63,7 @@ public class lingko extends AppCompatActivity {
 
         log = Integer.parseInt(log_selected.getText().toString().trim());
         item_s = item.getText().toString().trim();
+        nameBoot_ss = nameBoot.getText().toString().trim();
 
         String item_ch = "ขาย "+item_s;
         String log_j = "จองล็อคที่ "+ log + " Ling Ko";
@@ -89,6 +91,7 @@ public class lingko extends AppCompatActivity {
                         intent.putExtra(slip.LOG_S,log_j);
                         intent.putExtra(slip.PRICE,price);
                         intent.putExtra(slip.NAME_MARKET,nameMarket);
+                        intent.putExtra(slip.NAME_BOOT,nameBoot_ss);
 
                         startActivity(intent);
 
@@ -103,6 +106,7 @@ public class lingko extends AppCompatActivity {
                         intent.putExtra(slip.LOG_S,log_j);
                         intent.putExtra(slip.PRICE,price);
                         intent.putExtra(slip.NAME_MARKET,nameMarket);
+                        intent.putExtra(slip.NAME_BOOT,nameBoot_ss);
 
                         startActivity(intent);
 
@@ -124,6 +128,7 @@ public class lingko extends AppCompatActivity {
                                 intent.putExtra(slip.ITEM,item_ch);
                                 intent.putExtra(slip.COUNT,count_s);
                                 intent.putExtra(slip.NAME_MARKET,nameMarket);
+                                intent.putExtra(slip.NAME_BOOT,nameBoot_ss);
                                 startActivity(intent);
 
                             }
@@ -137,6 +142,7 @@ public class lingko extends AppCompatActivity {
                                 intent.putExtra(slip.ITEM,item_ch);
                                 intent.putExtra(slip.COUNT,count_s);
                                 intent.putExtra(slip.NAME_MARKET,nameMarket);
+                                intent.putExtra(slip.NAME_BOOT,nameBoot_ss);
                                 startActivity(intent);
 
                             }

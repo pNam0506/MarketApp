@@ -21,11 +21,11 @@ public class nama extends AppCompatActivity {
 
     Button success;
 
-    EditText log_selected, item;
+    EditText log_selected, item,nameBoot;
 
     private int log,count = 1;
 
-    private String price,nameMarket,item_s,count_s;
+    private String price,nameMarket,item_s,count_s,nameBoot_ss;
 
 
     @Override
@@ -37,6 +37,7 @@ public class nama extends AppCompatActivity {
         success = findViewById((int)R.id.Success3);
         log_selected = findViewById((int)R.id.log_nama);
         item = findViewById((int)R.id.log_nama_item);
+        nameBoot = findViewById((int)R.id.name_boot_nama);
         count_s = "จำนวน "+count+" ร้าน";
 
 
@@ -63,6 +64,7 @@ public class nama extends AppCompatActivity {
 
         log = Integer.parseInt(log_selected.getText().toString().trim());
         item_s = item.getText().toString().trim();
+        nameBoot_ss = nameBoot.getText().toString().trim();
 
         String item_ch = "ขาย "+item_s;
         String log_j = "จองล็อคที่ "+log+" Nama";
@@ -91,6 +93,7 @@ public class nama extends AppCompatActivity {
                         intent.putExtra(slip.LOG_S,log_j);
                         intent.putExtra(slip.PRICE,price);
                         intent.putExtra(slip.NAME_MARKET,nameMarket);
+                        intent.putExtra(slip.NAME_BOOT,nameBoot_ss);
 
                         startActivity(intent);
 
@@ -105,6 +108,7 @@ public class nama extends AppCompatActivity {
                         intent.putExtra(slip.LOG_S,log_j);
                         intent.putExtra(slip.PRICE,price);
                         intent.putExtra(slip.NAME_MARKET,nameMarket);
+                        intent.putExtra(slip.NAME_BOOT,nameBoot_ss);
 
                         startActivity(intent);
 
@@ -119,6 +123,7 @@ public class nama extends AppCompatActivity {
                         intent.putExtra(slip.LOG_S,log_j);
                         intent.putExtra(slip.PRICE,price);
                         intent.putExtra(slip.NAME_MARKET,nameMarket);
+                        intent.putExtra(slip.NAME_BOOT,nameBoot_ss);
 
                         startActivity(intent);
 
@@ -141,7 +146,8 @@ public class nama extends AppCompatActivity {
                                     intent.putExtra(slip.PRICE,price);
                                     intent.putExtra(slip.ITEM,item_ch);
                                     intent.putExtra(slip.COUNT,count_s);
-                                intent.putExtra(slip.NAME_MARKET,nameMarket);
+                                    intent.putExtra(slip.NAME_MARKET,nameMarket);
+                                    intent.putExtra(slip.NAME_BOOT,nameBoot_ss);
                                     startActivity(intent);
 
                             }
@@ -154,7 +160,8 @@ public class nama extends AppCompatActivity {
                                     intent.putExtra(slip.PRICE,price);
                                     intent.putExtra(slip.ITEM,item_ch);
                                     intent.putExtra(slip.COUNT,count_s);
-                                intent.putExtra(slip.NAME_MARKET,nameMarket);
+                                    intent.putExtra(slip.NAME_MARKET,nameMarket);
+                                    intent.putExtra(slip.NAME_BOOT,nameBoot_ss);
                                     startActivity(intent);
 
                             }

@@ -530,7 +530,7 @@
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:gravity="center"
-       android:layout_marginTop="10dp">
+       android:layout_marginTop="15dp">
 
     <EditText
         android:id="@+id/log_night_fair"
@@ -553,10 +553,25 @@
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:background="@drawable/background_input"
-        android:hint="จองพื้นที่หมายเลข"
+        android:hint="สินค้าที่ขาย"
         android:padding="5dp" />
 
+   </LinearLayout>
 
+   <LinearLayout
+       android:layout_below="@+id/tuomom_Layout"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center"
+       android:layout_marginTop="10dp">
+
+    <EditText
+        android:id="@+id/name_boot_night_fairs"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@drawable/background_input"
+        android:hint="ชื่อร้านค้า"
+        android:padding="5dp" />
    </LinearLayout>
 
    <LinearLayout

@@ -174,9 +174,6 @@ public class tuomom extends AppCompatActivity {
 
 
 
-
-
-
                 }
             }
 
@@ -185,9 +182,6 @@ public class tuomom extends AppCompatActivity {
 
             }
         });
-
-
-
 
 
 
