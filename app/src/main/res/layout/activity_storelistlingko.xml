@@ -45,7 +45,6 @@
             android:gravity="center"
             android:text="คุณสามารถดูร้านค้าต่างๆ เพื่อช่วยให้คุณไม่เจอร้านค้าที่ขายสินค้าเดียวกันได้"
             android:textSize="@dimen/_15ssp"
-            android:textStyle="bold"
             android:id="@+id/order"
             android:layout_marginEnd="@dimen/_20sdp"
             android:textColor="@color/gray" />
