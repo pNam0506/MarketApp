@@ -67,7 +67,7 @@ public class lingko extends AppCompatActivity {
 
         String item_ch = "ขาย "+item_s;
         String log_j = "จองล็อคที่ "+ log + " Ling Ko";
-        nameMarket = " Ling Ko";
+        nameMarket = " Lingko";
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("slip");
         Query checkData = reference.orderByChild("dataSlip").equalTo(log_j);
