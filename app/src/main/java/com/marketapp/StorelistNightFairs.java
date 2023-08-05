@@ -44,7 +44,7 @@ public class StorelistNightFairs extends AppCompatActivity {
         storeAdapter = new StoreAdapter(this,list);
         recyclerView.setAdapter(storeAdapter);
 
-        nameMarket = "Night Fairs"; // ตรงที่พี่น้ำเพิ่มมา
+        nameMarket = "Night Fair"; // ตรงที่พี่น้ำเพิ่มมา
 
         // พี่น้ำเพิ่มตัวเช็ค
 

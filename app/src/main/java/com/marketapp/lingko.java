@@ -66,8 +66,8 @@ public class lingko extends AppCompatActivity {
         nameBoot_ss = nameBoot.getText().toString().trim();
 
         String item_ch = "ขาย "+item_s;
-        String log_j = "จองล็อคที่ "+ log + " Ling Ko";
-        nameMarket = " Lingko";
+        String log_j = "จองล็อคที่ "+ log + " Lingko";
+        nameMarket = "Lingko";
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("slip");
         Query checkData = reference.orderByChild("dataSlip").equalTo(log_j);
@@ -84,7 +84,7 @@ public class lingko extends AppCompatActivity {
                 else{
                     if(log <= 15){
                         price = "ราคา 400 บาท";
-                        nameMarket = " Ling Ko";
+                        nameMarket = "Lingko";
 
                         Intent intent = new Intent(lingko.this,slip.class);
 
@@ -99,7 +99,7 @@ public class lingko extends AppCompatActivity {
                     }
                     else if(log == 16 ||log == 17){
                         price = "ราคา 350 บาท";
-                        nameMarket = " Ling Ko";
+                        nameMarket = "Lingko";
 
                         Intent intent = new Intent(lingko.this,slip.class);
 

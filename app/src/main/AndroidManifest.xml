@@ -38,6 +38,11 @@
         <activity
             android:name="com.marketapp.Bill"
             android:exported="false" />
+
+        <activity
+            android:name="com.marketapp.lingko"
+            android:exported="false" />
+
         <activity
             android:name="com.marketapp.profileM"
             android:exported="false" />

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.marketapp.nama"
+    tools:context="com.marketapp.lingko"
     android:id="@+id/Lingko">
 
     <ScrollView
@@ -466,7 +466,7 @@
                         android:layout_width="200dp"
                         android:layout_height="50dp"
                         android:background="@drawable/background_input"
-                        android:hint="จองพื้นที่หมายเลข"
+                        android:hint="สินค้าที่ขาย"
                         android:padding="5dp" />
 
                 </LinearLayout>
