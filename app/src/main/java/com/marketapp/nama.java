@@ -84,7 +84,7 @@ public class nama extends AppCompatActivity {
                 }
                 else{
 
-                    if(log <= 4){
+                    if(log >= 97 && log <= 106){
                         price = "ราคา 600 บาท";
                         nameMarket = "Nama";
 
@@ -99,7 +99,7 @@ public class nama extends AppCompatActivity {
 
 
                     }
-                    else if(log > 4 && log <= 13){
+                    else if(log >= 1 && log <= 36){
                         price = "ราคา 450 บาท";
                         nameMarket = "Nama";
 
@@ -114,7 +114,7 @@ public class nama extends AppCompatActivity {
 
 
                     }
-                    else if(log == 14){
+                    else if(log >=37 && log <= 96){
                         price = "ราคา 400 บาท";
                         nameMarket = "Nama";
 

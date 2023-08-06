@@ -89,7 +89,7 @@ public class night_fairs extends AppCompatActivity {
                 else{
 
 
-                    if(log <= 4){
+                    if(log >= 81){
                         price = "ราคา 600 บาท";
                         nameMarket = "Night Fair";
 
@@ -104,7 +104,7 @@ public class night_fairs extends AppCompatActivity {
 
 
                     }
-                    else if(log <= 20){
+                    else if(log <= 80){
                         price = "ราคา 350 บาท";
                         nameMarket = "Night Fair";
 

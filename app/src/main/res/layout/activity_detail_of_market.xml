@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#989898"
+    android:background="#FDF5E0"
     tools:context="com.marketapp.detailOfMarket">
 
     <LinearLayout
@@ -26,32 +26,60 @@
 
     </LinearLayout>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp">
 
             <ImageView
-                android:layout_width="200dp"
-                android:layout_height="250dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
                 android:id="@+id/detailImage"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:padding="8dp"
-                android:layout_marginLeft="20dp"
                 android:src="@drawable/shop_groceries_svgrepo_com"
                 android:scaleType="fitXY" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:background="@drawable/background_text5"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:background="@drawable/map_pin_svgrepo_com"
+                        android:backgroundTint="#FF5353">
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:textColor="@color/gray"
+                        android:text="ที่อยู่ตลาด"
+                        android:textSize="@dimen/_15ssp">
+                    </TextView>
+
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -61,7 +89,32 @@
                     android:id="@+id/detailInform"
                     android:textColor="@color/gray"
                     android:layout_marginStart="@dimen/_10sdp"
-                    android:layout_marginTop="20dp" />
+                    android:layout_marginTop="@dimen/_5sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:background="@drawable/clipboard_list_svgrepo_com">
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:textColor="@color/gray"
+                        android:text="กฏของตลาด"
+                        android:textSize="@dimen/_15ssp">
+                    </TextView>
+
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -70,23 +123,24 @@
                     android:textSize="@dimen/_15ssp"
                     android:id="@+id/rules"
                     android:textColor="@color/gray"
+                    android:layout_marginBottom="@dimen/_10sdp"
                     android:layout_marginStart="@dimen/_10sdp"
-                    android:layout_marginTop="20dp" />
+                    android:layout_marginTop="@dimen/_5sdp" />
 
 
             </LinearLayout>
 
 
-        </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -108,13 +162,16 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:background="@drawable/time_watch_svgrepo_com"/>
 
         <TextView
@@ -130,7 +187,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -151,7 +209,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -173,7 +232,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -197,7 +257,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="@dimen/_100sdp"
             android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/background_content_bottom2"
             android:gravity="center">
@@ -234,6 +294,8 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    </ScrollView>
 
 
 </LinearLayout>

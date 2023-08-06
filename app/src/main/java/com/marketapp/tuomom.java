@@ -83,7 +83,7 @@ public class tuomom extends AppCompatActivity {
                 }
                 else{
 
-                    if(log <= 10){
+                    if(log <= 10 || (log >=31 && log <= 40) || (log >= 61 && log <=70)){
                         price = "ราคา 450 บาท";
                         nameMarket = "Tuo Mom";
 
@@ -98,7 +98,7 @@ public class tuomom extends AppCompatActivity {
 
 
                     }
-                    else if(log <= 13 || log == 15 || log == 16){
+                    else if((log >= 11 && log <= 30) || (log >= 41 && log <= 60) || (log >= 71 && log<=90)){
                         price = "ราคา 400 บาท";
                         nameMarket = "Tuo Mom";
 
@@ -114,21 +114,6 @@ public class tuomom extends AppCompatActivity {
 
                     }
 
-                    else if(log == 14){
-                        price = "ราคา 450 บาท";
-                        nameMarket = "Tuo Mom";
-
-                        Intent intent = new Intent(tuomom.this,slip.class);
-
-                        intent.putExtra(slip.LOG_S,log_j);
-                        intent.putExtra(slip.PRICE,price);
-                        intent.putExtra(slip.NAME_MARKET,nameMarket);
-                        intent.putExtra(slip.NAME_BOOT,nameBoot_ss); // ตรงที่เพิ่มมา
-
-                        startActivity(intent);
-
-
-                    }
                     DatabaseReference reference = FirebaseDatabase.getInstance().getReference("slip").child(nameMarket);
                     Query checkData = reference.orderByChild("dataItem").equalTo(item_ch);
 

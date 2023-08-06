@@ -75,7 +75,7 @@ public class freeFeel extends AppCompatActivity {
                 }
                 else{
 
-                    if(log == 15 || log == 16){
+                    if(log == 107 || log == 108 || log == 109){
                         price = "ราคา 500 บาท";
                         nameMarket = "Free Feel";
 

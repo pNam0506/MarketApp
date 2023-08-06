@@ -7,146 +7,121 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/background_market_Layout"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:background="@color/gray"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         >
 
         <ImageView
+            android:layout_marginTop="@dimen/_15sdp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/shop_groceries_svgrepo_com"
-            android:background="@color/home"
-            />
+            android:layout_height="230dp"
+            android:src="@drawable/img2"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:orientation="horizontal"
+            android:background="@drawable/background_content_bottom3">
+
         <TextView
             android:id="@+id/userNameM"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Market"
-            android:textSize="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:text="ภัคจิราณัฐ"
             android:textColor="@color/white"
-            android:textStyle="bold"
-         android:layout_margin="20sp"
-            />
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold"/>
 
-
-    </com.google.android.material.card.MaterialCardView>
-
-
+        </LinearLayout>
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchBar"
-        android:layout_below="@+id/background_market_Layout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="-25dp"
         android:background="@drawable/white_corner"
         app:searchHintIcon="@null"
         app:iconifiedByDefault="false"
-        app:searchIcon="@drawable/search_circle_svgrepo_com"
+        app:searchIcon="@drawable/search_svgrepo_com__2_"
         android:focusable="false"
-        app:queryHint="search..."
-
-        >
-
-
+        app:queryHint="ค้นหาตลาด"
+        android:layout_marginTop="205dp">
     </androidx.appcompat.widget.SearchView>
+
+    </com.google.android.material.card.MaterialCardView>
 
     <LinearLayout
         android:id="@+id/option_4"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_below="@+id/searchBar"
-        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
+        android:layout_marginTop="@dimen/_225sdp"
+        app:layout_constraintTop_toBottomOf="@id/background_market_Layout">
 
-        >
         <LinearLayout
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:orientation="vertical"
-            android:gravity="center"
-
-            >
+            android:gravity="center">
             <ImageView
                 android:id="@+id/weatherImage"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/sun_svgrepo_com_1__1_"
-
-
-                />
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/sun_svgrepo_com_1__1_" />
             <TextView
                 android:id="@+id/weatherText"
                 android:layout_width="80dp"
                 android:layout_height="20dp"
                 android:text="อากาศ"
-                android:gravity="center"
-
-                />
-
-
+                android:gravity="center" />
         </LinearLayout>
+
         <LinearLayout
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:orientation="vertical"
-            android:gravity="center"
+            android:gravity="center">
 
-            >
             <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/calendar_svgrepo_com__1_"
-
-
-                />
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/calendar_svgrepo_com__1_" />
             <TextView
                 android:id="@+id/Date_Text"
                 android:layout_width="80dp"
                 android:layout_height="20dp"
                 android:text="วันปัจจุบัน"
-                android:gravity="center"
-
-                />
-
-
+                android:gravity="center" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:orientation="vertical"
-            android:gravity="center"
-
-            >
+            android:gravity="center">
             <ImageView
                 android:id="@+id/summer_season"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/sun_svgrepo_com_1__1_"
-
-
-                />
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/sun_svgrepo_com_1__1_" />
             <TextView
                 android:id="@+id/season_text"
                 android:layout_width="80dp"
                 android:layout_height="20dp"
                 android:text="ฤดูกาล"
-                android:gravity="center"
-
-                />
-
-
+                android:gravity="center" />
         </LinearLayout>
+
 
         <Button
             android:id="@+id/AddMarket"
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:backgroundTint="@color/orange"
-            android:layout_marginBottom="-20dp"
+            android:textSize="@dimen/_10sdp"
             android:text="เพิ่มตลาด"
-
             />
 
 
@@ -155,21 +130,20 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/option_4">
-
+        android:layout_marginTop="@dimen/_300sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="@dimen/_46sdp"
+        android:background="@drawable/background_content_bottom2"
+        app:layout_constraintTop_toBottomOf="@id/option_4">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_20sdp">
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycleView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-
-                android:layout_marginTop="20dp"
-                >
-
+                android:layout_height="match_parent">
 
             </androidx.recyclerview.widget.RecyclerView>
         </LinearLayout>

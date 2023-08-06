@@ -82,7 +82,7 @@ public class lingko extends AppCompatActivity {
 
                 }
                 else{
-                    if(log <= 15){
+                    if(log <= 60 && log >= 1){
                         price = "ราคา 400 บาท";
                         nameMarket = "Lingko";
 
@@ -97,7 +97,7 @@ public class lingko extends AppCompatActivity {
 
 
                     }
-                    else if(log == 16 ||log == 17){
+                    else if(log >= 61 && log <= 80){
                         price = "ราคา 350 บาท";
                         nameMarket = "Lingko";
 
